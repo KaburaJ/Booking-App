@@ -1,6 +1,6 @@
 # Booking-App
 
-This repository contains a booking app which targets gaming shops. This app can be accessed [here] (https://kaburaj.github.io/Booking-App)
+This repository contains a booking app which targets gaming shops. This app can be accessed [here](https://kaburaj.github.io/Booking-App)
 
 
 ## 🔗 Links

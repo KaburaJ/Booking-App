@@ -14,22 +14,22 @@ Setting up a [Flutter environment](https://flutter.io/get-started/editor/) On op
 Before diving into the code, certain key words have to be understood. They include:
 1. **Widget** 
 This feature is graphical and provides information through which a user can interact with an application. Widgets are of two types: **Stateless** and **stateful**.
-(i) A **stateless** widget refers to widgets which are immutable. Simply put, stateless widgets do not change even when there are obvious changes in the app such as variations in the input parameters. A good example is a text widget.
-(ii) A **stateful** widget changes in sync with the input data or parameters and are the complete opposite of stateless widgets. They are mutable.
+i. A **stateless** widget refers to widgets which are immutable. Simply put, stateless widgets do not change even when there are obvious changes in the app such as variations in the input parameters. A good example is a text widget.
+ii. A **stateful** widget changes in sync with the input data or parameters and are the complete opposite of stateless widgets. They are mutable.
 Thus, in the selection of a stateless or stateful widget- which you will see plenty of times in this project, is entirely based on whether or not the UI at that particular instance is expected to change or not. Stateless, UI will not change. Stateful, UI might change. Well, you get the idea.
 2. **Container**
 From the word itself, a container is some sort of storage system. In Flutter, a container stores widgets which perform various functions such as displaying text, icons and images. It is useful for when these widgets are many and require to be arranged and positioned ina certain way as per the UI design. A container is a widget in its own capacity. It is referred to as a parent widget. It might be obvious, or not, that this parent widget requires a child widget. There are terms that are used within containers. They include:
-(i) **Padding**
+i. **Padding**
 This widget creates empty space around a widget or a group of widgets. 
-(ii) **Margin**
+ii. **Margin**
 This widget creates empty space around the container itself. In this way, it outlines the application's margin.
-(iii) **Row and Column**
+iii. **Row and Column**
 Rows and columns are usually accompanied by children in the Flutter syntax. As such, a row displays its children in a horizontal manner whereas a column displays these children in a vertical manner.
-(iv) **CrossAxisAlignment and MainAxisAlignment**
+iv. **CrossAxisAlignment and MainAxisAlignment**
 When it comes to rows, the main axis is horizontal while the cross axis is perpendicular. The opposite is true for columns. Consequently, the terms CrossAxisAlignment and MainAxisAlignment vary in definition depending on whether one is referring to the row or column. However, both properties allow for positioning of widgets. 
-(vi) **Spacer()**
+vi. **Spacer()**
 Allows for spacing in between widgets. In this project, the widget is replaced by Gap() which carries out a similar funtion.
-(v) **Height and Width**
+v. **Height and Width**
 3. **Scaffold**
 A scaffold provides the UI layout of an application's screen such as appbar and bottom navigation bar. Where this layout is to be used by default, the scaffold can wrap a container. 
 Although a scaffold and container may seem to overlap in funtioning, a container is more flexible moreso when one is aiming at creating their own layout away from the defaults. 

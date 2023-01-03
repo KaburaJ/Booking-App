@@ -611,7 +611,7 @@ child: Row(
 
 A ```Row``` that is within the ```Container``` is defined. Its ```children``` include ```Icon``` and ```Text``` which are separated by a gap of 10 pixels.
 
-6. **layout_builder_widget.dart**
+5. **layout_builder_widget.dart**
 
 We shall import the ```package:flutter/material.dart```.
 
@@ -667,7 +667,33 @@ The build method returns a LayoutBuilder widget that takes in a BuildContext and
 The Flex widget also takes in a list of children, which are generated using the List.generate method. This method creates a new list of SizedBox widgets, with each widget having a width of 1 and a height of 1. The SizedBox widget is a box that takes up a specific amount of space.
 Futhermore, Each SizedBox widget also has a DecoratedBox widget as a child. The DecoratedBox widget is a box that can be decorated with a background color, border, and more. The background color of the DecoratedBox is determined by the isColor parameter. If it is null, the color is set to white, otherwise it is set to grey.
 
+6. **thick_container.dart** 
 
+Import ```package:flutter/material.dart```
+
+```dart
+class ThickContainer extends StatelessWidget {
+  final bool? isColor;
+  const ThickContainer({Key? key, this.isColor}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(3.0),
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          border: Border.all(
+              width: 2.5,
+              color: isColor == null ? Colors.white : Color(0xFF8ACCF7))),
+    );
+  }
+}
+```
+This is a StatelessWidget in the Flutter framework that creates a container with padding and a border. It takes in one parameter:
+
+* key: a unique key that allows Flutter to identify this widget
+* isColor: a boolean value that determines the color of the border
+The build method returns a Container widget that has padding on all sides and a border with rounded corners. The border has a width of 2.5 and a color that is determined by the isColor parameter. If it is null, the color is set to white, otherwise it is set to a specific color (0xFF8ACCF7). 
+The Container widget is a box that can contain other widgets and apply padding and a border around them.
 
 ## **home_screen.dart**
 

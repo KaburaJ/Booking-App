@@ -55,7 +55,7 @@ Looking at the homescreen UI [here](https://kaburaj.github.io/Booking-App), ther
 * Another scrollable section that has some images and text.
 * Lastly, there is a bottom bar that contains four icons namely: the 'home', 'search', 'games' and 'profile' icons which are clickable.
  
-**main.dart**
+##**main.dart**
 
 ```dart
 import 'package:flutter/material.dart';
@@ -100,7 +100,7 @@ The code above is our project's root. That means that it will be the parent widg
 
 Now that we've gone through the ```main.dart``` file, let's begin by setting up the bottom bar for easier reference.
 
-**bottom_bar.dart**
+## **bottom_bar.dart**
 
 In the ```file explorer``` section of your IDE's interface, you will find the ```lib``` folder. This is where I created a folder named ```screens```. Within it, I created a ```bottom_bar.dart``` file.
 
@@ -203,7 +203,7 @@ dependencies:
 Getting back to the ```items``` section of the code, we will go through the home icon. This will be similar for all four icons except for the label.
 ```items``` is a list and within it is a ```BottomNavigationBarItem``` widget which takes in ```icon``` as an argument. Here, I selected the ```FluentSystemIcons.ic_fluent_home_regular``` which is basically an outline of a home icon. For the ```activeIcon``` section, the filled version of the home icon was selected. That way when selected, this icon got filled and when unselected, it was not. 
 
-**app_layout.dart**
+## **app_layout.dart**
 
 To make our code more compact and reusable, it is necessary to create libraries. Thus, in the ```lib``` folder, we can create a ```utils``` folder and within it create a new file. This new file can be named ```app_layout.dart```. The following is a code snippet from the file:
 

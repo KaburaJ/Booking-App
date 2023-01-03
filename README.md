@@ -712,6 +712,27 @@ import 'games_view.dart';
 ```
 Importing our libraries
 
+![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%201.PNG)
+![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%202.PNG)
+![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%203.PNG)
+![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%204.PNG)
+![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%205.PNG)
+![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%206.PNG)
+![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%207.PNG)
+![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%208.PNG)
+![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%209.PNG)
+![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%210.PNG)
+![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%211.PNG)
+![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%212.PNG)
+![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%213.PNG)
+![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%214.PNG)
+![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%215.PNG)
+![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%216.PNG)
+![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%217.PNG)
+![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%218.PNG)
+![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%219.PNG)
+![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%220.PNG)
+![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%221.PNG)
 
 
 

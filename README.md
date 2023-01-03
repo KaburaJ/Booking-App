@@ -716,6 +716,7 @@ Importing our libraries
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%202.PNG)
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%203.PNG)
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%204.PNG)
+**Search Screen**
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%205.PNG)
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%206.PNG)
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%207.PNG)
@@ -723,6 +724,7 @@ Importing our libraries
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%209.PNG)
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2010.PNG)
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2011.PNG)
+**Games ticket view**
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2012.PNG)
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2013.PNG)
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2014.PNG)
@@ -731,8 +733,8 @@ Importing our libraries
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2017.PNG)
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2018.PNG)
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2019.PNG)
-![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%220.PNG)
-![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%221.PNG)
+![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2020.PNG)
+![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2021.PNG)
 
 
 

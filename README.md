@@ -55,7 +55,7 @@ Looking at the homescreen UI [here](https://kaburaj.github.io/Booking-App), ther
 * Another scrollable section that has some images and text.
 * Lastly, there is a bottom bar that contains four icons namely: the 'home', 'search', 'games' and 'profile' icons which are clickable.
  
-##**main.dart**
+## **main.dart**
 
 ```dart
 import 'package:flutter/material.dart';

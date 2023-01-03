@@ -305,6 +305,322 @@ class Styles {
 
 Here, we set up our primary, background, text and headline colors. For consistency's sake, the shade of some of the colors to be used is also declared here. All these are stored in the ```Styles``` class. The ```TextStyle``` allows us to override the default fontsize, colour and weight of different text fields. That way, if at all we required our headline to be in italics, we can define it using TextStyle.
 
+## **app_info_list**
+Still within the ```utils``` folder, we will have a list of key and value pairs which we will use to make our app dynamic. This can be thought of as our makeshift database. In future, this will be updated by the owner of the gaming shop and will update as automatically.
+
+```dart
+List<Map<String, dynamic>> GameList = [
+  {
+    'image': 'img4.jpg',
+    'game': 'God of War',
+    'type': 'PS4',
+    'price': 'Kes 50.00/hr'
+  },
+  {
+    'image': 'img5.jpg',
+    'game': 'Mortal Combat',
+    'type': 'PS4',
+    'price': 'Kes 50.00/hr'
+  },
+  {
+    'image': 'img6.jpg',
+    'game': 'FIFA',
+    'type': 'PS5',
+    'price': 'Kes 100.00/hr'
+  },
+];
+```
+
+```dart
+List<Map<String, dynamic>> gameList = [
+  {
+    '001_Available': {'code': "001", 'name': "FIFA"},
+    '002_Available': {'code': "002", 'name': "GTA"},
+    'available_time': '1H 30M',
+    'date': "1 MAY",
+    'time': "08:00 AM",
+    "players": "single"
+  },
+  {
+    '001_Available': {'code': "003", 'name': "God of War"},
+    '002_Available': {'code': "004", 'name': "GTA"},
+    'available_time': '2H 30M',
+    'date': "3 MAY",
+    'time': "02:00 PM",
+    "players": "multi"
+  },
+];
+```
+
+That being said, the two lists above will be the basis of most of the visuals we see in our application.
+
+## **Widgets**
+In any programming language, the reusability of code is essential. Since our app's layout has a number of features which may be repetitive, it is important to create code that is reusable in multiple screens. That being said, we create a ```widgets``` folder within the ```lib``` folder. Here, we will have:
+
+1. **double_text_widget.dart**
+Since at one point in time we will be required to format text such as 'Games' and 'View all', this particular dart file is very important. Well, at least in this application.
+
+```dart
+import 'package:flutter/material.dart';
+import '../utils/app_styles.dart';
+```
+We will start by importing our libraries. Wow, we are already making use of the ```Styles``` library we created earlier!.
+
+```dart
+class AppDoubleTextWidget extends StatelessWidget {
+  final String bigText;
+  final String smallText;
+  const AppDoubleTextWidget(
+      {Key? key, required this.bigText, required this.smallText})
+      : super(key: key);
+```
+
+Next, we create a ```stateless``` widget which we name ```AppDoubleTextWidget```. We then declare some string variables appropriately named ```bigText``` and ```smallText```. This widget, when in use, will require the user to define the big and small text respectively. 
+
+```dart
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween, 
+      children: [
+      Text(bigText,
+          style: Styles.headLineStyle2.copyWith(color: Color(0xfff4f0f0))),
+      InkWell(
+        onTap: () {},
+        child: Text(
+          smallText,
+          style: Styles.textStyle,
+        ),
+      )
+    ]);
+  }
+```
+
+In this case, we will be returning a row and within it, we will utilize the ```mainAxisAlignment``` and constrain it as per the space between. That way, whichever text we put first and the second one, will be spaced according to the space between them. We then start defining our text and declaring their style. For our ```smallText```, things are a bit different. The ```InkWell``` function which is used here defines what the user will tap and its ```onTap``` parameter contains the definition of how the application ought to behave. Right now, it is not doing anything but should we want some form of response, we will be required to edit the ```onTap``` function. In the Inkwell's child, the small text as well as its style is defined.
+
+2. **column_layout.dart**
+This is similar to the ```double_text_widget.dart``` only that it aligns the first and second texts in a vertical manner. The text will appear in a vertical manner as if stacked on top of each other.
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
+import '../utils/app_layout.dart';
+import '../utils/app_styles.dart';
+```
+First, we import our packages.
+
+```dart
+class AppColumnLayout extends StatelessWidget {
+  final CrossAxisAlignment alignment;
+  final String firstText;
+  final String secondText;
+  final bool? isColor;
+  const AppColumnLayout(
+      {Key? key,
+      required this.firstText,
+      required this.secondText,
+      required this.alignment,
+      this.isColor})
+      : super(key: key);
+```
+We create a ```stateless``` widget and define our first and second texts, our CrossAxisAlignment and isColor variables. The first and second text as well as the alignment are a requirement for the ```AppColumnLayout``` class to work. ```isColor``` is optional and only takes a boolean.
+
+```dart
+ @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: alignment,
+      children: [
+        Text(
+          firstText,
+          style: isColor == null
+              ? Styles.headLineStyle3.copyWith(color: Colors.white)
+              : Styles.headLineStyle3,
+        ),
+        Gap(AppLayout.getHeight(5)),
+        Text(secondText,
+            style: isColor == null
+                ? Styles.headLineStyle4.copyWith(color: Colors.white)
+                : Styles.headLineStyle4),
+      ],
+    );
+  }
+```
+
+We will return a Column this time round. Within it, the ```crossAxisAlignment``` is initialized to ```alignment```. The children bit houses the first text and its style, a ```Gap``` function and the second text and its styling. The gap function can be used interchangeably with ```spacer()```. 
+Importing ```gap()``` involves adding ```gap: ^2.0.0``` to the dependencies of ```pubspec.yaml```. Your pubspec.yaml will now look like this:
+
+```dart
+dependencies:
+  flutter:
+    sdk: flutter
+    
+  cupertino_icons: ^1.0.2
+  fluentui_icons: ^1.0.0
+  webviewx: ^0.2.1
+  get: ^4.6.5 
+  gap: ^2.0.0
+```
+
+3. **game_tabs.dart**
+[Image]
+In order to get the desired result above, this dart file is necessary.
+```dart
+import 'package:flutter/material.dart';
+import '../utils/app_layout.dart';
+```
+
+The code snippet above contains the imported files for this particular file.
+
+```dart
+class AppGameTabs extends StatelessWidget {
+  final String firstTab;
+  final String secondTab;
+  const AppGameTabs({Key? key, required this.firstTab, required this.secondTab})
+      : super(key: key);
+```
+
+The String variables ```firstTab``` and ```secondTab``` are defined. They are required whenever ```AppGameTabs``` is called.
+
+ ```dart
+  @override
+  Widget build(BuildContext context) {
+    final size = AppLayout.getSize(context);
+    return FittedBox(
+      child: Container(
+          padding: const EdgeInsets.all(3.5),
+          child: Row(
+            children: [
+            Container(
+              width: size.width * 0.44,
+              padding: EdgeInsets.symmetric(vertical: AppLayout.getHeight(7)),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.horizontal(
+                      left: Radius.circular(
+                    AppLayout.getHeight(50),
+                  )),
+                  color: Colors.white),
+              child: Center(
+                child: Text(firstTab),
+              ),
+            ),
+```
+
+A ```FittedBox``` is returned here. Within it, a ```Container``` is created. ```Padding``` of 3.5 pixels is introduced within the container. The child is a ```Row``` with a child ```Container``` which occupies 44 percent of the screen in width. A ```Padding``` of 7 pixels vertically is placed. To produce the circular edge, ```BoxDecoration``` is done with a border radius in the horizontal direction. The left is defined with ```Radius.circular()``` This ensures that the left side of this container remains circular while the right retains the vertical edge.
+
+```dart
+Container(
+              width: size.width * 0.44,
+              padding: EdgeInsets.symmetric(vertical: AppLayout.getHeight(7)),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.horizontal(
+                      right: Radius.circular(
+                    AppLayout.getHeight(50),
+                  )),
+                  color: Colors.transparent),
+              child: Center(
+                child: Text(secondTab),
+              ),
+            ),
+          ]),
+```
+
+The second ```Container``` within the ```Row``` which is wrappped in a ```Container``` which is the child of a ```FittedBox``` (quite a mouthful), is represented in the code snippet above. It has similar features as the first, the only difference being that in the ```BorderRadius.horizontal```, it is the right side of this container that is circular. In both cases, the text is centered. Also, the colour is white in the first container and transparent in the second. 
+
+```dart
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(
+              AppLayout.getHeight(50),
+            ),
+            color: const Color(0xFFF4F6FD),
+          )),
+```
+
+This last bit of the code ensures that overall, the container retains a circular form.
+
+4. **icon_text_widget.dart**
+
+[Image]
+This user-defined package provides a layout of the text that accompanies an icon.
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
+import '../utils/app_layout.dart';
+import '../utils/app_styles.dart';
+```
+
+Importing our libraries.
+
+```dart
+class AppIconText extends StatelessWidget {
+  final IconData icon;
+  final String text;
+  const AppIconText({Key? key, required this.icon, required this.text})
+      : super(key: key);
+```
+
+A ```stateless``` widget is created. Within it, one IconData and one String type variable is created. Both are required.
+
+```dart
+@override
+  Widget build(BuildContext context) {
+    return Container(
+        padding: EdgeInsets.symmetric(
+            vertical: AppLayout.getWidth(12),
+            horizontal: AppLayout.getHeight(12)),
+        decoration: BoxDecoration(
+            color: Color(0xff161616),
+            borderRadius: BorderRadius.circular(
+              AppLayout.getWidth(10),
+            ),
+            boxShadow: [
+              BoxShadow(
+                  color: Color(0xfffbf0f0),
+                  blurRadius: 2,
+                  spreadRadius: 1
+            ]),
+```
+
+A ```Container``` is returned and after setting up the padding, its shape is defined as circular in the ```decoration``` field and its colour is set. 
+Within the ```BoxDecoration```, an additional field, ```boxShadow``` is introduced. It defines the shadow cast by a box decoration. Its ```color``` is set to white, ```blurRadius``` to 2 and ```spreadRadius``` to 1.
+
+```dart
+child: Row(
+          children: [
+            Icon(
+              icon,
+              color: const Color(0xfffafbfd),
+            ),
+            Gap(AppLayout.getWidth(10)),
+            Text(
+              text,
+              style: Styles.textStyle,
+            )
+          ],
+        )
+```
+
+A ```Row``` that is within the ```Container``` is defined. Its ```children``` include ```Icon``` and ```Text``` which are separated by a gap of 10 pixels.
+
+
+## **home_screen.dart**
+
+Here, we define what we want to be seen in our home page. Here's the procedure followed in this project:
+
+```dart
+import 'package:fluentui_icons/fluentui_icons.dart';
+import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
+import 'package:kaburacreates/screens/games_screen.dart';
+import 'package:kaburacreates/utils/app_info_list.dart';
+import 'package:kaburacreates/widgets/double_text_widget.dart';
+import '../utils/app_layout.dart';
+import '../utils/app_styles.dart';
+import 'games_view.dart';
+```
+Importing our libraries
+
 
 
 

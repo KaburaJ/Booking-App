@@ -611,6 +611,63 @@ child: Row(
 
 A ```Row``` that is within the ```Container``` is defined. Its ```children``` include ```Icon``` and ```Text``` which are separated by a gap of 10 pixels.
 
+6. **layout_builder_widget.dart**
+
+We shall import the ```package:flutter/material.dart```.
+
+```dart
+class AppLayoutBuiderWidget extends StatelessWidget {
+  final bool? isColor;
+  final int sections;
+  final double width;
+  const AppLayoutBuiderWidget(
+      {Key? key, this.isColor, required this.sections, this.width = 3})
+      : super(key: key);
+```
+
+The code in this file allows the creation of a StatelessWidget in the Flutter framework that allows you to build a layout based on certain constraints. It takes in four parameters:
+
+* key: a unique key that allows Flutter to identify this widget
+* isColor: a boolean value that determines the color of the boxes
+* sections: an integer that determines the number of sections to display
+* width: a double that determines the width of each box (default is 3)
+```Sections``` are a required field.
+
+```dart
+  @override
+  Widget build(BuildContext context) {
+    return LayoutBuilder(
+      builder: (BuildContext context, BoxConstraints constraints) {
+        return Flex(
+            direction: Axis.horizontal,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisSize: MainAxisSize.max,
+            children: List.generate(
+              (constraints.constrainWidth() / 6).floor(),
+              (index) => SizedBox(
+                width: 1,
+                height: 1,
+                child: DecoratedBox(
+                  decoration: BoxDecoration(
+                      color: isColor == null
+                          ? Colors.white
+                          : Colors.grey.shade300),
+                ),
+              ),
+            ));
+      },
+    );
+  }
+  ```
+
+The build method returns a LayoutBuilder widget that takes in a BuildContext and BoxConstraints and returns a Flex widget. The Flex widget is a layout widget that displays its children along a main axis and cross axis. It takes in several properties to control the layout, including:
+* direction: determines the direction in which the children are placed (horizontal or vertical)
+* mainAxisAlignment: determines how the children are aligned along the main axis
+* mainAxisSize: determines the size of the main axis
+The Flex widget also takes in a list of children, which are generated using the List.generate method. This method creates a new list of SizedBox widgets, with each widget having a width of 1 and a height of 1. The SizedBox widget is a box that takes up a specific amount of space.
+Futhermore, Each SizedBox widget also has a DecoratedBox widget as a child. The DecoratedBox widget is a box that can be decorated with a background color, border, and more. The background color of the DecoratedBox is determined by the isColor parameter. If it is null, the color is set to white, otherwise it is set to grey.
+
+
 
 ## **home_screen.dart**
 

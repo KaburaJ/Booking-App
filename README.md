@@ -14,7 +14,7 @@ Setting up a [Flutter environment](https://flutter.io/get-started/editor/) On op
 Before diving into the code, certain key words have to be understood. They include:
 1. **Widget** 
 This feature is graphical and provides information through which a user can interact with an application. Widgets are of two types: **Stateless** and **stateful**.
-- A **stateless** widget refers to widgets which are immutable. Simply put, stateless widgets do not change even when there are obvious changes in the app such as variations in the input parameters. A good example is a text widget.
+- **Stateless** widgets refer to widgets which are immutable. Simply put, stateless widgets do not change even when there are obvious changes in the app such as variations in the input parameters. A good example is a text widget.
 - A **stateful** widget changes in sync with the input data or parameters and are the complete opposite of stateless widgets. They are mutable.
 Thus, in the selection of a stateless or stateful widget- which you will see plenty of times in this project, is entirely based on whether or not the UI at that particular instance is expected to change or not. Stateless, UI will not change. Stateful, UI might change. Well, you get the idea.
 2. **Container**
@@ -34,11 +34,27 @@ Allows for spacing in between widgets. In this project, the widget is replaced b
 A scaffold provides the UI layout of an application's screen such as appbar and bottom navigation bar. Where this layout is to be used by default, the scaffold can wrap a container. 
 Although a scaffold and container may seem to overlap in funtioning, a container is more flexible moreso when one is aiming at creating their own layout away from the defaults. 
 4. **Flex**
-5. **ListView**
-6. **Stack**
+We can refer to flex as a combination of row and column. It facilitates the positioning of widgets either in the vertical or horizontal axes. Unlike row and column which are fixed, flex is flexible.
+6. **ListView**
+ListView creates children in a list that can be scrolled though either vertically or horizontally.
+8. **Stack**
+When one wants widgets to overlap, a stack widget is used. 
+-All these keywords are used at one point or another in this particular project. Now that we have defined everything, we can now dive into the code itself.
 
+PS: The UI/ layout design comes first before any coding can be done. 
 
-
+### Let's Dive into it!
+[App Image]
+Looking at the homescreen UI [here](https://kaburaj.github.io/Booking-App), there's:
+* some form of text. Furthermore, the text is of varying fontsize.
+* an image at the top right corner
+* a search space that has a search icon and the word 'search' on it
+* The text 'Available Games' and 'View all' on the same row but at the beginning and end respectively
+* A scrollable section (we'll eloy some sort of ListView widget). Worth noting is that this section is scrollable horizontally.
+* The text 'Games' and 'View all' on the same row but at the beginning and end respectively
+* Another scrollable section that has some images and text.
+* Lastly, there is a bottom bar that contains four icons namely: the 'home', 'search', 'games' and 'profile' icons which are clickable.
+Let's begin by setting up the bottom bar for easier reference. 
 
 
 ## 🔗 Links

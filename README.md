@@ -54,7 +54,51 @@ Looking at the homescreen UI [here](https://kaburaj.github.io/Booking-App), ther
 * The text 'Games' and 'View all' on the same row but at the beginning and end respectively
 * Another scrollable section that has some images and text.
 * Lastly, there is a bottom bar that contains four icons namely: the 'home', 'search', 'games' and 'profile' icons which are clickable.
-Let's begin by setting up the bottom bar for easier reference. 
+ 
+**main.dart**
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:kaburacreates/screens/bottom_bar.dart';
+import 'package:kaburacreates/utils/app_styles.dart';
+
+void main() => runApp(const MyApp());
+```
+
+The main.dart file is a prerequisite for all Flutter applications and is where the program starts. It takes one main() function that excecutes any code within it. Simply put, it allows our widgets to be seen by the user. The runApp() method loads the app layout on the emulator's screen. Above it is a list of imports. Some like ```import 'package:flutter/material.dart'``` are standard libraries while others like ```import 'package:kaburacreates/screens/bottom_bar.dart'```are user-defined meaning that in the creation of this project, I created some libraries with the intent of reusing code. 
+
+```dart
+ class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+  ```
+
+It takes a widget as a parameter in which we ought to pass a root widget. In this case, ```MyApp``` is the widget.
+
+```dart
+@override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      // Application name
+      title: 'Flutter Hello World',
+      // Application theme data, you can set the colors for the application as
+      // you want
+      theme: ThemeData(
+        primaryColor: primary,
+      ),
+      // A widget which will be started on application startup
+      home: const BottomBar(),
+    );
+
+```
+
+The code above is our project's root. That means that it will be the parent widget for all others that follow. It will house our ```Container ``` , ```Scaffold``` among others. ```@override``` allows the overriding of the methods of the parent class. We are overriding the ```build()``` method which takes in the ```BuildContext``` object and returns a widget; ```MaterialApp``` which houses:
+ - ```debugShowCheckedModeBanner: false``` hides the debug tag that appears by default on any emulator
+ - the title: "Flutter Hello World"
+ - a selected theme which, in this case, is the color named 'primary' 
+ - The ```home``` widget which allows for one to define the place where the application begins when rerun. In this case, the ```BottomBar``` will be the first to be showcased.
+
+Now that we've gone through the ```main.dart``` file, let's begin by setting up the bottom bar for easier reference.
 
 
 ## 🔗 Links

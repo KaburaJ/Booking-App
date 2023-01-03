@@ -9,8 +9,7 @@ This app, though currently more of a UI representation of the end goal, is suppo
 In the creation of this application, [Flutter](https://www.geeksforgeeks.org/what-is-flutter/), which supports cross-platform applications, was used. In my case, I used [FlutLab](https://flutlab.io/) in the execution of code initially. Afterwards, I incorporated VS Code in the final building and eventual deployment to Github pages. No special reason though, the choice of IDE was done based on preference.
 
 ## The Nitty Gritties
-Setting up a [Flutter environment](https://flutter.io/get-started/editor/) On opening any Flutter IDE, one is welcomed by a screen with code already on it. In my case, it was the 'Hello World' project. For a smile's sake, I would advice one to run it, feel proud, press and hold Ctrl+A and delete. Mostly, the lib/main.dart is what will be edited. We'll begin in the main.dart file. It looks something like this...
-[image]
+Setting up a [Flutter environment](https://flutter.io/get-started/editor/) On opening any Flutter IDE, one is welcomed by a screen with code already on it. In my case, it was the 'Hello World' project. For a smile's sake, I would advice one to run it, feel proud, press and hold Ctrl+A and delete. Mostly, the lib/main.dart is what will be edited.
 Before diving into the code, certain key words have to be understood. They include:
 1. **Widget** 
 This feature is graphical and provides information through which a user can interact with an application. Widgets are of two types: **Stateless** and **stateful**.
@@ -46,13 +45,13 @@ When called, it creates a widget that scales and positions its child within itse
 PS: The UI/ layout design comes first before any coding can be done. 
 
 ### Let's Dive into it!
-[App Image]
+
 Looking at the homescreen UI [here](https://kaburaj.github.io/Booking-App), there's:
 * some form of text. Furthermore, the text is of varying fontsize.
 * an image at the top right corner
 * a search space that has a search icon and the word 'search' on it
 * The text 'Available Games' and 'View all' on the same row but at the beginning and end respectively
-* A scrollable section (we'll eloy some sort of ListView widget). Worth noting is that this section is scrollable horizontally.
+* A scrollable section (we'll employ some sort of ListView widget). Worth noting is that this section is scrollable horizontally.
 * The text 'Games' and 'View all' on the same row but at the beginning and end respectively
 * Another scrollable section that has some images and text.
 * Lastly, there is a bottom bar that contains four icons namely: the 'home', 'search', 'games' and 'profile' icons which are clickable.
@@ -104,7 +103,11 @@ Now that we've gone through the ```main.dart``` file, let's begin by setting up 
 
 ## **bottom_bar.dart**
 
+![Bottom Bar](https://github.com/KaburaJ/Booking-App/blob/main/images/Image003.PNG)
+
 In the ```file explorer``` section of your IDE's interface, you will find the ```lib``` folder. This is where I created a folder named ```screens```. Within it, I created a ```bottom_bar.dart``` file.
+
+![File Explorer](https://github.com/KaburaJ/Booking-App/blob/main/images/Image004.PNG)
 
 ```dart
 class BottomBar extends StatefulWidget {
@@ -399,6 +402,9 @@ Next, we create a ```stateless``` widget which we name ```AppDoubleTextWidget```
 In this case, we will be returning a row and within it, we will utilize the ```mainAxisAlignment``` and constrain it as per the space between. That way, whichever text we put first and the second one, will be spaced according to the space between them. We then start defining our text and declaring their style. For our ```smallText```, things are a bit different. The ```InkWell``` function which is used here defines what the user will tap and its ```onTap``` parameter contains the definition of how the application ought to behave. Right now, it is not doing anything but should we want some form of response, we will be required to edit the ```onTap``` function. In the Inkwell's child, the small text as well as its style is defined.
 
 2. **column_layout.dart**
+
+![column_layout image](https://github.com/KaburaJ/Booking-App/blob/main/images/Image002.PNG)
+
 This is similar to the ```double_text_widget.dart``` only that it aligns the first and second texts in a vertical manner. The text will appear in a vertical manner as if stacked on top of each other.
 
 ```dart
@@ -463,7 +469,9 @@ dependencies:
 ```
 
 3. **game_tabs.dart**
-[Image]
+
+![Expected result image](https://github.com/KaburaJ/Booking-App/blob/main/images/Image001.PNG)
+
 In order to get the desired result above, this dart file is necessary.
 ```dart
 import 'package:flutter/material.dart';

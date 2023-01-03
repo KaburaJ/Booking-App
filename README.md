@@ -39,6 +39,8 @@ We can refer to flex as a combination of row and column. It facilitates the posi
 ListView creates children in a list that can be scrolled though either vertically or horizontally.
 8. **Stack**
 When one wants widgets to overlap, a stack widget is used. 
+9. **FittedBox**
+When called, it creates a widget that scales and positions its child within itself
 -All these keywords are used at one point or another in this particular project. Now that we have defined everything, we can now dive into the code itself.
 
 PS: The UI/ layout design comes first before any coding can be done. 

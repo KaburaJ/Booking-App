@@ -203,6 +203,79 @@ dependencies:
 Getting back to the ```items``` section of the code, we will go through the home icon. This will be similar for all four icons except for the label.
 ```items``` is a list and within it is a ```BottomNavigationBarItem``` widget which takes in ```icon``` as an argument. Here, I selected the ```FluentSystemIcons.ic_fluent_home_regular``` which is basically an outline of a home icon. For the ```activeIcon``` section, the filled version of the home icon was selected. That way when selected, this icon got filled and when unselected, it was not. 
 
+**app_layout.dart**
+
+To make our code more compact and reusable, it is necessary to create libraries. Thus, in the ```lib``` folder, we can create a ```utils``` folder and within it create a new file. This new file can be named ```app_layout.dart```. The following is a code snippet from the file:
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+class AppLayout {
+  static getSize(BuildContext context) {
+    return MediaQuery.of(context).size;
+  }
+```
+
+The first thing we notice here is the foreign-looking import ```package:get/get.dart```. It is yet another imported library which is essential in the creation of designs that will look good on any device. The get library has widgets that control pixel size. Just as we did for the bottom bar icons, we shall import this package. On the ```pubspec.yaml``` dependencies, add ```get: ^4.6.5```. It will look something like this:
+
+```dart
+dependencies:
+  flutter:
+    sdk: flutter
+    
+  cupertino_icons: ^1.0.2
+  fluentui_icons: ^1.0.0
+  get: ^4.6.5 
+```
+
+Once that's done, we can get right back to the code. We create an ```AppLayout``` class. Within it, we shall have:
+
+```dart
+static getSize(BuildContext context) {
+    return MediaQuery.of(context).size;
+  }
+```
+
+* A static function ```getSize``` which takes in the location of the widget, that is, ```BuildContext``` and returns a ```MediaQuery``` class. MediaQuery allows a widget to rebuild automatically whenever the data changes, for instance, if the user rotates their device. In this case, the data in question is the size of the device's screen. 
+
+```dart
+static getScreenHeight() {
+    return Get.height;
+  }
+```
+
+* ```getScreenHeight``` which is a static function which, when called, returns the height of the device's screen.
+
+```dart
+static getScreenWidth() {
+    return Get.width;
+  }
+```
+
+* ```getScreenWidth``` which returns the width of the device's screen.
+
+```dart
+static getHeight(double pixels) {
+    double x = getScreenHeight() / pixels;
+    return getScreenHeight() / x;
+  }
+```
+
+* The ```getHeight``` static function that takes in the number of pixels, divides the height of the device by the number of pixels and returns the value computed.
+
+```dart
+static getWidth(double pixels) {
+    double x = getScreenWidth() / pixels;
+    return getScreenWidth() / x;
+  }
+```
+
+* The ```getHeight``` static function that takes in the number of pixels, divides the width of the device by the number of pixels and returns the value computed.
+
+
+
+
 
 
 

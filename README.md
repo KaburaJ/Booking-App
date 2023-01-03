@@ -731,6 +731,7 @@ Importing our libraries
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2015.PNG)
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2016.PNG)
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2017.PNG)
+**Profile Screen**
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2018.PNG)
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2019.PNG)
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2020.PNG)

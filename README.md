@@ -2038,13 +2038,13 @@ Container(
                   ))
  ```
  This code creates:
-* A gap with a height of 8 logical pixels.
-* A text element displaying a large number with a particular style.
-* Another gap with a height of 20 logical pixels.
-* A row with two text elements displaying dates and aligned to opposite ends of the row.
-* Another gap with a height of 20 logical pixels.
-* A divider with a grey color.
-* Several rows, each with two instances of a custom AppColumnLayout widget and a divider in between. Each AppColumnLayout widget displays a number and a label, and can be aligned to either end of the row.
+* A `gap` with a height of 8 logical pixels.
+* A `text` element displaying a large number with a particular style.
+* Another `gap` with a height of 20 logical pixels.
+* A `row` with two text elements displaying dates and aligned to opposite ends of the row.
+* Another `gap` with a height of 20 logical pixels.
+* A `divider` with a grey color.
+* Several rows, each with two instances of a custom `AppColumnLayout` widget and a `divider` in between. Each `AppColumnLayout` widget displays a number and a label, and can be aligned to either end of the row.
 Another gap with a height of 20 logical pixels.
 
 ## Outcome
@@ -2054,14 +2054,17 @@ Another gap with a height of 20 logical pixels.
 </br>
 </br>
 
+# We made it!
+Now that we've created the home, search, game tickets and profile screens, we have created pretty much the whole project. There is room for improvement in terms of making it useful in the real world but so far, so good. To share it with peers publicly, one has to deploy their application. There are several platforms, GitHub Pages being one of them. This [tutorial](https://maheshmnj.medium.com/deploying-your-flutter-webapp-to-github-pages-111ff9e5cbc9) details the procedure clearly.
 
-
-
-
-
-
-
+</br>
+## Acknowledgements
+ - [Awesome Flutter Tutorial](https://www.youtube.com/watch?v=71AsYo2q_0Y)
+ - [Awesome Guide to deploy Flutter app to GitHub Pages](https://github.com/matiassingers/awesome-readme)
+ - [Awesome Guide to deploy Flutter app to GitHub Pages](https://maheshmnj.medium.com/deploying-your-flutter-webapp-to-github-pages-111ff9e5cbc9)
+</br>
 ## 🔗 Links
+
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/joan-kabura)
 [![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/JoanKabura_)
 

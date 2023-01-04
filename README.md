@@ -1031,12 +1031,12 @@ Expanded(
                     ),
                   )),
 ```
-*This code is building a UI element that consists of a row with three elements:
+*This code is building a UI element that consists of a row with three elements:*
 </br>
 1. *A text widget that displays the value of the "code" field in the "001_Available" object of the "list" map. The text style for this widget is determined by the "isColor" bool value. If "isColor" is null, the text style is "Styles.headLineStyle3" with the color set to black. If "isColor" is not null, the text style is "Styles.headLineStyle3" with no color modification.*
-2. *A "ThickContainer" widget with its "isColor" field set to true.
+2. *A "ThickContainer" widget with its "isColor" field set to true.*
 3. *A row of "AppLayoutBuiderWidget" widgets with "sections" set to 6 and no other properties set.
-Another "ThickContainer" widget with its "isColor" field set to true.
+Another "ThickContainer" widget with its "isColor" field set to true.*
 4. *A text widget that displays the value of the "code" field in the "002_Available" object of the "list" map. The text style for this widget is determined by the "isColor" bool value. If "isColor" is null, the text style is "Styles.headLineStyle4" with the color set to black. If "isColor" is not null, the text style is "Styles.headLineStyle3" with no color modification.*
 ```dart
 SizedBox(

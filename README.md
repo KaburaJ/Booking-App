@@ -21,7 +21,8 @@ This repository contains a booking app which targets gaming shops. This app can 
         6. [thick_cotainer.dart](https://github.com/KaburaJ/Booking-App#thick_containerdart)
     6. [Home Screen](https://github.com/KaburaJ/Booking-App#home-screen)
     7. [Search_Screen](https://github.com/KaburaJ/Booking-App#search-screen)
-    8. [Games ticket view]()
+    8. [Games ticket view](https://github.com/KaburaJ/Booking-App/blob/main/README.md#games-ticket-view)
+    9. 
 5. [links](#links)
 
 # Overview
@@ -972,6 +973,7 @@ Gap(AppLayout.getHeight(25)),
 
 
 ## Outcome
+</br>
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%201.PNG)
 </br>
 
@@ -987,6 +989,7 @@ Gap(AppLayout.getHeight(25)),
 
 
 ## Outcome
+</br>
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%202.PNG)
 </br>
 
@@ -1009,6 +1012,7 @@ Gap(AppLayout.getHeight(15)),
 
  
  ## Outcome
+ </br>
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%203.PNG)
 </br>
 
@@ -1040,6 +1044,7 @@ Finally, there are several instances of the `Gap` widget, which are used to add 
 
 
 ## Outcome
+</br>
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%204.PNG)
 </br>
 </br>
@@ -1093,6 +1098,7 @@ The `ListView` has two children: a `Gap` widget and a `Text` widget. The Gap wid
 
 
 ## Outcome:
+</br>
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%205.PNG)
 </br>
 
@@ -1110,6 +1116,7 @@ The second `Gap` widget adds more vertical space with a height of 25 pixels betw
 
 
 ## Outcome:
+</br>
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%206.PNG)
 </br>
 </br>
@@ -1128,7 +1135,7 @@ This code displays two AppIconText widgets and some gap widgets in between them.
 </br>
 
 ## Outcome
-
+</br>
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%207.PNG)
 </br>
 </br>
@@ -1159,6 +1166,7 @@ The decoration property specifies a background color and a border radius for the
 The child property specifies a single child widget for the container, which is a Text widget that displays the text "find games" in white. The style property specifies the text style for the Text widget, which appears to be a copy of the Styles.textStyle object with the color set to white.
 
 ## Outcome
+</br>
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%208.PNG)
 </br>
 </br>
@@ -1174,7 +1182,7 @@ This code creates a new instance of the AppDoubleTextWidget widget and displays 
 </br>
 
 ## Outcome
-
+</br>
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%209.PNG)
 </br>
 </br>
@@ -1230,6 +1238,7 @@ The Gap widget adds some space between the first container and the Text widget. 
 </br>
 
 ## Outcome
+</br>
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2010.PNG)
 </br>
 </br>
@@ -1294,7 +1303,8 @@ The positioned widget is positioned relatively to the top-right corner of the st
 </br>
 
 ## Outcome
-![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2011.PNG)
+</br>
+(https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2011.PNG)
 
 </br>
 </br>
@@ -1343,6 +1353,7 @@ In the given code, the RichText widget displays three text spans, each with a di
 *The emoticons can be assessed via your PC's keyboard*
 
 ## Outcome
+</br>
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2012.PNG)
 
 ## **Games ticket view**
@@ -1404,6 +1415,7 @@ The Gap widget adds some space between the widgets above and below it. The Text 
 The ListView widget also has a padding property that adds some space around the widget. The padding property takes an EdgeInsets object as its value. The EdgeInsets object is constructed using the EdgeInsets.symmetric constructor and takes two arguments: horizontal and vertical. The horizontal argument specifies the padding on the left and right sides of the widget and the vertical argument specifies the padding on the top and bottom sides of the widget. The padding values are determined by the AppLayout.getHeight utility method.
 </br>
  ## Outcome
+ </br>
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2013.PNG)
 </br>
 </br>
@@ -1419,6 +1431,7 @@ This code creates a AppGameTabs widget, a Gap widget, and a Container widget wit
 The AppGameTabs widget displays two tabs with fixed titles. It does not have any children.
 </br>
 ## Outcome
+</br>
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2014.PNG)
 </br>
 </br>
@@ -1441,6 +1454,7 @@ The Container widget has a padding property that adds space around the widget. T
 The GameView widget displays a list of games. It has two properties: list and isColor. The list property specifies the list of games to display and the isColor property determines whether the background color of the widget should be applied or not.
 </br>
 ## Outcome
+</br>
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2015.PNG)
 
 ```dart
@@ -1596,6 +1610,7 @@ dev_dependencies:
 ```
 </br>
 ## Outcome
+</br>
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2016.PNG)
 </br>
 </br>
@@ -1649,12 +1664,14 @@ The Container widget has some padding and a single child, a GameView widget. The
 The Positioned widgets are used to position their children within their parent widget. They have a left and top property that determine the position of the child within the parent. The Positioned widgets have a Container widget as their child. The Container widget has some padding and a BoxDecoration that adds a border around it. It also has a single child, a CircleAvatar widget. The CircleAvatar widget displays an avatar in the form of a circle. It has a maxRadius property that determines the size of the avatar and a backgroundColor property that specifies the background color of the avatar.
  </br>
  ## Outcome
+ </br>
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2017.PNG)
 </br>
 </br>
 </br>
 </br>
 ## **Profile Screen**
+</br>
 The final screen of our appplication is next. Still within the `screens` folder, create a file. You may opt to name it `profile_screen.dart`, or not. 
 </br>
 ```dart
@@ -1779,6 +1796,7 @@ This code is creating a layout with a spacer and a column with a single InkWell 
 </br>
 
 ## Outcome
+</br>
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2018.PNG)
 </br>
 </br>
@@ -1856,6 +1874,7 @@ This is done by:
 * Another gap with a height of 8 logical pixels.
 * A stack containing several nested containers. The outermost container has a height of 90 logical pixels and a circular pink background color with a border radius of 18 logical pixels. The middle container has a transparent background and a circular border. The innermost container has padding and contains a row with an avatar icon, a gap, and a column of text. The avatar icon is a white light bulb on a circular background and the text includes a headline and a subheadline, both in white.
 # Outcome
+</br>
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2019.PNG)
 </br>
 </br>
@@ -1875,6 +1894,7 @@ The code snippet above creates:
 * Another gap with a height of 20 logical pixels.
 </br>
 ## Outcome
+</br>
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2020.PNG)
 </br>
 </br>
@@ -2012,6 +2032,7 @@ Container(
 Another gap with a height of 20 logical pixels.
 </br>
 ## Outcome
+</br>
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2021.PNG)
 </br>
 </br>

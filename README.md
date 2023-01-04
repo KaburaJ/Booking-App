@@ -22,7 +22,7 @@ This repository contains a booking app which targets gaming shops. This app can 
     6. [Home Screen](https://github.com/KaburaJ/Booking-App#home-screen)
     7. [Search_Screen](https://github.com/KaburaJ/Booking-App#search-screen)
     8. [Games ticket view](https://github.com/KaburaJ/Booking-App/blob/main/README.md#games-ticket-view)
-    9. 
+    9. [Profile Screen](https://github.com/KaburaJ/Booking-App/blob/main/README.md#profile-screen)
 5. [links](#links)
 
 # Overview
@@ -1930,8 +1930,6 @@ Container(
                           spreadRadius: 1,
                         )
                       ]),
- ```
- ```dart
                   child: Column(
                     children: [
                       Gap(
@@ -1958,8 +1956,6 @@ Container(
                           ),
                         ],
                       ),
- ```
- ```dart
                       Gap(
                         AppLayout.getHeight(20),
                       ),
@@ -1983,8 +1979,6 @@ Container(
                           )
                         ],
                       ),
- ```
- ```dart
                       Gap(
                         AppLayout.getHeight(20),
                       ),
@@ -2008,16 +2002,12 @@ Container(
                           )
                         ],
                       ),
- ```
- ```dart
                       Gap(
                         AppLayout.getHeight(20),
                       ),
                       Divider(
                         color: Colors.grey.shade300,
                       ),
- ```
- ```dart
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -2046,7 +2036,7 @@ Container(
                       ]))
                     ],
                   ))
-    ```
+ ```
  This code creates:
 * A gap with a height of 8 logical pixels.
 * A text element displaying a large number with a particular style.

@@ -5,7 +5,7 @@ This repository contains a booking app which targets gaming shops. This app can 
 2. [Development](#Development)
     1. [The_Nitty_Gritties](https://github.com/KaburaJ/Booking-App/blob/main/README.md#the-nitty-gritties)
         1. [Definitions](#Definitions)
-3. [#Let's_Dive_into_it!](https://github.com/KaburaJ/Booking-App/blob/main/README.md#lets-dive-into-it)
+3. [Let's_Dive_into_it!](https://github.com/KaburaJ/Booking-App/blob/main/README.md#lets-dive-into-it)
     1. [main.dart](https://github.com/KaburaJ/Booking-App#maindart)
     2. [bottom_bar.dart](https://github.com/KaburaJ/Booking-App#bottom_bardart)
     3. [Utils](https://github.com/KaburaJ/Booking-App#utils)
@@ -386,7 +386,7 @@ That being said, the two lists above will be the basis of most of the visuals we
 ## **Widgets**
 In any programming language, the reusability of code is essential. Since our app's layout has a number of features which may be repetitive, it is important to create code that is reusable in multiple screens. That being said, we create a ```widgets``` folder within the ```lib``` folder. Here, we will have:
 
-1. **double_text_widget.dart**
+### **double_text_widget.dart**
 Since at one point in time we will be required to format text such as 'Games' and 'View all', this particular dart file is very important. Well, at least in this application.
 
 ```dart
@@ -427,7 +427,7 @@ Next, we create a ```stateless``` widget which we name ```AppDoubleTextWidget```
 
 In this case, we will be returning a row and within it, we will utilize the ```mainAxisAlignment``` and constrain it as per the space between. That way, whichever text we put first and the second one, will be spaced according to the space between them. We then start defining our text and declaring their style. For our ```smallText```, things are a bit different. The ```InkWell``` function which is used here defines what the user will tap and its ```onTap``` parameter contains the definition of how the application ought to behave. Right now, it is not doing anything but should we want some form of response, we will be required to edit the ```onTap``` function. In the Inkwell's child, the small text as well as its style is defined.
 
-2. **column_layout.dart**
+### **column_layout.dart**
 
 ![column_layout image](https://github.com/KaburaJ/Booking-App/blob/main/images/Image002.PNG)
 
@@ -494,7 +494,7 @@ dependencies:
   gap: ^2.0.0
 ```
 
-3. **game_tabs.dart**
+### **game_tabs.dart**
 
 ![Expected result image](https://github.com/KaburaJ/Booking-App/blob/main/images/Image001.PNG)
 
@@ -572,7 +572,7 @@ The second ```Container``` within the ```Row``` which is wrappped in a ```Contai
 
 This last bit of the code ensures that overall, the container retains a circular form.
 
-4. **icon_text_widget.dart**
+### **icon_text_widget.dart**
 
 [Image]
 This user-defined package provides a layout of the text that accompanies an icon.
@@ -637,7 +637,7 @@ child: Row(
 
 A ```Row``` that is within the ```Container``` is defined. Its ```children``` include ```Icon``` and ```Text``` which are separated by a gap of 10 pixels.
 
-5. **layout_builder_widget.dart**
+### **layout_builder_widget.dart**
 
 We shall import the ```package:flutter/material.dart```.
 
@@ -693,7 +693,7 @@ The build method returns a LayoutBuilder widget that takes in a BuildContext and
 The Flex widget also takes in a list of children, which are generated using the List.generate method. This method creates a new list of SizedBox widgets, with each widget having a width of 1 and a height of 1. The SizedBox widget is a box that takes up a specific amount of space.
 Futhermore, Each SizedBox widget also has a DecoratedBox widget as a child. The DecoratedBox widget is a box that can be decorated with a background color, border, and more. The background color of the DecoratedBox is determined by the isColor parameter. If it is null, the color is set to white, otherwise it is set to grey.
 
-6. **thick_container.dart** 
+### **thick_container.dart** 
 
 Import ```package:flutter/material.dart```
 

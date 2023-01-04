@@ -2030,7 +2030,7 @@ Container(
 * A divider with a grey color.
 * Several rows, each with two instances of a custom AppColumnLayout widget and a divider in between. Each AppColumnLayout widget displays a number and a label, and can be aligned to either end of the row.
 Another gap with a height of 20 logical pixels.
-</br>
+
 ## Outcome
 </br>
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2021.PNG)

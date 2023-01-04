@@ -1915,6 +1915,7 @@ The code snippet above creates:
 </br>
 </br>
 </br>
+ The following code creates:
 ```dart
 Container(
                   padding:
@@ -1940,6 +1941,9 @@ Container(
                               fontSize: 45,
                               color: Styles.bgColor,
                               fontWeight: FontWeight.w600)),
+```
+* A container that has some padding, a rounded border, a solid color background, and a box shadow. It also has a single child, which is a column widget containing a gap and a text widget. The text widget displays the string "193745" with a font size of 45 and a white color, and is given a font weight of "w600", which is a slightly bolder weight than the default.
+```dart
                       Gap(
                         AppLayout.getHeight(20),
                       ),
@@ -1962,6 +1966,9 @@ Container(
                       Divider(
                         color: Colors.grey.shade300,
                       ),
+ ```
+ * Another column widget as a child of the container. This column has several children: a gap, a row widget with two text widgets, and another gap. The row widget has mainAxisAlignment set to "spaceBetween", which means that the two children will be positioned at the beginning and end of the row, with space evenly distributed between them. The text widgets display the strings "Games Played" and "31 Dec 2022", respectively, with a font size of 16 and a style defined by the "headLineStyle4" constant. The column also has a divider widget as a child, which will display a horizontal line with a grey color.
+ ```dart
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -1979,6 +1986,12 @@ Container(
                           )
                         ],
                       ),
+  ```
+* A row widget with two children, each of which is an instance of a custom "AppColumnLayout" widget. The row has mainAxisAlignment set to "spaceBetween", so the two children will be evenly distributed at the beginning and end of the row.
+</br>
+The "AppColumnLayout" widget appears to have four named parameters: "firstText", "secondText", "alignment", and "isColor". It's likely that this widget displays two pieces of text and allows some customization of the text alignment and coloring. The "firstText" and "secondText" parameters probably specify the text to be displayed, while the "alignment" parameter controls the alignment of the text within the widget. The "isColor" parameter might be a boolean that determines whether the widget is colored or not.
+</br>
+  ```dart
                       Gap(
                         AppLayout.getHeight(20),
                       ),
@@ -2002,6 +2015,13 @@ Container(
                           )
                         ],
                       ),
+ ```
+* Another row widget with two children, each of which is an instance of the "AppColumnLayout" widget. The row has mainAxisAlignment set to "spaceBetween", so the two children will be evenly distributed at the beginning and end of the row.
+
+The "AppColumnLayout" widget appears to have four named parameters: "firstText", "secondText", "alignment", and "isColor". It's likely that this widget displays two pieces of text and allows some customization of the text alignment and coloring. The "firstText" and "secondText" parameters probably specify the text to be displayed, while the "alignment" parameter controls the alignment of the text within the widget. The "isColor" parameter might be a boolean that determines whether the widget is colored or not.
+
+This code also includes a divider widget as a child of the column, which will display a horizontal line with a grey color.
+ ```dart
                       Gap(
                         AppLayout.getHeight(20),
                       ),
@@ -2037,15 +2057,12 @@ Container(
                     ],
                   ))
  ```
- This code creates:
-* A `gap` with a height of 8 logical pixels.
-* A `text` element displaying a large number with a particular style.
-* Another `gap` with a height of 20 logical pixels.
-* A `row` with two text elements displaying dates and aligned to opposite ends of the row.
-* Another `gap` with a height of 20 logical pixels.
-* A `divider` with a grey color.
-* Several rows, each with two instances of a custom `AppColumnLayout` widget and a `divider` in between. Each `AppColumnLayout` widget displays a number and a label, and can be aligned to either end of the row.
-Another gap with a height of 20 logical pixels.
+* The remainder of the children of the container widget. It includes another row widget with two children, each of which is an instance of the "AppColumnLayout" widget. The row has mainAxisAlignment set to "spaceBetween", so the two children will be evenly distributed at the beginning and end of the row.
+</br>
+The "AppColumnLayout" widget appears to have four named parameters: "firstText", "secondText", "alignment", and "isColor". It's likely that this widget displays two pieces of text and allows some customization of the text alignment and coloring. The "firstText" and "secondText" parameters probably specify the text to be displayed, while the "alignment" parameter controls the alignment of the text within the widget. The "isColor" parameter might be a boolean that determines whether the widget is colored or not.
+</br>
+This code also includes another divider widget as a child of the column, and a container widget with a single child, which is a column widget containing a gap and a divider widget.
+
 
 ## Outcome
 
@@ -2057,11 +2074,11 @@ Another gap with a height of 20 logical pixels.
 # We made it!
 Now that we've created the home, search, game tickets and profile screens, we have created pretty much the whole project. There is room for improvement in terms of making it useful in the real world but so far, so good. To share it with peers publicly, one has to deploy their application. There are several platforms, GitHub Pages being one of them. This [tutorial](https://maheshmnj.medium.com/deploying-your-flutter-webapp-to-github-pages-111ff9e5cbc9) details the procedure clearly.
 
-</br>
-## Acknowledgements
+# Acknowledgements
  - [Awesome Flutter Tutorial](https://www.youtube.com/watch?v=71AsYo2q_0Y)
  - [Awesome Guide to deploy Flutter app to GitHub Pages](https://github.com/matiassingers/awesome-readme)
  - [Awesome Guide to deploy Flutter app to GitHub Pages](https://maheshmnj.medium.com/deploying-your-flutter-webapp-to-github-pages-111ff9e5cbc9)
+</br>
 </br>
 ## 🔗 Links
 

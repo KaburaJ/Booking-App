@@ -860,7 +860,249 @@ The build method returns a Container widget that has padding on all sides and a 
 The Container widget is a box that can contain other widgets and apply padding and a border around them.
 </br>
 
+*Detour:
+Remember our info list that was to act like our makeshift database? Well, we shall retrieve data from it in this short segment that may seem like a detour but is actually very important. In the `screen` folder, we shall create a new file. We can name it `game_view.dart`. It should contain the following code:*
+```dart
+import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
+import 'package:get/utils.dart';
+import 'package:kaburacreates/utils/app_layout.dart';
+import 'package:kaburacreates/widgets/layout_builder_widget.dart';
+import 'package:kaburacreates/widgets/thick_container.dart';
+import '../utils/app_styles.dart';
+import '../widgets/column_layout.dart';
+```
+*First, we import our libraries*
+```dart
+class GameView extends StatelessWidget {
+  final Map<String, dynamic> list;
+  final bool? isColor;
+  const GameView({Key? key, required this.list, this.isColor})
+      : super(key: key);
+```
+*This code defines a class called "GameView" which extends the "StatelessWidget" class. The "GameView" class has two final properties: "list" and "isColor".
+</br>
+The "list" property is of type "Map<String, dynamic>" and is required when constructing an instance of "GameView". The "isColor" property is of type "bool?" (nullable boolean) and is not required when constructing an instance of "GameView".*
 
+```dart
+@override
+  Widget build(BuildContext context) {
+    final size = AppLayout.getSize(context);
+    return SizedBox(
+      width: size.width * 0.85,
+      height: AppLayout.getHeight(GetPlatform.isAndroid == true ? 167 : 177),
+      child: Container(
+        margin: EdgeInsets.only(right: AppLayout.getHeight(16)),
+        child: Column(children: [
+          Container(
+            decoration: BoxDecoration(
+                color: isColor == null ? const Color(0xfffbf8fa) : Colors.white,
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(AppLayout.getHeight(21)),
+                    topRight: Radius.circular(AppLayout.getHeight(21)))),
+            padding: EdgeInsets.all(AppLayout.getHeight(16)),
+ ```
+ *This code is defining the "build" method of the "GameView" class. In this case, the "build" method first retrieves the device's screen size using the "AppLayout.getSize" method and passing in the "context" argument. It then returns a "SizedBox" widget, which is a widget that has a fixed size. The width of the "SizedBox" widget is set to 85% of the screen width, and the height is set to a fixed value that is dependent on the platform.
+</br>
+Inside the "SizedBox" widget, there is a "Container" widget which has a "Column" widget as its child. The "Container" widget has a "BoxDecoration" with a background color that is either white or a light shade of pink (depending on the value of the "isColor" property) and rounded corners at the top. The "Container" widget also has some padding around its content.*
+
+```dart
+child: Column(children: [
+              Row(
+                children: [
+                  Text(
+                    list['001_Available']['code'],
+                    style: isColor == null
+                        ? Styles.headLineStyle3.copyWith(color: Colors.black)
+                        : Styles.headLineStyle3,
+                  ),
+                  Expanded(child: Container()),
+                  const ThickContainer(
+                    isColor: true,
+                  ),
+                  Expanded(
+                      child: SizedBox(
+                          height: AppLayout.getHeight(24),
+                          child: AppLayoutBuiderWidget(
+                            sections: 6,
+                          ))),
+                  const ThickContainer(
+                    isColor: true,
+                  ),
+                  Expanded(child: Container()),
+                  Text(
+                    list['002_Available']['code'],
+                    style: isColor == null
+                        ? Styles.headLineStyle4.copyWith(color: Colors.black)
+                        : Styles.headLineStyle3,
+                  ),
+                ],
+              ),
+```
+*This code is defining a layout for a widget that is made up of a Column with a single Row as its child. The Row has several children: a Text widget, two Expanded widgets with Containers as their children, two ThickContainer widgets, and another Text widget. The Text widgets are displaying text from the list parameter, which is a map of dynamic values. The Expanded widgets with Containers as their children are taking up all the remaining space in the row, while the ThickContainer widgets are fixed-width widgets. The isColor parameter is used to determine the text style for the Text widgets. If isColor is null, the text style will be Styles.headLineStyle3 with the text color set to black. If isColor is not null, the text style will be Styles.headLineStyle3 with the default text color. The AppLayoutBuiderWidget widget is a custom widget that appears to create a row of sections with a fixed width.*
+
+```dart
+const Gap(3),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SizedBox(
+                    width: AppLayout.getWidth(100),
+                    child: Text(
+                      list['001_Available']['name'],
+                      style: isColor == null
+                          ? Styles.headLineStyle4.copyWith(color: Colors.black)
+                          : Styles.headLineStyle4,
+                    ),
+                  ),
+                  Text(
+                    list['available_time'],
+                    style: isColor == null
+                        ? Styles.headLineStyle4
+                            .copyWith(color: Color(0xff131212))
+                        : Styles.headLineStyle4,
+                  ),
+                  SizedBox(
+                    width: AppLayout.getWidth(100),
+                    child: Text(
+                      list['002_Available']['name'],
+                      textAlign: TextAlign.end,
+                      style: isColor == null
+                          ? Styles.headLineStyle4
+                              .copyWith(color: Color(0xff141414))
+                          : Styles.headLineStyle4,
+                    ),
+                  ),
+```
+*This code is creating a column widget that contains a row widget and two other widgets. The row widget contains several children widgets which include Text widgets, an Expanded widget with an empty container child, a ThickContainer widget, another Expanded widget with an SizedBox widget as the child, another ThickContainer widget, another Expanded widget with an empty container child, and another Text widget. The two other widgets are a Gap widget with a height of 3 pixels and another row widget with three children widgets which include two SizedBox widgets with Text widgets as children and a Text widget.*
+
+```dart
+Container(
+              color: isColor == null ? Styles.orangeColor : Color(0xff161616),
+              child: Row(
+                children: [
+                  SizedBox(
+                    height: AppLayout.getWidth(20),
+                    width: AppLayout.getWidth(10),
+                    child: DecoratedBox(
+                        decoration: BoxDecoration(
+                            color: isColor == null
+                                ? Colors.grey.shade200
+                                : Colors.white,
+                            borderRadius: BorderRadius.only(
+                                topRight: Radius.circular(
+                                  AppLayout.getHeight(10),
+                                ),
+                                bottomRight: Radius.circular(
+                                  AppLayout.getHeight(10),
+                                )))),
+                  ),
+  ```
+*This code is creating a container with a colored background. The color of the background is determined by the isColor parameter. If isColor is null, then the background color is set to Styles.orangeColor. Otherwise, the background color is set to Color(0xff161616), which is a shade of black.
+</br>
+Inside this container, there is a single row containing a SizedBox widget. The SizedBox has a height of AppLayout.getWidth(20) and a width of AppLayout.getWidth(10). The SizedBox also has a DecoratedBox as its child. The DecoratedBox has a decoration which includes a colored background and rounded corners. The color of the background is determined by the isColor parameter. If isColor is null, then the background color is set to Colors.grey.shade200. Otherwise, the background color is set to Colors.white. The rounded corners have a radius of AppLayout.getHeight(10).*
+
+```dart
+Expanded(
+                      child: Padding(
+                    padding: EdgeInsets.all(
+                      AppLayout.getHeight(12),
+                    ),
+                    child: LayoutBuilder(
+                      builder:
+                          (BuildContext context, BoxConstraints constraints) {
+                        return Flex(
+                          direction: Axis.horizontal,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          mainAxisSize: MainAxisSize.max,
+                          children: List.generate(
+                              (constraints.constrainWidth() / 15).floor(),
+                              (index) => SizedBox(
+                                    width: AppLayout.getWidth(5),
+                                    height: AppLayout.getHeight(1),
+                                    child: DecoratedBox(
+                                        decoration: BoxDecoration(
+                                            color: isColor == null
+                                                ? Colors.white
+                                                : Colors.grey.shade300)),
+                                  )),
+                        );
+                      },
+                    ),
+                  )),
+```
+*This code is building a UI element that consists of a row with three elements:
+</br>
+1. *A text widget that displays the value of the "code" field in the "001_Available" object of the "list" map. The text style for this widget is determined by the "isColor" bool value. If "isColor" is null, the text style is "Styles.headLineStyle3" with the color set to black. If "isColor" is not null, the text style is "Styles.headLineStyle3" with no color modification.*
+2. *A "ThickContainer" widget with its "isColor" field set to true.
+3. *A row of "AppLayoutBuiderWidget" widgets with "sections" set to 6 and no other properties set.
+Another "ThickContainer" widget with its "isColor" field set to true.
+4. *A text widget that displays the value of the "code" field in the "002_Available" object of the "list" map. The text style for this widget is determined by the "isColor" bool value. If "isColor" is null, the text style is "Styles.headLineStyle4" with the color set to black. If "isColor" is not null, the text style is "Styles.headLineStyle3" with no color modification.*
+```dart
+SizedBox(
+                    height: AppLayout.getHeight(20),
+                    width: AppLayout.getWidth(10),
+                    child: DecoratedBox(
+                        decoration: BoxDecoration(
+                            color: isColor == null
+                                ? Colors.grey.shade200
+                                : Colors.white,
+                            borderRadius: BorderRadius.only(
+                                topLeft:
+                                    Radius.circular(AppLayout.getHeight(10)),
+                                bottomLeft:
+                                    Radius.circular(AppLayout.getHeight(10))))),
+                  )
+```
+*This code is creating a SizedBox widget with a width of 10 logical pixels and a height of 20 logical pixels. The SizedBox widget is then decorated with a BoxDecoration that sets its color to either Colors.grey.shade200 or Colors.white depending on the value of the isColor boolean parameter. The BoxDecoration also sets the border radius of the SizedBox widget to have rounded corners on the top-left and bottom-left edges. The SizedBox widget is then displayed on the screen.*
+```dart
+Container(
+            decoration: BoxDecoration(
+                color: isColor == null ? Styles.orangeColor : Colors.white,
+                borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(isColor == null
+                        ? AppLayout.getHeight(21)
+                        : AppLayout.getHeight(0)),
+                    bottomRight: Radius.circular(isColor == null
+                        ? AppLayout.getHeight(21)
+                        : AppLayout.getHeight(0)))),
+            padding: EdgeInsets.only(
+                left: AppLayout.getWidth(16),
+                top: AppLayout.getHeight(10),
+                right: AppLayout.getWidth(16),
+                bottom: AppLayout.getHeight(16)),
+            child: Column(children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  AppColumnLayout(
+                    firstText: list['date'],
+                    secondText: "DATE",
+                    alignment: CrossAxisAlignment.start,
+                    isColor: isColor,
+                  ),
+                  AppColumnLayout(
+                    firstText: list['time'],
+                    secondText: "TIME",
+                    alignment: CrossAxisAlignment.center,
+                    isColor: isColor,
+                  ),
+                  AppColumnLayout(
+                    firstText: list['players'],
+                    secondText: "PLAYER",
+                    alignment: CrossAxisAlignment.end,
+                    isColor: isColor,
+                  ),
+                ],
+              )
+            ]),
+          )
+ ```
+*This code is creating a widget for displaying information about a game. The widget has two sections, separated by a horizontal divider. The top section contains a Row with three AppColumnLayout widgets, each displaying a piece of information about the game (date, time, and number of players). The bottom section is a container with a solid color background (either orange or white, depending on the value of isColor). It contains a Column with a single Row inside it. This Row contains three more AppColumnLayout widgets, which again display information about the game (date, time, and number of players). The AppColumnLayout widgets are used to display the information in a consistent way, with a label and a value aligned vertically. The isColor parameter determines whether the widget should use a light or dark color scheme.*
+
+</br>
+</br>
+</br>
 ## **Home Screen**
 
 Here, we define what we want to be seen in our home page. A file is created in  the ```screens``` folder and named ```home_screen.dart``` Here's the procedure followed in this project:
@@ -1747,6 +1989,9 @@ return Scaffold(
                     AppLayout.getHeight(10),
                   ),
  ```
+This code is defining a "Scaffold" widget with a white background color, and a single child, which is a "ListView" widget. The "ListView" has padding and a single child, which is a row widget with two children. The first child is a container widget with a height and width of 86 pixels, and a decoration that includes a rounded corner border and an image. The second child is a gap widget with a fixed height of 10 pixels.
+</br>
+The container widget has a single child, which is an image widget displaying the image specified by the "assets/images/img2.jpg" asset. The image is displayed within the container with a rounded corner border. The gap widget is likely used to add some space between the container and the next widget.
  ```dart
                   Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -1766,6 +2011,14 @@ return Scaffold(
                                 BorderRadius.circular(AppLayout.getHeight(100)),
                             color: Color(0xFFFEF4F3),
                           ),
+```
+This code defines a column widget with three children. The first child is a text widget displaying the string "Book Games" with a style defined by the "headLineStyle" constant. The second child is a gap widget with a fixed height of 2 pixels, and the third child is a text widget displaying the string "Kabura Creates" with a custom text style.
+</br>
+The column also has two named parameters set: "crossAxisAlignment" and "mainAxisAlignment". "crossAxisAlignment" is set to "start", so the children will be aligned along the start of the column, and "mainAxisAlignment" is set to "start", so the children will be aligned along the start of the main axis.
+</br>
+The column has a single grandchild, which is a container widget with a single child, which is a gap widget with a fixed height of 8 pixels. The container has a decoration with a rounded corner border and a light pink background color.
+
+```dart
                           padding: EdgeInsets.symmetric(
                               horizontal: AppLayout.getHeight(3),
                               vertical: AppLayout.getHeight(3)),
@@ -1794,9 +2047,14 @@ return Scaffold(
                         )
                       ]),
 ```
-This code is creating a layout for a profile screen in a Flutter app. It has a header with an image, name, and username. It also has a section for a premium status badge, which is a purple circle with a white shield icon. The header is a Row with a circular image on the left and the name, username, and premium status badge on the right. The premium status badge is a Container with a purple background and white shield icon.
+This code defines a row widget with three children as a child of the container widget. The row has a single grandchild, which is a gap widget with a fixed height of 6 pixels.
 </br>
-This is done by creating a ListView widget with a padding around the edges and a Gap widget as the first child. Then it creates a Row widget with two children: a Container widget with a circular border and an image, and a Column widget with various text and other widgets as children. The Gap widget is used to add space between the widgets. The Column widget contains a Text widget for the user's name, another Text widget for their username, another Gap widget, and a Container widget with a circular border and a Row widget as its child. The Row widget contains a Container widget with a circular border and an icon as its child, a Gap widget, a Text widget, and another Gap widget.
+The first child of the row is a container widget with a single child, which is an icon widget. The container has padding and a decoration with a circular shape and a dark purple background color. The icon widget displays a shield icon in white color and has a size of 15 pixels.
+</br>
+The second child of the row is a gap widget with a fixed height of 6 pixels, and the third child is a text widget displaying the string "Premium Status" with a dark purple color and a font weight of 600.
+</br>
+*The code snippets above create a layout for a profile screen in a Flutter app. It has a header with an image, name, and username. It also has a section for a premium status badge, which is a purple circle with a white shield icon. The header is a Row with a circular image on the left and the name, username, and premium status badge on the right. The premium status badge is a Container with a purple background and white shield icon.*
+
 </br>
 </br>
 ```dart
@@ -1823,6 +2081,7 @@ This code is creating a layout with a spacer and a column with a single InkWell 
 </br>
 </br>
 </br>
+
 
 ```dart
 Gap(
@@ -1854,6 +2113,13 @@ Gap(
                               Border.all(width: 18, color: Color(0xff7e1154))),
                     )),
  ```
+* The code above defines a gap widget with a fixed height of 8 pixels as a child of the "ListView" widget, followed by a divider widget with a grey color, and another gap widget with a fixed height of 8 pixels.
+</br>
+The code also defines a stack widget with a single child, which is a container widget. The stack widget has a single grandchild, which is a positioned widget.
+</br>
+The container widget has a fixed height of 90 pixels and a width of "double.infinity", so it will take up all the available horizontal space. It also has a decoration with a dark purple background color and rounded corners.
+</br>
+The positioned widget is positioned 45 pixels to the right and 40 pixels from the top of the container widget. It has padding and a decoration with a transparent color, a circular shape, and a border with a width of 18 pixels and a dark purple color.
  ```dart
                 Container(
                   padding: EdgeInsets.symmetric(
@@ -1890,13 +2156,12 @@ Gap(
                         )
                       ]),
   ```
-This code defines a Flutter widget for displaying a message about a new reward. The widget consists of several UI elements stacked together: a gap, a divider, another gap, and then a stack containing a container with a circular background color and border radius, another container with a transparent background and border, and a third container with padding and containing a row with an avatar icon, a gap, and a column of text. The avatar icon is a light bulb and the text includes a headline and a subheadline. The text and the avatar icon are both white, while the background container has a color of Color(0xffa42d87), which is a shade of pink.
+* This code defines a container widget with a single child, which is a row widget. The container has padding and the row widget has two children and one grandchild.
 </br>
-This is done by:
-* A gap with a height of 8 logical pixels.
-* A divider with a grey color.
-* Another gap with a height of 8 logical pixels.
-* A stack containing several nested containers. The outermost container has a height of 90 logical pixels and a circular pink background color with a border radius of 18 logical pixels. The middle container has a transparent background and a circular border. The innermost container has padding and contains a row with an avatar icon, a gap, and a column of text. The avatar icon is a white light bulb on a circular background and the text includes a headline and a subheadline, both in white.
+The first child of the row widget is a circle avatar widget with a single child, which is an icon widget. The circle avatar widget has a maximum radius of 25 pixels and a white background color. The icon widget displays a lightbulb icon in dark purple color and has a size of 27 pixels.
+</br>
+*The code snippets above define a Flutter widget for displaying a message about a new reward. The widget consists of several UI elements stacked together: a gap, a divider, another gap, and then a stack containing a container with a circular background color and border radius, another container with a transparent background and border, and a third container with padding and containing a row with an avatar icon, a gap, and a column of text. The avatar icon is a light bulb and the text includes a headline and a subheadline. The text and the avatar icon are both white, while the background container has a color of Color(0xffa42d87), which is a shade of pink.*
+
 # Outcome
 
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2019.PNG)

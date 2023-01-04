@@ -1,15 +1,40 @@
 # Booking-App
 
+# Table of contents
+1. [Overview](#Overview)
+2. [Development](#Development)
+    1. [The Nitty Gritties](#The Nitty Gritties)
+       1. [Definitions](#Definitions)
+3. [Let's Dive into it!](#Let's Dive into it!)
+    1. [main.dart](#main.dart)
+    2. [bottom_bar.dart](#bottom_bar.dart)
+    3. [Utils](#Utils)
+        1. [app_layout.dart](#app_layout.dart)
+        2. [app_styles.dart](#app_styles.dart)
+        3. [app_info_list.dart](#app_info_list.dart)
+    5. [Widgets](#Widgets)
+        1. [double_text_widget.dart](#double_text_widget.dart)
+        2. [column_layout.dart](#column_layout.dart)
+        3. [game_tabs.dart](#game_tabs.dart)
+        4. [icon_text_widget.dart](#icon_text_widget.dart)
+        5. [layout_builder_widget.dart](#layout_builder_widget.dart)
+        6. [thick_cotainer.dart](#thick_container.dart)
+    6. [home_screen.dart](#home_screen.dart)
+    7. [Search Screen.dart](#Search Screen.dart)
+5. [links](#links)
+
 This repository contains a booking app which targets gaming shops. This app can be accessed [here](https://kaburaj.github.io/Booking-App)
 
-## Overview
+# Overview
 This app, though currently more of a UI representation of the end goal, is supposed to be updated by the gaming shop owner. These changes are to be showcased in real time hence the app is dynamic nature. The clients, on the other hand, can now book the available games in advance instead of going to the shop and waiting in line, thus wasting time. To put a spin on it, I thought of categorizing the games in terms of availability and the number of players it requires. For example, the client might opt for a multi-player game at a certain time. This game will remain in the available games tab up until the maximum number of players for that game (usually 2) is reached. 
 
-## Development
+# Development
 In the creation of this application, [Flutter](https://www.geeksforgeeks.org/what-is-flutter/), which supports cross-platform applications, was used. In my case, I used [FlutLab](https://flutlab.io/) in the execution of code initially. Afterwards, I incorporated VS Code in the final building and eventual deployment to Github pages. No special reason though, the choice of IDE was done based on preference.
 
 ## The Nitty Gritties
 Setting up a [Flutter environment](https://flutter.io/get-started/editor/) On opening any Flutter IDE, one is welcomed by a screen with code already on it. In my case, it was the 'Hello World' project. For a smile's sake, I would advice one to run it, feel proud, press and hold Ctrl+A and delete. Mostly, the lib/main.dart is what will be edited.
+
+### Definitions
 Before diving into the code, certain key words have to be understood. They include:
 1. **Widget** 
 This feature is graphical and provides information through which a user can interact with an application. Widgets are of two types: **Stateless** and **stateful**.
@@ -44,7 +69,7 @@ When called, it creates a widget that scales and positions its child within itse
 
 PS: The UI/ layout design comes first before any coding can be done. 
 
-### Let's Dive into it!
+# Let's Dive into it!
 
 Looking at the homescreen UI [here](https://kaburaj.github.io/Booking-App), there's:
 * some form of text. Furthermore, the text is of varying fontsize.
@@ -208,9 +233,12 @@ dependencies:
 Getting back to the ```items``` section of the code, we will go through the home icon. This will be similar for all four icons except for the label.
 ```items``` is a list and within it is a ```BottomNavigationBarItem``` widget which takes in ```icon``` as an argument. Here, I selected the ```FluentSystemIcons.ic_fluent_home_regular``` which is basically an outline of a home icon. For the ```activeIcon``` section, the filled version of the home icon was selected. That way when selected, this icon got filled and when unselected, it was not. 
 
-## **app_layout.dart**
+## Utils
 
-To make our code more compact and reusable, it is necessary to create libraries. Thus, in the ```lib``` folder, we can create a ```utils``` folder and within it create a new file. This new file can be named ```app_layout.dart```. The following is a code snippet from the file:
+To make our code more compact and reusable, it is necessary to create libraries. Thus, in the ```lib``` folder, we can create a ```utils``` folder and within it create a new file. This new file can be named ```app_layout.dart```. 
+### **app_layout.dart**
+
+The following is a code snippet from the file:
 
 ```dart
 import 'package:flutter/material.dart';
@@ -278,7 +306,7 @@ static getWidth(double pixels) {
 
 * The ```getHeight``` static function that takes in the number of pixels, divides the width of the device by the number of pixels and returns the value computed.
 
-## **app_styles.dart**
+### **app_styles.dart**
 
 Next up is setting up our colors. This file is still within the ```utils``` folder. 
 
@@ -308,7 +336,7 @@ class Styles {
 
 Here, we set up our primary, background, text and headline colors. For consistency's sake, the shade of some of the colors to be used is also declared here. All these are stored in the ```Styles``` class. The ```TextStyle``` allows us to override the default fontsize, colour and weight of different text fields. That way, if at all we required our headline to be in italics, we can define it using TextStyle.
 
-## **app_info_list**
+### **app_info_list**
 Still within the ```utils``` folder, we will have a list of key and value pairs which we will use to make our app dynamic. This can be thought of as our makeshift database. In future, this will be updated by the owner of the gaming shop and will update as automatically.
 
 ```dart
@@ -695,9 +723,9 @@ class ThickContainer extends StatelessWidget {
 The build method returns a Container widget that has padding on all sides and a border with rounded corners. The border has a width of 2.5 and a color that is determined by the isColor parameter. If it is null, the color is set to white, otherwise it is set to a specific color (0xFF8ACCF7). 
 The Container widget is a box that can contain other widgets and apply padding and a border around them.
 
-## **home_screen.dart**
+## **Home Screen**
 
-Here, we define what we want to be seen in our home page. Here's the procedure followed in this project:
+Here, we define what we want to be seen in our home page. A file is created in  the ```screens``` folder and named ```home_screen.dart``` Here's the procedure followed in this project:
 
 ```dart
 import 'package:fluentui_icons/fluentui_icons.dart';

@@ -1307,7 +1307,7 @@ The positioned widget is positioned relatively to the top-right corner of the st
 
 ## Outcome
 
-(https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2011.PNG)
+![fig_1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2011.PNG)
 </br>
 </br>
 </br>
@@ -1424,7 +1424,9 @@ The Gap widget adds some space between the widgets above and below it. The Text 
 The ListView widget also has a padding property that adds some space around the widget. The padding property takes an EdgeInsets object as its value. The EdgeInsets object is constructed using the EdgeInsets.symmetric constructor and takes two arguments: horizontal and vertical. The horizontal argument specifies the padding on the left and right sides of the widget and the vertical argument specifies the padding on the top and bottom sides of the widget. The padding values are determined by the AppLayout.getHeight utility method.
 
 </br>
- ## Outcome
+## Outcome
+
+
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2013.PNG)
 </br>
 </br>
@@ -1496,6 +1498,14 @@ const SizedBox(height: 1),
                           isColor: false,
                           width: 5,
                         ),
+```
+This code defines a "SizedBox" widget with a fixed height of 1 pixel, and a container widget with white background color and padding. The container has a single child, which is a column widget containing a row widget with two children, each of which is an instance of the "AppColumnLayout" widget, and a gap widget. The row has mainAxisAlignment set to "spaceBetween", so the two children will be evenly distributed at the beginning and end of the row.
+</br>
+The "AppColumnLayout" widget appears to have four named parameters: "firstText", "secondText", "alignment", and "isColor". It's likely that this widget displays two pieces of text and allows some customization of the text alignment and coloring. The "firstText" and "secondText" parameters probably specify the text to be displayed, while the "alignment" parameter controls the alignment of the text within the widget. The "isColor" parameter might be a boolean that determines whether the widget is colored or not.
+</br>
+The column also includes a gap widget and an instance of a custom "AppLayoutBuiderWidget" widget as children. It's likely that this widget is used to build some kind of layout or display some UI elements. It has three named parameters: "sections", "isColor", and "width". The "sections" parameter probably specifies the number of sections in the widget, while the "isColor" parameter might control the coloring of the widget. The "width" parameter might control the width of the widget or some other aspect of its appearance.
+</br>
+```dart
                         Gap(AppLayout.getHeight(20)),
                         Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -1520,6 +1530,11 @@ const SizedBox(height: 1),
                           width: 5,
                         ),
   ```
+* This code defines a gap widget and a row widget with two children, each of which is an instance of the "AppColumnLayout" widget, as children of the container's column widget. The row has mainAxisAlignment set to "spaceBetween", so the two children will be evenly distributed at the beginning and end of the row.
+</br>
+The "AppColumnLayout" widget appears to have four named parameters: "firstText", "secondText", "alignment", and "isColor". It's likely that this widget displays two pieces of text and allows some customization of the text alignment and coloring. The "firstText" and "secondText" parameters probably specify the text to be displayed, while the "alignment" parameter controls the alignment of the text within the widget. The "isColor" parameter might be a boolean that determines whether the widget is colored or not.
+</br>
+This code also includes another gap widget and an instance of the "AppLayoutBuiderWidget" widget as children of the column. It's likely that this widget is used to build some kind of layout or display some UI elements. It has three named parameters: "sections", "isColor", and "width". The "sections" parameter probably specifies the number of sections in the widget, while the "isColor" parameter might control the coloring of the widget. The "width" parameter might control the width of the widget or some other aspect of its appearance.
   ```dart
                         Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -1552,6 +1567,11 @@ const SizedBox(height: 1),
                             ])
                       ])),
    ```
+* This code defines a row widget with two children as a child of the container's column widget. The row has mainAxisAlignment set to "spaceBetween", so the two children will be evenly distributed at the beginning and end of the row.
+</br>
+The first child is a column widget with three children: a row widget containing an image and a text widget, a gap widget, and another text widget. The row widget has two children: an image widget and a text widget. The image widget displays the image specified by the "assets/images/img1.jpg" asset, and the text widget displays the string "*** 2712" with a style defined by the "headLineStyle3" constant. The second child of the column is a gap widget with a fixed height of 5 pixels, and the third child is a text widget displaying the string "Payment method" with a style defined by the "headLineStyle4" constant.
+</br>
+The second child of the row is an instance of the "AppColumnLayout" widget. It appears to have four named parameters: "firstText", "secondText", "alignment", and "isColor". It's likely that this widget displays two pieces of text and allows some customization of the text alignment and coloring. The "firstText" and "secondText" parameters probably specify the text to be displayed, while the "alignment" parameter controls the alignment of the text within the widget. The "isColor" parameter might be a boolean that determines whether the widget is colored or not.
    ```dart
                   //Barcode
                   const SizedBox(
@@ -1590,22 +1610,10 @@ const SizedBox(height: 1),
                         ),
                       )),
   ```
-This code creates several widgets including a SizedBox widget, a Container widget, and several instances of the AppColumnLayout and AppLayoutBuiderWidget widgets.
+* This code defines a "SizedBox" widget with a fixed height of 1 pixel, and a container widget with white background color and rounded bottom corners. The container has a single child, which is another container widget with padding and a single child, which is a "ClipRRect" widget. The "ClipRRect" widget has a single child, which is an instance of a custom "BarcodeWidget" widget.
 </br>
-
-The SizedBox widget adds space between the widgets above and below it. It has a fixed height of 1.
+The "BarcodeWidget" widget appears to be used to display a barcode image. It has several named parameters: "barcode", "data", "drawText", "color", "width", and "height". The "barcode" parameter specifies the type of barcode to be generated, "data" specifies the data to be encoded in the barcode, "drawText" is a boolean that determines whether text should be drawn below the barcode image, "color" specifies the color of the barcode image, "width" specifies the width of the widget, and "height" specifies the height of the widget. In this case, the "BarcodeWidget" is set to display a Code 128 barcode, encoded with the data "https://github.com/martinovovo", in black color, with no text below the image and with a width and height of 70 pixels.
 </br>
-The Container widget has some padding and a BoxDecoration with a white background color. It also has a single child, a Column widget. The Column widget has several children including a Row widget, several Gap widgets, and another Row widget.
-</br>
-The Row widget displays its children in a horizontal line. It has a mainAxisAlignment property that determines how the children should be aligned within the row. In this case, the mainAxisAlignment is set to MainAxisAlignment.spaceBetween, which means that the children will be evenly distributed within the row with equal space between them. The Row widget has two children, instances of the AppColumnLayout widget.
-</br>
-The AppColumnLayout widget displays two pieces of text in a column layout. It has four properties: firstText, secondText, alignment, and isColor. The firstText and secondText properties specify the text to display, the alignment property determines the alignment of the text within the widget, and the isColor property determines whether the background color of the widget should be applied or not.
-</br>
-The Gap widget adds some space between the widgets above and below it.
-</br>
-The AppLayoutBuiderWidget widget displays a series of horizontal lines with a fixed number of sections. It has three properties: sections, isColor, and width. The sections property specifies the number of sections to display, the isColor property determines whether the background color of the widget should be applied or not, and the width property specifies the width of the lines in the widget.
-</br>
-
 *For the `barcode` to be created, a package has to be imported onto the `dev_dependencies` section of the `pubspec.yaml` file. Once done, your file should resemble this:*
 
 ```dart

@@ -26,102 +26,108 @@ This repository contains a booking app which targets gaming shops. This app can 
 5. [links](#links)
 
 # Overview
-This app, though currently more of a UI representation of the end goal, is supposed to be updated by the gaming shop owner. These changes are to be showcased in real time hence the app is dynamic nature. The clients, on the other hand, can now book the available games in advance instead of going to the shop and waiting in line, thus wasting time. To put a spin on it, I thought of categorizing the games in terms of availability and the number of players it requires. For example, the client might opt for a multi-player game at a certain time. This game will remain in the available games tab up until the maximum number of players for that game (usually 2) is reached. 
+This app, though currently more of a UI representation of the end goal, is supposed to be updated by the gaming shop owner. These changes are to be showcased in real time hence the application's dynamic nature. The clients, on the other hand, can now book the available games in advance instead of going to the shop and waiting in line, thus wasting time. To put a spin on it, I thought of categorizing the games in terms of availability and the number of players it requires. For example, the client might opt for a multi-player game at a certain time. This game will remain in the available games tab up until the maximum number of players for that game (usually 2) is reached. 
 </br>
 
 
 # Development
-In the creation of this application, [Flutter](https://www.geeksforgeeks.org/what-is-flutter/), which supports cross-platform applications, was used. In my case, I used [FlutLab](https://flutlab.io/) in the execution of code initially. Afterwards, I incorporated VS Code in the final building and eventual deployment to Github pages. No special reason though, the choice of IDE was done based on preference.
+In the creation of this application, [Flutter](https://www.geeksforgeeks.org/what-is-flutter/) framework, which supports cross-platform applications, was used. In my case, I used [FlutLab](https://flutlab.io/) in the execution of code initially. Afterwards, I incorporated VS Code in the final building and eventual deployment to Github pages. No special reason though, the choice of IDE was based on preference.
 </br>
 
 
 ## The Nitty Gritties
-Setting up a [Flutter environment](https://flutter.io/get-started/editor/) On opening any Flutter IDE, one is welcomed by a screen with code already on it. In my case, it was the 'Hello World' project. For a smile's sake, I would advice one to run it, feel proud, press and hold Ctrl+A and delete. Mostly, the lib/main.dart is what will be edited.
+Setting up a [Flutter environment](https://flutter.io/get-started/editor/) is the first course of action. [VS Code](https://code.visualstudio.com/) is preferred. Nonetheless, on opening any Flutter IDE, one is welcomed by a screen with code already on it. In my case, it was the 'Hello World' project. For a smile's sake, I would advice one to run it, feel proud of themselves for a moment, press and hold Ctrl+A and delete. 
 </br>
 
 
 ### Definitions
-Before diving into the code, certain key words have to be understood. They include:
+Before diving into the application's code, certain key words have to be understood. They include:
 </br>
 
 1. **Widget** 
+</br>
 This feature is graphical and provides information through which a user can interact with an application. Widgets are of two types: **Stateless** and **stateful**.
 
 - **Stateless** widgets refer to widgets which are immutable. Simply put, stateless widgets do not change even when there are obvious changes in the app such as variations in the input parameters. A good example is a text widget.
 
 - A **stateful** widget changes in sync with the input data or parameters and are the complete opposite of stateless widgets. They are mutable.
-Thus, in the selection of a stateless or stateful widget- which you will see plenty of times in this project, is entirely based on whether or not the UI at that particular instance is expected to change or not. Stateless, UI will not change. Stateful, UI might change. Well, you get the idea.
+Thus, in the selection of a stateless or stateful widget- which you will see plenty of times in this project, is entirely based on whether or not the UI at that particular instance is expected to change or not. 
+</br>
+`Stateless`, UI will not change. `Stateful`, UI might change. Well, you get the idea.
 </br>
 
 2. **Container**
-From the word itself, a container is some sort of storage system. In Flutter, a container stores widgets which perform various functions such as displaying text, icons and images. It is useful for when these widgets are many and require to be arranged and positioned ina certain way as per the UI design. A container is a widget in its own capacity. It is referred to as a parent widget. It might be obvious, or not, that this parent widget requires a child widget. There are terms that are used within containers. They include:
+</br>
+From the word itself, a container is some sort of storage system. In Flutter, a container stores widgets which perform various functions such as displaying text, icons and images. It is useful for when these widgets are many and require to be arranged and positioned ina certain way as per the UI design. A container is a widget in its own capacity. It is referred to as a parent widget. It might be obvious, or not, that this parent widget requires a child widget. This is true for a `Container`. 
+</br>
+Consequently, there are terms that are used within containers. They include:
 - **Padding**
+</br>
 This widget creates empty space around a widget or a group of widgets. 
 </br>
 
 - **Margin**
-This widget creates empty space around the container itself. In this way, it outlines the application's margin.
+</br>
+Easily confused with padding, this widget creates empty space around the container itself. In this way, it outlines the application's margin.
 </br>
 
 - **Row and Column**
-Rows and columns are usually accompanied by children in the Flutter syntax. As such, a row displays its children in a horizontal manner whereas a column displays these children in a vertical manner.
+</br>
+Rows and columns are usually accompanied by children in the Flutter syntax. As such, a row displays its children in a horizontal manner whereas a column displays these children in a vertical manner. 
+</br>
+*In the interpration of UI design to code, identifying whether you intend to work with a column or row in a particular instance is paramount in the creation of an application.*
 </br>
 
 - **CrossAxisAlignment and MainAxisAlignment**
+</br>
 When it comes to rows, the main axis is horizontal while the cross axis is perpendicular. The opposite is true for columns. Consequently, the terms CrossAxisAlignment and MainAxisAlignment vary in definition depending on whether one is referring to the row or column. However, both properties allow for positioning of widgets. 
 </br>
 
 - **Spacer()**
-Allows for spacing in between widgets. In this project, the widget is replaced by Gap() which carries out a similar funtion.
+</br>
+Of importance is the `spacer()` widget which allows for spacing in between widgets. In this project, the widget is replaced by Gap() which carries out a similar funtion.
 </br>
 
 - **Height and Width**
 </br>
 
 3. **Scaffold**
+</br>
 A scaffold provides the UI layout of an application's screen such as appbar and bottom navigation bar. Where this layout is to be used by default, the scaffold can wrap a container. 
-Although a scaffold and container may seem to overlap in funtioning, a container is more flexible moreso when one is aiming at creating their own layout away from the defaults. 
+Although a scaffold and container may seem to overlap in functioning, a container is more flexible moreso when one is aiming at creating their own layout away from the defaults. 
 </br>
 
 4. **Flex**
-We can refer to flex as a combination of row and column. It facilitates the positioning of widgets either in the vertical or horizontal axes. Unlike row and column which are fixed, flex is flexible.
+</br>
+We can refer to flex as a combination of rows and columns. It facilitates the positioning of widgets either in the vertical or horizontal axes. Unlike row and column whose direction is fixed, flex is flexible.
 </br>
 
 6. **ListView**
-ListView creates children in a list that can be scrolled though either vertically or horizontally.
+</br>
+ListView creates children in a list that can be `scrolled though` either vertically or horizontally. 
 </br>
 
 8. **Stack**
-When one wants widgets to overlap, a stack widget is used. 
+</br>
+When one wants widgets to overlap, a stack widget is used.
 </br>
 
 9. **FittedBox**
+</br>
 When called, it creates a widget that scales and positions its child within itself
 </br>
 
--All these keywords are used at one point or another in this particular project. Now that we have defined everything, we can now dive into the code itself.
+-All these keywords and many others are used at one point or another in this particular project. Now that we have defined a few of the buzzwords, we can now dive into the code.
 
-PS: The UI/ layout design comes first before any coding can be done. 
+*PS: The UI/ layout design comes first before any coding can be done. Thus, it is a good idea to have a vision sketched out to make coding easier and more enjoyable*
 </br>
 </br>
 
 
 # Let's Dive into it!
-
-Looking at the homescreen UI [here](https://kaburaj.github.io/Booking-App), there's:
-* some form of text. Furthermore, the text is of varying fontsize.
-* an image at the top right corner
-* a search space that has a search icon and the word 'search' on it
-* The text 'Available Games' and 'View all' on the same row but at the beginning and end respectively
-* A scrollable section (we'll employ some sort of ListView widget). Worth noting is that this section is scrollable horizontally.
-* The text 'Games' and 'View all' on the same row but at the beginning and end respectively
-* Another scrollable section that has some images and text.
-* Lastly, there is a bottom bar that contains four icons namely: the 'home', 'search', 'games' and 'profile' icons which are clickable.
 </br>
-
- 
 ## **main.dart**
-
+The `main.dart` file is a prerequisite for all Flutter applications and is where the program starts. 
 ```dart
 import 'package:flutter/material.dart';
 import 'package:kaburacreates/screens/bottom_bar.dart';
@@ -132,7 +138,9 @@ void main() => runApp(const MyApp());
 
 
 
-The main.dart file is a prerequisite for all Flutter applications and is where the program starts. It takes one main() function that excecutes any code within it. Simply put, it allows our widgets to be seen by the user. The runApp() method loads the app layout on the emulator's screen. Above it is a list of imports. Some like ```import 'package:flutter/material.dart'``` are standard libraries while others like ```import 'package:kaburacreates/screens/bottom_bar.dart'```are user-defined meaning that in the creation of this project, I created some libraries with the intent of reusing code. 
+It takes one `main()` function that excecutes any code within it. Simply put, it allows our widgets to be seen by the user. The runApp() method loads the app layout on the [emulator's](https://www.geeksforgeeks.org/how-to-run-a-flutter-app-on-android-emulator/) screen. 
+</br>
+Above it is a list of imports. Some like `package:flutter/material.dart` are standard built-in libraries while others like `package:kaburacreates/screens/bottom_bar.dart`are user-defined meaning that in the creation of this project, some libraries were created, the intent being to reuse code. 
 </br>
 
 
@@ -141,7 +149,7 @@ The main.dart file is a prerequisite for all Flutter applications and is where t
   const MyApp({Key? key}) : super(key: key);
   ```
 
-It takes a widget as a parameter in which we ought to pass a root widget. In this case, ```MyApp``` is the widget.
+It takes a widget, `Stateless` in this case, as a parameter in which we ought to pass a root widget. In this case, `MyApp` is the root widget name.
 </br>
 
 
@@ -163,11 +171,17 @@ It takes a widget as a parameter in which we ought to pass a root widget. In thi
 
 ```
 
-The code above is our project's root. That means that it will be the parent widget for all others that follow. It will house our ```Container ``` , ```Scaffold``` among others. ```@override``` allows the overriding of the methods of the parent class. We are overriding the ```build()``` method which takes in the ```BuildContext``` object and returns a widget; ```MaterialApp``` which houses:
- - ```debugShowCheckedModeBanner: false``` hides the debug tag that appears by default on any emulator
- - the title: "Flutter Hello World"
- - a selected theme which, in this case, is the color named 'primary' 
- - The ```home``` widget which allows for one to define the place where the application begins when rerun. In this case, the ```BottomBar``` will be the first to be showcased.
+The code above is our project's root. That means that it will be the parent widget for all others that follow. It will house our `Container ` , `Scaffold` , `Stack` and `ListView` among others. 
+</br>
+`@override` allows the overriding of the methods of the parent class. It is overriding the ```build()``` method which takes in the ```BuildContext``` object and returns a widget; ```MaterialApp``` which houses:
+ - ```debugShowCheckedModeBanner: false``` 
+ </br>
+ which that hides the debug tag that appears by default on any emulator in debug mode
+ - the `title`: "Flutter Hello World"
+ - a selected `theme` which, in this case, is the primary color of the app. `primary` is a user defined variable. 
+ - The `home` widget 
+ </br>
+ which allows for one to define the place where the application begins when rerun. In this case, the ```BottomBar``` will be the first to be showcased.
 </br>
 
 Now that we've gone through the ```main.dart``` file, let's begin by setting up the bottom bar for easier reference.
@@ -179,8 +193,9 @@ Now that we've gone through the ```main.dart``` file, let's begin by setting up 
 ![Bottom Bar](https://github.com/KaburaJ/Booking-App/blob/main/images/Image003.PNG)
 </br>
 
-
-In the ```file explorer``` section of your IDE's interface, you will find the ```lib``` folder. This is where a folder named ```screens``` is created. Within it, create a ```bottom_bar.dart``` file.
+The image above is a snippet of the bottom bar. It consists of the `home`, `search`, `games` and `profile` fields. This section attaempts to recreate what is represented by the image above.
+</br>
+In the ```file explorer``` section of your IDE's interface, you will find the ```lib``` folder. This is where a folder named ```screens``` is created. Within it, I created a ```bottom_bar.dart``` file.
 
 
 ![File Explorer](https://github.com/KaburaJ/Booking-App/blob/main/images/Image004.PNG)
@@ -209,7 +224,13 @@ class _WidgetState extends State<BottomBar> {
   }
 ```
 
-The first thing to do was to create a ```stateful widget``` which can be autogenerated by any Flutter IDE. It is as easy as right clicking or hitting some special keys. So once created, I renamed mine to ```BottomBar```. Which was referenced in the ```main.dart``` file. I think this is a good place to mention that importing the ```'package:flutter/material.dart'``` standard library should be standard practice for each file created to get rid of any errors. Our bottom bar contains the ```home```, ```search```, ```games``` and ```profile``` sections. They are the ones whic are references as ```HomeScreen()```, ```SearchScreen()```, ```GamesTicketView()``` and ```ProfileScreen()```. Each with a separate dart file. Additionally, an integer type variable, ```_selectedIndex``` has been initialized to zer. Why? Let's dive even deeper.
+The first thing to do was to create a ```stateful widget``` which can be autogenerated by any Flutter IDE. It is as easy as right clicking or hitting some special keys. Once created, I renamed mine to ```BottomBar```. Which was referenced in the ```main.dart``` file. 
+</br>
+*I think this is a good place to mention that importing the ```'package:flutter/material.dart'``` standard library should be standard practice for each file created to get rid of any errors.*
+</br>
+Our bottom bar contains the ```home```, ```search```, ```games``` and ```profile``` sections. They are the ones which are referenced as ```HomeScreen()```, ```SearchScreen()```, ```GamesTicketView()``` and ```ProfileScreen()```; each with a separate dart file to be addressed later on. 
+</br>
+Additionally, an integer type variable, ```_selectedIndex``` has been initialized to zer0. Why, you may ask? Let's dive even deeper.
 </br>
 
 
@@ -221,7 +242,7 @@ The first thing to do was to create a ```stateful widget``` which can be autogen
   }
 ```
 
-A function, ```_onItemTapped```, was then created. It takes an integer as an argument which is to be stored in the ```index``` variable. The ```setState``` function notifies the framework that the initial state of the object within it has changed. In this case, the object in question is the ```_selectedIndex``` which is re-initialized to the index input. 
+A function, ```_onItemTapped```, is then created. It takes an integer as an argument which is to be stored in the ```index``` variable. The ```setState``` function notifies the framework that the initial state of the object within it has changed. In this case, the object in question is the ```_selectedIndex``` which is re-initialized to the index input. 
 </br>
 
 
@@ -230,7 +251,7 @@ A function, ```_onItemTapped```, was then created. It takes an integer as an arg
   Widget build(BuildContext context) {
     return Scaffold(
 ```
-We then return ```Scaffold```, again, for a default structure. Within it, there are several parameters.
+We then return ```Scaffold```; again, for a default structure. Within it, there are several parameters.
 </br>
 
 
@@ -240,7 +261,7 @@ body: Center(
       ),
 ```
 
-The first is the definition of the ```body```.  The ```Center``` widget is passed. It centers its child which in this case is the index of the list of icons on the bottom bar. Thus, in retrospect, each Icon in the bottom bar is assigned an index and the code snippet above centers each of these icons to provide an apealing feel.
+The first is the definition of the ```body```.  The ```Center``` widget is passed. It centers its child which in this case is the index of the list of icons on the bottom bar. Thus, in retrospect, each Icon in the bottom bar is assigned an index and the code snippet above centers each of these icons to provide an apealing look.
 </br>
 
 
@@ -261,16 +282,26 @@ bottomNavigationBar: BottomNavigationBar(
                 label: "Home"),
 ```
 
-```bottomNavigationBar``` is up next. It is within the scaffold. It allow for definition of parameters of the items that fo into the bottom bar. ```BottomNavigationBar``` takes a lot of parameters. The ones represented in the code snippet above are a handful of them. They include:
+```bottomNavigationBar``` is up next. It is still within the scaffold. It allows for definition of parameters of the items that go into the bottom bar. ```BottomNavigationBar``` takes a lot of parameters. The ones represented in the code snippet above are a handful of them. They include:
 * ```currentIndex``` which stores the index of the current selected item on the bottom bar. It is assigned ```_selectedIndex``` which was initialized earlier.
-* ```onTap``` which checks if any of the items on the bottom bar is selected. If yes, it is called.
-* ```elevation``` which controls the size of the shadow behind the bottom bar. It is initialized to 10 pixels. However, 10 pixels may vary from phone to phone depending on size and other factors such as height. That is why the ```app_layout``` library was created. We shall take a look at it pretty soon!
+</br>
+* ```onTap``` which checks if any of the items on the bottom bar are selected.
+</br>
+* ```elevation``` which controls the size of the shadow behind the bottom bar. It is initialized to 10 pixels. However, 10 pixels may vary from phone to phone depending on size and other factors such as height. *That is why the ```app_layout``` library was created. We shall take a look at it pretty soon!*
+</br>
 * ```showSelectedLabels``` which is set to ```false``` meaning that, for instance, on selecting the home icon, the label ```home``` will not be shown.
+</br>
 * ```showUnselectedLabels``` which ensures that the labels of the icons, when unselected, remain unseen.
+</br>
 * ```selectedItemColor``` which is set to a blueGrey colour. Consequently, it is used to set the icon colour when tapped.
-* ```type``` which is set to ```BottomNavigationBarType.fixed``` which ensures that the icons remain in their fixed positions and do not move haphazardly.
+</br>
+* ```type``` which is set to ```BottomNavigationBarType.fixed``` which ensures that the icons remain in their fixed positions and do not move haphazardly when tapped.
+</br>
 * ```unselectedItemColor``` which defines the colour of the icons when they are not selected.
-* ```items``` which defines the appearance of the icons on the bottom bar. For this, instead of using the default icons in the material library, another library was imported. It is called the ```FluentSystemIcons``` library. To import this library, we head on to the ```pubspec.yaml``` file on the explorer section.
+</br>
+* ```items``` which defines the appearance of the icons on the bottom bar. For this, instead of using the default icons in the material library, another library was imported. It is called the ```FluentSystemIcons``` library. 
+</br>
+To import this library, we head on to the ```pubspec.yaml``` file on the explorer section.
 </br>
 
 
@@ -283,7 +314,9 @@ dependencies:
   fluentui_icons: ^1.0.0
 ```
 
-```fluentui_icons: ^1.0.0```  should be added to the ```dependencies``` section of the ```pubspec.yaml``` file.  It will resemble the snippet above. Afterwards ```pub get``` should be selected and just like that, a library will have been imported into the streamlit app. In the ```bottom_dart``` file, import ```'package:fluentui_icons/fluentui_icons.dart'```. 
+```fluentui_icons: ^1.0.0```  should be added to the ```dependencies``` section of the ```pubspec.yaml``` file.  It will resemble the snippet above. Afterwards ```pub get``` should be selected and just like that, a library will have been imported into the streamlit app. 
+</br>
+*In the ```bottom_dart``` file, import ```'package:fluentui_icons/fluentui_icons.dart'``` to be able to use the new icons in your application*
 </br>
 
 
@@ -303,7 +336,7 @@ Getting back to the ```items``` section of the code, we will go through the home
 
 ## Utils
 
-To make our code more compact and reusable, it is necessary to create libraries. Thus, in the ```lib``` folder, we can create a ```utils``` folder and within it create a new file. This new file can be named ```app_layout.dart```. 
+To make our code more compact and reusable, it is necessary to create custom libraries. Thus, in the ```lib``` folder, we can create a ```utils``` folder and within it create a new file. This new file can be named ```app_layout.dart```. 
 ### **app_layout.dart**
 </br>
 
@@ -320,7 +353,9 @@ class AppLayout {
   }
 ```
 
-The first thing we notice here is the foreign-looking import ```package:get/get.dart```. It is yet another imported library which is essential in the creation of designs that will look good on any device. The get library has widgets that control pixel size. Just as we did for the bottom bar icons, we shall import this package. On the ```pubspec.yaml``` dependencies, add ```get: ^4.6.5```. It will look something like this:
+The first thing we notice here is the foreign-looking import ```package:get/get.dart```. It is yet another imported library which is essential in the creation of designs that will look good on any device. The get library has widgets that control pixel size. Just as we did for the bottom bar icons, we shall import this package.
+</br>
+On the ```pubspec.yaml``` dependencies, add ```get: ^4.6.5```. It the updated version will look something like this:
 
 ```dart
 dependencies:
@@ -332,7 +367,7 @@ dependencies:
   get: ^4.6.5 
 ```
 </br>
-
+*Remember to import `package:get/get.dart` to be able to use get()*
 
 Once that's done, we can get right back to the code. We create an ```AppLayout``` class. Within it, we shall have:
 
@@ -342,7 +377,8 @@ static getSize(BuildContext context) {
   }
 ```
 
-* A static function ```getSize``` which takes in the location of the widget, that is, ```BuildContext``` and returns a ```MediaQuery``` class. MediaQuery allows a widget to rebuild automatically whenever the data changes, for instance, if the user rotates their device. In this case, the data in question is the size of the device's screen. 
+* A static function ```getSize``` which takes in the location of the widget, that is, ```BuildContext``` and returns a ```MediaQuery``` class. 
+*MediaQuery allows a widget to rebuild automatically whenever the data changes, for instance, if the user rotates their device.* In this case, the data in question is the size of the device's screen. 
 </br>
 
 
@@ -373,7 +409,7 @@ static getHeight(double pixels) {
   }
 ```
 
-* The ```getHeight``` static function that takes in the number of pixels, divides the height of the device by the number of pixels and returns the value computed.
+* The ```getHeight``` static function that takes in the number of pixels, divides the height of the device's screen by the number of pixels and returns the value computed.
 </br>
 
 
@@ -384,13 +420,13 @@ static getWidth(double pixels) {
   }
 ```
 
-* The ```getHeight``` static function that takes in the number of pixels, divides the width of the device by the number of pixels and returns the value computed.
+* The ```getHeight``` static function that takes in the number of pixels, divides the width of the device's screen by the number of pixels and returns the value computed.
 </br>
 
 
 ### **app_styles.dart**
 
-Next up is setting up our colors. This file is still within the ```utils``` folder. 
+Next up is setting up our custom colors. This file is still within the ```utils``` folder. 
 </br>
 
 
@@ -418,12 +454,12 @@ class Styles {
 }
 ```
 
-Here, we set up our primary, background, text and headline colors. For consistency's sake, the shade of some of the colors to be used is also declared here. All these are stored in the ```Styles``` class. The ```TextStyle``` allows us to override the default fontsize, colour and weight of different text fields. That way, if at all we required our headline to be in italics, we can define it using TextStyle.
+Here, we set up our `primary`, `background`, `text` and `headline` colors. For consistency's sake, the shade of some of the colors to be used is also declared here. All these are stored in the ```Styles``` class. ```TextStyle``` allows us to override the default `fontsize`, `colour` and `weight` of different text fields. 
 </br>
 
 
 ### **app_info_list**
-Still within the ```utils``` folder, we will have a list of key and value pairs which we will use to make our app dynamic. This can be thought of as our makeshift database. In future, this will be updated by the owner of the gaming shop and will update as automatically.
+Still within the ```utils``` folder, we will have a list of key and value pairs which we will use to make our app dynamic. This can be thought of as our makeshift database. In future, this will be updated by the owner of the gaming shop and will update automatically.
 </br>
 
 
@@ -477,7 +513,9 @@ That being said, the two lists above will be the basis of most of the visuals we
 
 
 ## **Widgets**
-In any programming language, the reusability of code is essential. Since our app's layout has a number of features which may be repetitive, it is important to create code that is reusable in multiple screens. That being said, we create a ```widgets``` folder within the ```lib``` folder. Here, we will have:
+In any programming language, the reusability of code is essential. Since our app's layout has a number of features which may be repetitive, it is important to create code that is reusable in multiple screens. 
+</br>
+That being said, we create a ```widgets``` folder within the ```lib``` folder. Here, we will have:
 </br>
 
 
@@ -488,7 +526,7 @@ Since at one point in time we will be required to format text such as 'Games' an
 import 'package:flutter/material.dart';
 import '../utils/app_styles.dart';
 ```
-We will start by importing our libraries. Wow, we are already making use of the ```Styles``` library we created earlier!.
+We will start by importing our libraries. *Wow, we are already making use of the ```Styles``` library we created earlier!.*
 
 ```dart
 class AppDoubleTextWidget extends StatelessWidget {
@@ -499,7 +537,7 @@ class AppDoubleTextWidget extends StatelessWidget {
       : super(key: key);
 ```
 
-Next, we create a ```stateless``` widget which we name ```AppDoubleTextWidget```. We then declare some string variables appropriately named ```bigText``` and ```smallText```. This widget, when in use, will require the user to define the big and small text respectively. 
+Next, we create a ```stateless``` widget which we name ```AppDoubleTextWidget```. We then declare some string variables appropriately named ```bigText``` and ```smallText```. When in use, this widget will require the user to define the big and small text respectively. 
 </br>
 
 
@@ -522,7 +560,9 @@ Next, we create a ```stateless``` widget which we name ```AppDoubleTextWidget```
   }
 ```
 
-In this case, we will be returning a row and within it, we will utilize the ```mainAxisAlignment``` and constrain it as per the space between. That way, whichever text we put first and the second one, will be spaced according to the space between them. We then start defining our text and declaring their style. For our ```smallText```, things are a bit different. The ```InkWell``` function which is used here defines what the user will tap and its ```onTap``` parameter contains the definition of how the application ought to behave. Right now, it is not doing anything but should we want some form of response, we will be required to edit the ```onTap``` function. In the Inkwell's child, the small text as well as its style is defined.
+In this case, we will be returning a `row` and within it, we will utilize the ```mainAxisAlignment``` and constrain it as per the `space between`. That way, whichever text we put first and the second one, will be spaced according to the space between them. We then start defining our text and declaring their style. 
+</br>
+For our ```smallText```, things are a bit different. The ```InkWell``` function which is used here defines what the user will tap and its ```onTap``` parameter contains the definition of how the application ought to behave. Right now, it is not doing anything but should we want some form of response, we would be required to edit the ```onTap``` function. In the Inkwell's child, the small text as well as its style is defined.
 </br>
 
 
@@ -531,7 +571,7 @@ In this case, we will be returning a row and within it, we will utilize the ```m
 ![column_layout image](https://github.com/KaburaJ/Booking-App/blob/main/images/Image002.PNG)
 </br>
 
-This is similar to the ```double_text_widget.dart``` only that it aligns the first and second texts in a vertical manner. The text will appear in a vertical manner as if stacked on top of each other.
+This is similar to the ```double_text_widget.dart``` only that it aligns the first and second texts in a vertical manner. The text will appear in a vertically; as if stacked on top of each other.
 </br>
 
 
@@ -559,7 +599,7 @@ class AppColumnLayout extends StatelessWidget {
       this.isColor})
       : super(key: key);
 ```
-We create a ```stateless``` widget and define our first and second texts, our CrossAxisAlignment and isColor variables. The first and second text as well as the alignment are a requirement for the ```AppColumnLayout``` class to work. ```isColor``` is optional and only takes a boolean.
+We create a ```stateless``` widget and define our `first` and `second` texts, our `alignment` and `isColor` variables. The first and second text as well as the alignment are a requirement for the ```AppColumnLayout``` class to work. ```isColor``` is optional and only takes a boolean, ie., it can only be initialized to either `true` or `false`.
 </br>
 
 
@@ -585,7 +625,9 @@ We create a ```stateless``` widget and define our first and second texts, our Cr
   }
 ```
 
-We will return a Column this time round. Within it, the ```crossAxisAlignment``` is initialized to ```alignment```. The children bit houses the first text and its style, a ```Gap``` function and the second text and its styling. The gap function can be used interchangeably with ```spacer()```. 
+We will return a `Column` this time round. Within it, the ```crossAxisAlignment``` is initialized to ```alignment```. The children bit houses the `first` text and its style, a ```Gap``` function and the `second` text and its styling. The `gap` function can be used interchangeably with ```spacer()```. 
+</br>
+*Importing gap() library*
 Importing ```gap()``` involves adding ```gap: ^2.0.0``` to the dependencies of ```pubspec.yaml```. Your pubspec.yaml will now look like this:
 
 
@@ -596,7 +638,6 @@ dependencies:
     
   cupertino_icons: ^1.0.2
   fluentui_icons: ^1.0.0
-  webviewx: ^0.2.1
   get: ^4.6.5 
   gap: ^2.0.0
 ```
@@ -607,7 +648,7 @@ dependencies:
 ![Expected result image](https://github.com/KaburaJ/Booking-App/blob/main/images/Image001.PNG)
 
 
-In order to get the desired result above, this dart file is necessary.
+In order to get the reproduceable code of the desired result above, this dart file is necessary.
 </br>
 
 ```dart
@@ -627,7 +668,7 @@ class AppGameTabs extends StatelessWidget {
       : super(key: key);
 ```
 
-The String variables ```firstTab``` and ```secondTab``` are defined. They are required whenever ```AppGameTabs``` is called.
+Thereafter, the `String` variables ```firstTab``` and ```secondTab``` are defined. They are required whenever ```AppGameTabs``` is called.
 </br>
 
 
@@ -655,7 +696,9 @@ The String variables ```firstTab``` and ```secondTab``` are defined. They are re
             ),
 ```
 
-A ```FittedBox``` is returned here. Within it, a ```Container``` is created. ```Padding``` of 3.5 pixels is introduced within the container. The child is a ```Row``` with a child ```Container``` which occupies 44 percent of the screen in width. A ```Padding``` of 7 pixels vertically is placed. To produce the circular edge, ```BoxDecoration``` is done with a border radius in the horizontal direction. The left is defined with ```Radius.circular()``` This ensures that the left side of this container remains circular while the right retains the vertical edge.
+A ```FittedBox``` is then returned. Within it, a ```Container``` is created. ```Padding``` of 3.5 pixels is introduced within the container. The child is a ```Row``` with a child ```Container``` which occupies 44 percent of the screen in width. A ```Padding``` of 7 pixels vertically is placed. 
+</br>
+To produce the circular edge, ```BoxDecoration``` is done with a border radius in the horizontal direction. The left is defined with ```Radius.circular()``` This ensures that the left side of this container remains circular while the right retains a vertical edge.
 </br>
 
 
@@ -676,7 +719,7 @@ Container(
           ]),
 ```
 
-The second ```Container``` within the ```Row``` which is wrappped in a ```Container``` which is the child of a ```FittedBox``` (quite a mouthful), is represented in the code snippet above. It has similar features as the first, the only difference being that in the ```BorderRadius.horizontal```, it is the right side of this container that is circular. In both cases, the text is centered. Also, the colour is white in the first container and transparent in the second.
+The second ```Container``` within the ```Row``` which is wrappped in a ```Container``` which is the child of a ```FittedBox``` *quite a mouthful*, is represented in the code snippet above. It has similar features as the first, the only difference being that in the ```BorderRadius.horizontal```, it is the right side of this container that is circular. In both cases, the text is centered. Also, the colour is white in the first container and transparent in the second.
 </br>
 
 
@@ -689,13 +732,13 @@ The second ```Container``` within the ```Row``` which is wrappped in a ```Contai
           )),
 ```
 
-This last bit of the code ensures that overall, the container retains a circular form.
+This last bit of the code ensures that overall, the initial container retains a circular form.
 </br>
 
 
 ### **icon_text_widget.dart**
 
-This user-defined package provides a layout of the text that accompanies an icon.
+This user-defined package provides a layout of the text that accompanies any icon in this project.
 </br>
 
 
@@ -706,7 +749,7 @@ import '../utils/app_layout.dart';
 import '../utils/app_styles.dart';
 ```
 
-Importing our libraries.
+Importing our libraries first.
 </br>
 
 
@@ -718,7 +761,9 @@ class AppIconText extends StatelessWidget {
       : super(key: key);
 ```
 
-A ```stateless``` widget is created. Within it, one IconData and one String type variable is created. Both are required.
+Creating a ```stateless``` widget. 
+</br>
+Within it, one `IconData` and one `String` type variable is created. Both are required when `AppIconText` is called.
 </br>
 
 
@@ -741,8 +786,9 @@ A ```stateless``` widget is created. Within it, one IconData and one String type
                   spreadRadius: 1
             ]),
 ```
-
-A ```Container``` is returned and after setting up the padding, its shape is defined as circular in the ```decoration``` field and its colour is set. 
+Returning a `Container`
+</br>
+A ```Container``` is returned and after setting up the padding, its shape is defined as circular in the ```decoration``` field and its colour set. 
 Within the ```BoxDecoration```, an additional field, ```boxShadow``` is introduced. It defines the shadow cast by a box decoration. Its ```color``` is set to white, ```blurRadius``` to 2 and ```spreadRadius``` to 1.
 </br>
 
@@ -763,7 +809,9 @@ child: Row(
         )
 ```
 
-A ```Row``` that is within the ```Container``` is defined. Its ```children``` include ```Icon``` and ```Text``` which are separated by a gap of 10 pixels.
+Defining ```Row``` that is within the ```Container```. 
+</br>
+Its ```children``` include ```Icon``` and ```Text``` which are separated by a gap of 10 pixels.
 </br>
 
 
@@ -785,10 +833,10 @@ class AppLayoutBuiderWidget extends StatelessWidget {
 
 The code in this file allows the creation of a StatelessWidget in the Flutter framework that allows you to build a layout based on certain constraints. It takes in four parameters:
 
-* key: a unique key that allows Flutter to identify this widget
-* isColor: a boolean value that determines the color of the boxes
-* sections: an integer that determines the number of sections to display
-* width: a double that determines the width of each box (default is 3)
+* `key`: a unique key that allows Flutter to identify this widget
+* `isColor`: a boolean value that determines the color of the boxes
+* `sections`: an integer that determines the number of sections to display
+* `width`: a double that determines the width of each box (default is 3)
 ```Sections``` are a required field.
 </br>
 
@@ -820,12 +868,14 @@ The code in this file allows the creation of a StatelessWidget in the Flutter fr
   }
   ```
 
-The build method returns a LayoutBuilder widget that takes in a BuildContext and BoxConstraints and returns a Flex widget. The Flex widget is a layout widget that displays its children along a main axis and cross axis. It takes in several properties to control the layout, including:
-* direction: determines the direction in which the children are placed (horizontal or vertical)
-* mainAxisAlignment: determines how the children are aligned along the main axis
-* mainAxisSize: determines the size of the main axis
-The Flex widget also takes in a list of children, which are generated using the List.generate method. This method creates a new list of SizedBox widgets, with each widget having a width of 1 and a height of 1. The SizedBox widget is a box that takes up a specific amount of space.
-Futhermore, Each SizedBox widget also has a DecoratedBox widget as a child. The DecoratedBox widget is a box that can be decorated with a background color, border, and more. The background color of the DecoratedBox is determined by the isColor parameter. If it is null, the color is set to white, otherwise it is set to grey.
+The `build` method returns a `LayoutBuilder` widget that takes in `BuildContext` and `BoxConstraints` and returns a Flex widget. The Flex widget takes in several properties to control the layout, including:
+* `direction`: determines the direction in which the children are placed (horizontal or vertical)
+* `mainAxisAlignment`: determines how the children are aligned along the main axis
+* `mainAxisSize`: determines the size of the main axis
+The `Flex` widget also takes in a list of children, which are generated using the `List.generate` method. This method creates a new list of `SizedBox` widgets, with each widget having a `width` of 1 and a `height` of 1. 
+</br>
+The `SizedBox` widget is a box that takes up a specific amount of space.
+Futhermore, Each SizedBox widget also has a `DecoratedBox` widget as a `child`. The DecoratedBox widget is a box that can be decorated with a `background color`, `border`, and more. The background colour of the DecoratedBox is determined by the `isColor` parameter. If it is null, the color is set to white; otherwise, it is set to grey.
 </br>
 
 
@@ -852,15 +902,17 @@ class ThickContainer extends StatelessWidget {
   }
 }
 ```
-```ThickContainer``` is a StatelessWidget in the Flutter framework that creates a container with padding and a border. It takes in one parameter:
+```ThickContainer``` is a StatelessWidget in the Flutter framework that creates a `Container` with `padding` and a `border`. Its parameters are:
 
-* key: a unique key that allows Flutter to identify this widget
-* isColor: a boolean value that determines the color of the border
-The build method returns a Container widget that has padding on all sides and a border with rounded corners. The border has a width of 2.5 and a color that is determined by the isColor parameter. If it is null, the color is set to white, otherwise it is set to a specific color (0xFF8ACCF7). 
-The Container widget is a box that can contain other widgets and apply padding and a border around them.
+* `key`: a unique key that allows Flutter to identify this widget
+* `isColor`: a boolean value that determines the color of the border
+</br>
+The build method returns a `Container` widget that has `padding` on all sides and a border with rounded corners. The border has a `width` of 2.5 and a `color` that is determined by the isColor parameter. If it is null, the color is set to white, otherwise it is set to a specific color (0xFF8ACCF7). 
+
 </br>
 
 *Detour:
+</br>
 Remember our info list that was to act like our makeshift database? Well, we shall retrieve data from it in this short segment that may seem like a detour but is actually very important. In the `screen` folder, we shall create a new file. We can name it `game_view.dart`. It should contain the following code:*
 ```dart
 import 'package:flutter/material.dart';
@@ -880,9 +932,9 @@ class GameView extends StatelessWidget {
   const GameView({Key? key, required this.list, this.isColor})
       : super(key: key);
 ```
-*This code defines a class called "GameView" which extends the "StatelessWidget" class. The "GameView" class has two final properties: "list" and "isColor".
+*Then, we define a class called `GameView` which extends the `StatelessWidget` class. The `GameView` class has two final properties: `list` and `isColor`.
 </br>
-The "list" property is of type "Map<String, dynamic>" and is required when constructing an instance of "GameView". The "isColor" property is of type "bool?" (nullable boolean) and is not required when constructing an instance of "GameView".*
+The `list` property is of type `Map<String, dynamic>` and is required when constructing an instance of `GameView`. The `isColor` property is of type `bool?` (a nullable boolean) and is not required when constructing an instance of `GameView`.*
 
 ```dart
 @override
@@ -902,9 +954,9 @@ The "list" property is of type "Map<String, dynamic>" and is required when const
                     topRight: Radius.circular(AppLayout.getHeight(21)))),
             padding: EdgeInsets.all(AppLayout.getHeight(16)),
  ```
- *This code is defining the "build" method of the "GameView" class. In this case, the "build" method first retrieves the device's screen size using the "AppLayout.getSize" method and passing in the "context" argument. It then returns a "SizedBox" widget, which is a widget that has a fixed size. The width of the "SizedBox" widget is set to 85% of the screen width, and the height is set to a fixed value that is dependent on the platform.
+ *The `build` method of the `GameView` class is created. In this case, the `build` method first retrieves the device's screen size using the `AppLayout.getSize` method and passing in the `context` argument. It then returns a "SizedBox" widget, which is a widget that has a fixed size. The width of the `SizedBox` widget is set to 85% of the screen width, and the height is set to a fixed value that is dependent on the platform.
 </br>
-Inside the "SizedBox" widget, there is a "Container" widget which has a "Column" widget as its child. The "Container" widget has a "BoxDecoration" with a background color that is either white or a light shade of pink (depending on the value of the "isColor" property) and rounded corners at the top. The "Container" widget also has some padding around its content.*
+Inside the `SizedBox` widget, there is a `Container` widget which has a `Column` widget as its child. The `Container` widget has a `BoxDecoration` with a background color that is either white or a light shade of pink (depending on the value of the `isColor` property) and rounded corners at the top. The `Container` widget also has some padding around its content.*
 
 ```dart
 child: Column(children: [
@@ -939,7 +991,9 @@ child: Column(children: [
                 ],
               ),
 ```
-*This code is defining a layout for a widget that is made up of a Column with a single Row as its child. The Row has several children: a Text widget, two Expanded widgets with Containers as their children, two ThickContainer widgets, and another Text widget. The Text widgets are displaying text from the list parameter, which is a map of dynamic values. The Expanded widgets with Containers as their children are taking up all the remaining space in the row, while the ThickContainer widgets are fixed-width widgets. The isColor parameter is used to determine the text style for the Text widgets. If isColor is null, the text style will be Styles.headLineStyle3 with the text color set to black. If isColor is not null, the text style will be Styles.headLineStyle3 with the default text color. The AppLayoutBuiderWidget widget is a custom widget that appears to create a row of sections with a fixed width.*
+*We then define a layout for a widget that is made up of a `Column` with a single `Row` as its child. The `Row` has several `children`: a `Text` widget, two `Expanded` widgets with `Containers` as their `children`, two `ThickContainer` widgets, and another `Text` widget. The Text widgets are displaying text from the `list` parameter, which is a `map of dynamic values`. The `Expanded` widgets with `Containers` as their children are taking up all the remaining space in the row, while the `ThickContainer` widgets are fixed-width widgets. 
+</br>
+The `isColor` parameter is used to determine the text style for the `Text` widgets. If `isColor` is null, the text `style` will be `Styles.headLineStyle3` with the `text color` set to `black`. If `isColor` is not null, the `text style` will be `Styles.headLineStyle3` with the `default` text color. The `AppLayoutBuiderWidget` widget is a custom widget that creates a `row` of `sections` with a fixed width.*
 
 ```dart
 const Gap(3),
@@ -974,7 +1028,7 @@ const Gap(3),
                     ),
                   ),
 ```
-*This code is creating a column widget that contains a row widget and two other widgets. The row widget contains several children widgets which include Text widgets, an Expanded widget with an empty container child, a ThickContainer widget, another Expanded widget with an SizedBox widget as the child, another ThickContainer widget, another Expanded widget with an empty container child, and another Text widget. The two other widgets are a Gap widget with a height of 3 pixels and another row widget with three children widgets which include two SizedBox widgets with Text widgets as children and a Text widget.*
+*A `column` widget that contains a `row` widget and two other widgets is created. The `row` widget contains several children widgets which include `Text` widgets, an `Expanded` widget with an empty `container` child, a `ThickContainer` widget, another `Expanded` widget with an `SizedBox` widget as the child, another `ThickContainer` widget, another `Expanded` widget with an empty container child, and another `Text` widget. The two other widgets are a `Gap` widget with a height of 3 pixels and another `row` widget with three children widgets which include two `SizedBox` widgets with `Text` widgets as children.*
 
 ```dart
 Container(
@@ -998,9 +1052,9 @@ Container(
                                 )))),
                   ),
   ```
-*This code is creating a container with a colored background. The color of the background is determined by the isColor parameter. If isColor is null, then the background color is set to Styles.orangeColor. Otherwise, the background color is set to Color(0xff161616), which is a shade of black.
+*This code is creating a `container` with a colored background. The color of the background is determined by the `isColor` parameter. If `isColor` is `null`, then the `background color` is set to `Styles.orangeColor`. Otherwise, the `background color` is set to `Color(0xff161616)`, which is a shade of `black`.
 </br>
-Inside this container, there is a single row containing a SizedBox widget. The SizedBox has a height of AppLayout.getWidth(20) and a width of AppLayout.getWidth(10). The SizedBox also has a DecoratedBox as its child. The DecoratedBox has a decoration which includes a colored background and rounded corners. The color of the background is determined by the isColor parameter. If isColor is null, then the background color is set to Colors.grey.shade200. Otherwise, the background color is set to Colors.white. The rounded corners have a radius of AppLayout.getHeight(10).*
+Inside this `container`, there is a single `row` containing a `SizedBox` widget. The `SizedBox` has a height of `AppLayout.getWidth(20)` and a `width` of `AppLayout.getWidth(10)`. The `SizedBox` also has a `DecoratedBox` as its child. The `DecoratedBox` has a `decoration` which includes a colored background and rounded corners. The color of the background is determined by the `isColor` parameter. If `isColor` is `null`, then the background color is set to `Colors.grey.shade200`. Otherwise, the background color is set to `Colors.white`. The rounded corners have a `radius` of `AppLayout.getHeight(10)`.*
 
 ```dart
 Expanded(
@@ -1031,13 +1085,17 @@ Expanded(
                     ),
                   )),
 ```
-*This code is building a UI element that consists of a row with three elements:*
+*This code is building a `row` with three elements:*
 </br>
-1. *A text widget that displays the value of the "code" field in the "001_Available" object of the "list" map. The text style for this widget is determined by the "isColor" bool value. If "isColor" is null, the text style is "Styles.headLineStyle3" with the color set to black. If "isColor" is not null, the text style is "Styles.headLineStyle3" with no color modification.*
-2. *A "ThickContainer" widget with its "isColor" field set to true.*
-3. *A row of "AppLayoutBuiderWidget" widgets with "sections" set to 6 and no other properties set.
-Another "ThickContainer" widget with its "isColor" field set to true.*
-4. *A text widget that displays the value of the "code" field in the "002_Available" object of the "list" map. The text style for this widget is determined by the "isColor" bool value. If "isColor" is null, the text style is "Styles.headLineStyle4" with the color set to black. If "isColor" is not null, the text style is "Styles.headLineStyle3" with no color modification.*
+1. *A `text` widget that displays the value of the `code` field in the `001_Available` object of the `list` map. The `text style` for this widget is determined by the `isColor` bool value. If `isColor` is `null`, the `text style` is `Styles.headLineStyle3` with the `color` set to `black`. If "isColor" is `not null`, the `text style` is `Styles.headLineStyle3` with no color modification.*
+</br>
+2. *A `ThickContainer` widget with its `isColor` field set to true.*
+</br>
+3. *A `row` of `AppLayoutBuiderWidget` widgets with `sections` set to 6 and no other properties set.
+</br>
+4. *Another `ThickContainer` widget with its "isColor" field set to true.*
+</br>
+5. *A `text` widget that displays the value of the `code` field in the `002_Available` object of the `list` map. The `text style` for this widget is determined by the `isColor` bool value. If `isColor` is null, the text style is `Styles.headLineStyle4` with the colour set to `black`. If `isColor` is not null, the text style is `Styles.headLineStyle3` with no colour modification.*
 ```dart
 SizedBox(
                     height: AppLayout.getHeight(20),
@@ -1054,7 +1112,7 @@ SizedBox(
                                     Radius.circular(AppLayout.getHeight(10))))),
                   )
 ```
-*This code is creating a SizedBox widget with a width of 10 logical pixels and a height of 20 logical pixels. The SizedBox widget is then decorated with a BoxDecoration that sets its color to either Colors.grey.shade200 or Colors.white depending on the value of the isColor boolean parameter. The BoxDecoration also sets the border radius of the SizedBox widget to have rounded corners on the top-left and bottom-left edges. The SizedBox widget is then displayed on the screen.*
+*This code is creating a `SizedBox` widget with a `width` of 10 logical pixels and a `height` of 20 logical pixels. The `SizedBox` widget is then decorated with a `BoxDecoration` that sets its color to either `Colors.grey.shade200` or `Colors.white` depending on the value of the `isColor` boolean parameter. The `BoxDecoration` also sets the border radius of the `SizedBox` widget to have rounded corners on the top-left and bottom-left edges. The `SizedBox` widget is then displayed on the screen.*
 ```dart
 Container(
             decoration: BoxDecoration(
@@ -1098,13 +1156,25 @@ Container(
             ]),
           )
  ```
-*This code is creating a widget for displaying information about a game. The widget has two sections, separated by a horizontal divider. The top section contains a Row with three AppColumnLayout widgets, each displaying a piece of information about the game (date, time, and number of players). The bottom section is a container with a solid color background (either orange or white, depending on the value of isColor). It contains a Column with a single Row inside it. This Row contains three more AppColumnLayout widgets, which again display information about the game (date, time, and number of players). The AppColumnLayout widgets are used to display the information in a consistent way, with a label and a value aligned vertically. The isColor parameter determines whether the widget should use a light or dark color scheme.*
+*Here, there is a `container` with a solid color background (either orange or white, depending on the value of isColor). It contains a `Column` with a single `Row` inside it. This `Row` contains three more `AppColumnLayout` widgets, which again display information about the game (date, time, and number of players). The `AppColumnLayout` widgets are used to display the information in a consistent way, with a label and a value aligned vertically. The isColor parameter determines whether the widget should use a light or dark color scheme.*
 
 </br>
 </br>
 </br>
 ## **Home Screen**
 
+Looking at the homescreen UI [here](https://kaburaj.github.io/Booking-App), there's:
+* some form of text. Furthermore, the text is of varying fontsize.
+* an image at the top right corner
+* a search bar that has a search icon and the word 'search' on it
+* The text 'Available Games' and 'View all' on the same row but at the beginning and end respectively
+* A scrollable section (we'll employ some sort of ListView widget). Worth noting is that this section is scrollable horizontally.
+* The text 'Games' and 'View all' on the same row but at the beginning and end respectively
+* Another scrollable section that has some images and text.
+* Lastly, there is a bottom bar that contains four icons namely: the 'home', 'search', 'games' and 'profile' icons which are clickable.
+</br>
+These subsequent sections will be reproducing this UI which, when completed, will make up our homescreen.
+</br>
 Here, we define what we want to be seen in our home page. A file is created in  the ```screens``` folder and named ```home_screen.dart``` Here's the procedure followed in this project:
 </br>
 
@@ -1168,7 +1238,8 @@ class HomeScreen extends StatelessWidget {
                     ]),
  ```
 * The widget has a `Scaffold` as the root element and a `ListView` with a single child `Container` inside. The `Container` has some padding on the left and right sides, and a `Column` as a child. The `Column` has two children: a `Row` and a `Gap` widget. The `Row` widget has two children: two `Column` widgets. Each of these `Column` widgets has two children: a `Text` widget with a greeting message and a title, and a `Gap` widget. The `Text` widgets have different styles applied to them.
-In this code, a `Container` widget is added as a second child of the `Row` widget. The `Container` has a width and height specified in terms of a function `AppLayout.getWidth` and `AppLayout.getHeight`. It also has a `BoxDecoration` with a border radius and an image as its background image. The image is specified using an `AssetImage` widget. The `Container` is decorated with a rounded border with a radius equal to 15 pixels of its height. The image will be scaled to cover the entire `Container`, and any parts of the image that do not fit within the container will be cropped.
+</br>
+* In this code, a `Container` widget is added as a second child of the `Row` widget. The `Container` has a width and height specified in terms of a function `AppLayout.getWidth` and `AppLayout.getHeight`. It also has a `BoxDecoration` with a border radius and an image as its background image. The image is specified using an `AssetImage` widget. The `Container` is decorated with a rounded border with a radius equal to 15 pixels of its height. The image will be scaled to cover the entire `Container`, and any parts of the image that do not fit within the container will be cropped.
 </br>
 
 

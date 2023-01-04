@@ -21,6 +21,7 @@ This repository contains a booking app which targets gaming shops. This app can 
         6. [thick_cotainer.dart](https://github.com/KaburaJ/Booking-App#thick_containerdart)
     6. [Home Screen](https://github.com/KaburaJ/Booking-App#home-screen)
     7. [Search_Screen](https://github.com/KaburaJ/Booking-App#search-screen)
+    8. [Games ticket view]()
 5. [links](#links)
 
 # Overview
@@ -1111,27 +1112,910 @@ The second `Gap` widget adds more vertical space with a height of 25 pixels betw
 ## Outcome:
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%206.PNG)
 </br>
+</br>
 
+```dart
+const AppIconText(
+                icon: Icons.gamepad_outlined,
+                text: "Single Player",
+              ),
+              Gap(AppLayout.getHeight(20)),
+              const AppIconText(
+                  icon: Icons.gamepad_outlined, text: "Multi Player"),
+              Gap(AppLayout.getHeight(25)),
+```
+This code displays two AppIconText widgets and some gap widgets in between them. The AppIconText widgets are displaying an icon from the Flutter Icons package (Icons.gamepad_outlined) and the text. The gap widgets are adding some space between the AppIconText widgets.
+</br>
 
+## Outcome
 
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%207.PNG)
-![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%208.PNG)
-![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%209.PNG)
-![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2010.PNG)
-![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2011.PNG)
-## **Games ticket view**
-![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2012.PNG)
-![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2013.PNG)
-![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2014.PNG)
-![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2015.PNG)
-![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2016.PNG)
-![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2017.PNG)
-## **Profile Screen**
-![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2018.PNG)
-![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2019.PNG)
-![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2020.PNG)
-![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2021.PNG)
+</br>
+</br>
 
+```dart
+Container(
+                  padding: EdgeInsets.symmetric(
+                      vertical: AppLayout.getWidth(15),
+                      horizontal: AppLayout.getHeight(15)),
+                  decoration: BoxDecoration(
+                    color: Color(0xff7e1154),
+                    borderRadius: BorderRadius.circular(AppLayout.getWidth(10)),
+                  ),
+                  child: Center(
+                    child: Text(
+                      "find games",
+                      style: Styles.textStyle.copyWith(color: Colors.white),
+                    ),
+                  )),
+   ```
+   
+This code creates a new Container widget with some padding, a background color, a border radius, and a single child widget (a Text widget). 
+</br>
+The padding property specifies the amount of space that should be added inside the container. The EdgeInsets.symmetric method creates an EdgeInsets object with symmetrical vertical and horizontal padding. The vertical padding is determined by the value returned by AppLayout.getWidth(15) and the horizontal padding is determined by the value returned by AppLayout.getHeight(15). It's not clear from this code what these methods do, but it's possible that they take a value in pixels or some other unit of measure and return a value that represents some sort of width or height in pixels.
+</br>
+The decoration property specifies a background color and a border radius for the container. The background color is specified using a 32-bit hexadecimal value (0xff7e1154), which represents a reddish purple color. The border radius is determined by the value returned by AppLayout.getWidth(10). This value is passed to the BorderRadius.circular method, which creates a border radius with a circular shape.
+</br>
+The child property specifies a single child widget for the container, which is a Text widget that displays the text "find games" in white. The style property specifies the text style for the Text widget, which appears to be a copy of the Styles.textStyle object with the color set to white.
+
+## Outcome
+![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%208.PNG)
+</br>
+</br>
+
+```dart
+Gap(AppLayout.getHeight(40)),
+              const AppDoubleTextWidget(
+                  bigText: "Available Games", smallText: "View all"),
+              Gap(AppLayout.getHeight(15)),
+```
+
+This code creates a new instance of the AppDoubleTextWidget widget and displays two pieces of text: "Available Games" and "View all". The bigText property specifies the text to display in a larger font size and the smallText property specifies the text to display in a smaller font size. The const keyword indicates that this widget is a constant and its value cannot be changed after it is initialized.
+</br>
+
+## Outcome
+
+![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%209.PNG)
+</br>
+</br>
+
+```dart
+Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+                Container(
+                    height: AppLayout.getHeight(425),
+                    width: size.width * 0.42,
+                    padding: EdgeInsets.symmetric(
+                        horizontal: AppLayout.getHeight(15),
+                        vertical: AppLayout.getWidth(15)),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius:
+                            BorderRadius.circular(AppLayout.getHeight(20)),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.grey.shade200,
+                              blurRadius: 1,
+                              spreadRadius: 1)
+                        ]),
+                    child: Column(
+                      children: [
+                        Container(
+                            height: AppLayout.getHeight(190),
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(
+                                    AppLayout.getHeight(12)),
+                                image: const DecorationImage(
+                                    fit: BoxFit.cover,
+                                    image:
+                                        AssetImage("assets/images/img7.jpg")))),
+                        Gap(AppLayout.getHeight(12)),
+                        Text(
+                          "20% discount on the first 10 people to book via the app!",
+                          style: Styles.headLineStyle2
+                              .copyWith(color: Colors.black),
+                        )
+                      ],
+                    )),
+ ```
+ </br>
+This code creates a Row widget with a single child container widget. The Row widget has its mainAxisAlignment property set to MainAxisAlignment.spaceBetween, which will align its children such that there is an equal amount of space between the children and the start and end of the row.
+</br>
+This container widget has a fixed height (determined by the value returned by AppLayout.getHeight(425)), a fixed width (determined by size.width * 0.42), some padding, a white background color, a rounded border, and a box shadow. The container has a single child, which is a Column widget with three children: a container with a background image, a Gap widget, and a Text widget.
+</br>
+
+The first container has a fixed height (determined by the value returned by AppLayout.getHeight(190)) and a background image that is specified using the DecorationImage class. The borderRadius property gives the container rounded corners with a radius determined by the value returned by AppLayout.getHeight(12).
+</br>
+
+The Gap widget adds some space between the first container and the Text widget. The Text widget displays some text with a style specified by the Styles.headLineStyle2 object, which has had its color property set to black.
+</br>
+
+## Outcome
+![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2010.PNG)
+</br>
+</br>
+</br>
+
+```dart
+           Column(children: [
+                  Stack(
+                    children: [
+                      Container(
+                        width: size.width * 0.44,
+                        height: AppLayout.getHeight(184),
+                        decoration: BoxDecoration(
+                            color: Color(0xffa42d87),
+                            borderRadius:
+                                BorderRadius.circular(AppLayout.getHeight(18))),
+                        padding: EdgeInsets.symmetric(
+                            vertical: AppLayout.getHeight(15),
+                            horizontal: AppLayout.getWidth(15)),
+                        child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Discount\nfor survey",
+                                style: Styles.headLineStyle2.copyWith(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white),
+                              ),
+                              Gap(AppLayout.getHeight(10)),
+                              Text("Take the survey and get discount",
+                                  style: Styles.headLineStyle2.copyWith(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.white))
+                            ]),
+                      ),
+                      Positioned(
+                        right: AppLayout.getWidth(-45),
+                        top: AppLayout.getHeight(-40),
+                        child: Container(
+                            padding: EdgeInsets.all(AppLayout.getHeight(30)),
+                            decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                border: Border.all(
+                                    width: AppLayout.getWidth(18),
+                                    color: Color(0xff7e1154)),
+                                color: Colors.transparent)),
+                      )
+                    ],
+                  ),
+ ```
+ </br>
+ This code creates a Column widget with a single child, a Stack widget.
+</br>
+The Stack widget has two children: a container widget and a positioned widget. The container widget has a fixed width (determined by size.width * 0.44), a fixed height (determined by the value returned by AppLayout.getHeight(184)), a purple background color, rounded corners, some padding, and a single child column widget.
+</br>
+
+The column widget has a single cross axis alignment (CrossAxisAlignment.start) and two children: a Text widget and a Gap widget. The Text widget displays some text with a bold white font and the Gap widget adds some space between the two Text widgets.
+</br>
+
+The positioned widget is positioned relatively to the top-right corner of the stack. It has a fixed distance from the right edge of the stack (determined by the value returned by AppLayout.getWidth(-45)) and a fixed distance from the top edge of the stack (determined by the value returned by AppLayout.getHeight(-40)). The positioned widget has a single child, a container widget with some padding and a circular border. The container has a transparent background color and a circular shape specified by the BoxShape.circle property. The border has a fixed width (determined by the value returned by AppLayout.getWidth(18)) and a purple color
+</br>
+
+## Outcome
+![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2011.PNG)
+
+</br>
+</br>
+</br>
+
+```dart
+ Gap(AppLayout.getHeight(12)),
+                  Container(
+                    width: size.width * 0.44,
+                    height: AppLayout.getHeight(210),
+                    padding: EdgeInsets.symmetric(
+                        vertical: AppLayout.getHeight(15),
+                        horizontal: AppLayout.getWidth(15)),
+                    decoration: BoxDecoration(
+                        borderRadius:
+                            BorderRadius.circular(AppLayout.getHeight(18)),
+                        color: const Color(0xffde58bd)),
+                    child: Column(children: [
+                      Text("Take love",
+                          style: Styles.headLineStyle2.copyWith(
+                              //fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white),
+                          textAlign: TextAlign.center),
+                      Gap(AppLayout.getHeight(5)),
+                      RichText(
+                          text: const TextSpan(
+                        children: [
+                          TextSpan(text: '😍', style: TextStyle(fontSize: 20)),
+                          TextSpan(text: '😍', style: TextStyle(fontSize: 35)),
+                          TextSpan(text: '😍', style: TextStyle(fontSize: 20)),
+                        ],
+                      ))
+                    ]),
+                  )
+  ```
+  </br>
+This code creates a Gap widget and a container widget, both with fixed dimensions. The Gap widget is adding some space or gap between the widgets above and below it.
+  </br>
+This container widget has a fixed width (determined by size.width * 0.44), a fixed height (determined by the value returned by AppLayout.getHeight(210)), some padding, a pink background color, rounded corners, and a single child column widget. The column widget has two children: a Text widget and a RichText widget.
+</br>
+RichText is a widget that displays a paragraph of mixed-style text. It displays text that uses multiple different styles.
+
+In the given code, the RichText widget displays three text spans, each with a different font size. The text spans are displayed in a row and the resulting text looks like a row of three hearts. The RichText widget allows you to specify the style for each span of text separately, so you can have a paragraph of mixed-style text without having to break it up into multiple Text widgets.
+</br>
+*The emoticons can be assessed via your PC's keyboard*
+
+## Outcome
+![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2012.PNG)
+
+## **Games ticket view**
+Within the `screens` folder, create a file. I named mine the `games_ticket_view.dart`
+</br>
+```dart
+import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
+import 'package:kaburacreates/screens/games_view.dart';
+import 'package:kaburacreates/utils/app_info_list.dart';
+import 'package:kaburacreates/utils/app_layout.dart';
+import 'package:kaburacreates/widgets/column_layout.dart';
+import 'package:kaburacreates/widgets/game_tabs.dart';
+import 'package:kaburacreates/widgets/layout_builder_widget.dart';
+import 'package:barcode_widget/barcode_widget.dart';
+import '../utils/app_styles.dart';
+```
+As usual, we'll first import the relevant libraries
+</br>
+</br>
+
+```dart
+class GamesTicketView extends StatelessWidget {
+  const GamesTicketView({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    final size = AppLayout.getSize(context);
+    return Scaffold(
+ ```
+The GamesTicketView is a stateless widget that displays a Scaffold widget. A Scaffold widget is a material design container that provides a framework to implement a consistent layout across an app. It typically includes a top app bar, a bottom navigation bar, and a body that displays a list of items.
+</br>
+The GamesTicketView class extends the StatelessWidget class and overrides the build method to return a Scaffold widget. It also has a constructor that takes an optional Key argument and passes it to the superclass constructor. The build method also gets the size of the screen from the AppLayout utility class and stores it in the size variable.
+</br>
+</br>
+
+```dart
+ Scaffold(
+        backgroundColor: Styles.bgColor,
+        body: Stack(
+          children: [
+            ListView(
+                padding: EdgeInsets.symmetric(
+                    horizontal: AppLayout.getHeight(20),
+                    vertical: AppLayout.getHeight(10)),
+                children: [
+                  Gap(AppLayout.getHeight(40)),
+                  Text(
+                    "Games' Tickets",
+                    style: Styles.headLineStyle,
+                  ),
+                  Gap(AppLayout.getHeight(20)),
+ ```
+This code creates a Scaffold widget with a fixed background color and a single child, a Stack widget.
+</br>
+The Stack widget has a single child, a ListView widget. The ListView widget has some padding, a single child Gap widget, and a Text widget.
+</br>
+The Gap widget adds some space between the widgets above and below it. The Text widget displays a fixed string of text with a predefined style.
+</br>
+The ListView widget also has a padding property that adds some space around the widget. The padding property takes an EdgeInsets object as its value. The EdgeInsets object is constructed using the EdgeInsets.symmetric constructor and takes two arguments: horizontal and vertical. The horizontal argument specifies the padding on the left and right sides of the widget and the vertical argument specifies the padding on the top and bottom sides of the widget. The padding values are determined by the AppLayout.getHeight utility method.
+</br>
+ ## Outcome
+![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2013.PNG)
+</br>
+</br>
+
+```dart
+const AppGameTabs(
+                      firstTab: "Upcoming", secondTab: "Previous"),
+                  Gap(AppLayout.getHeight(20)),
+               
+```
+This code creates a AppGameTabs widget, a Gap widget, and a Container widget with a single child, a GameView widget.
+</br>
+The AppGameTabs widget displays two tabs with fixed titles. It does not have any children.
+</br>
+## Outcome
+![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2014.PNG)
+</br>
+</br>
+</br>
+
+```dart
+Container(
+                    padding: EdgeInsets.only(left: AppLayout.getHeight(15)),
+                    child: GameView(
+                      list: gameList[0],
+                      isColor: true,
+                    ),
+                  ),
+
+```
+This code creates a Container widget with some padding and a single child, a GameView widget.
+</br>
+The Container widget has a padding property that adds space around the widget. The padding property takes an EdgeInsets object as its value and the EdgeInsets object is constructed using the EdgeInsets.only constructor. The EdgeInsets.only constructor takes an EdgeInsets argument that specifies the padding on specific edges of the widget. In this case, the padding is only added to the left edge of the widget.
+</br>
+The GameView widget displays a list of games. It has two properties: list and isColor. The list property specifies the list of games to display and the isColor property determines whether the background color of the widget should be applied or not.
+</br>
+## Outcome
+![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2015.PNG)
+
+```dart
+const SizedBox(height: 1),
+                  Container(
+                      color: Colors.white,
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+                      margin: EdgeInsets.symmetric(horizontal: 15),
+                      child: Column(children: [
+                        Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              AppColumnLayout(
+                                firstText: "Kabura Creates",
+                                secondText: "Player",
+                                alignment: CrossAxisAlignment.start,
+                                isColor: false,
+                              ),
+                              AppColumnLayout(
+                                firstText: "1234 5678",
+                                secondText: "ID",
+                                alignment: CrossAxisAlignment.end,
+                                isColor: false,
+                              ),
+                            ]),
+                        Gap(AppLayout.getHeight(20)),
+                        const AppLayoutBuiderWidget(
+                          sections: 15,
+                          isColor: false,
+                          width: 5,
+                        ),
+                        Gap(AppLayout.getHeight(20)),
+                        Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              AppColumnLayout(
+                                firstText: "557 222 1616",
+                                secondText: "Ticket no.",
+                                alignment: CrossAxisAlignment.start,
+                                isColor: false,
+                              ),
+                              AppColumnLayout(
+                                firstText: "B123",
+                                secondText: "Booking code",
+                                alignment: CrossAxisAlignment.end,
+                                isColor: false,
+                              ),
+                            ]),
+                        Gap(AppLayout.getHeight(20)),
+                        const AppLayoutBuiderWidget(
+                          sections: 15,
+                          isColor: false,
+                          width: 5,
+                        ),
+                        Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Column(
+                                children: [
+                                  Row(
+                                    children: [
+                                      Image.asset(
+                                        "assets/images/img1.jpg",
+                                        scale: 9,
+                                      ),
+                                      Text(
+                                        "*** 2712",
+                                        style: Styles.headLineStyle3,
+                                      )
+                                    ],
+                                  ),
+                                  const Gap(5),
+                                  Text("Payment method",
+                                      style: Styles.headLineStyle4)
+                                ],
+                              ),
+                              AppColumnLayout(
+                                firstText: "Kes. 50.00",
+                                secondText: "Price",
+                                alignment: CrossAxisAlignment.end,
+                                isColor: false,
+                              ),
+                            ])
+                      ])),
+                  //Barcode
+                  const SizedBox(
+                    height: 1,
+                  ),
+                  Container(
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.only(
+                              bottomRight:
+                                  Radius.circular(AppLayout.getHeight(21)),
+                              bottomLeft:
+                                  Radius.circular(AppLayout.getHeight(21)))),
+                      margin: EdgeInsets.only(
+                        left: AppLayout.getHeight(15),
+                        right: AppLayout.getHeight(15),
+                      ),
+                      padding: EdgeInsets.only(
+                        top: AppLayout.getHeight(20),
+                        bottom: AppLayout.getHeight(20),
+                      ),
+                      child: Container(
+                        padding: EdgeInsets.symmetric(
+                            horizontal: AppLayout.getHeight(20)),
+                        child: ClipRRect(
+                          borderRadius:
+                              BorderRadius.circular(AppLayout.getHeight(15)),
+                          child: BarcodeWidget(
+                            barcode: Barcode.code128(),
+                            data: 'https://github.com/martinovovo',
+                            drawText: false,
+                            color: Styles.bgColor,
+                            width: double.infinity,
+                            height: 70,
+                          ),
+                        ),
+                      )),
+  ```
+This code creates several widgets including a SizedBox widget, a Container widget, and several instances of the AppColumnLayout and AppLayoutBuiderWidget widgets.
+</br>
+
+The SizedBox widget adds space between the widgets above and below it. It has a fixed height of 1.
+</br>
+The Container widget has some padding and a BoxDecoration with a white background color. It also has a single child, a Column widget. The Column widget has several children including a Row widget, several Gap widgets, and another Row widget.
+</br>
+The Row widget displays its children in a horizontal line. It has a mainAxisAlignment property that determines how the children should be aligned within the row. In this case, the mainAxisAlignment is set to MainAxisAlignment.spaceBetween, which means that the children will be evenly distributed within the row with equal space between them. The Row widget has two children, instances of the AppColumnLayout widget.
+</br>
+The AppColumnLayout widget displays two pieces of text in a column layout. It has four properties: firstText, secondText, alignment, and isColor. The firstText and secondText properties specify the text to display, the alignment property determines the alignment of the text within the widget, and the isColor property determines whether the background color of the widget should be applied or not.
+</br>
+The Gap widget adds some space between the widgets above and below it.
+</br>
+The AppLayoutBuiderWidget widget displays a series of horizontal lines with a fixed number of sections. It has three properties: sections, isColor, and width. The sections property specifies the number of sections to display, the isColor property determines whether the background color of the widget should be applied or not, and the width property specifies the width of the lines in the widget.
+</br>
+
+*For the `barcode` to be created, a package has to be imported onto the `dev_dependencies` section of the `pubspec.yaml` file. Once done, your file should resemble this:*
+
+```dart
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^1.0.0
+  barcode_widget: ^2.0.2
+```
+</br>
+## Outcome
+![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2016.PNG)
+</br>
+</br>
+</br>
+
+```dart
+Gap(AppLayout.getHeight(20)),
+                  Container(
+                    padding: EdgeInsets.only(left: AppLayout.getHeight(15)),
+                    child: GameView(
+                      list: gameList[0],
+                    ),
+                  ),
+                ]),
+            Positioned(
+              left: AppLayout.getHeight(22),
+              top: AppLayout.getHeight(295),
+              child: Container(
+                  padding: EdgeInsets.all(3),
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    border: Border.all(color: Styles.textColor, width: 2),
+                  ),
+                  child: CircleAvatar(
+                    maxRadius: 4,
+                    backgroundColor: Styles.textColor,
+                  )),
+            ),
+            Positioned(
+              right: AppLayout.getHeight(22),
+              top: AppLayout.getHeight(295),
+              child: Container(
+                  padding: EdgeInsets.all(3),
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    border: Border.all(color: Colors.black, width: 2),
+                  ),
+                  child: CircleAvatar(
+                    maxRadius: 4,
+                    backgroundColor: Colors.white,
+                  )),
+            )
+ ```
+ </br>
+This code creates several widgets including a Gap widget, a Container widget, and two Positioned widgets.
+</br>
+The Gap widget adds some space between the widgets above and below it.
+</br>
+The Container widget has some padding and a single child, a GameView widget. The GameView widget displays a list of games. It has a single property: list, which specifies the list of games to display.
+</br>
+The Positioned widgets are used to position their children within their parent widget. They have a left and top property that determine the position of the child within the parent. The Positioned widgets have a Container widget as their child. The Container widget has some padding and a BoxDecoration that adds a border around it. It also has a single child, a CircleAvatar widget. The CircleAvatar widget displays an avatar in the form of a circle. It has a maxRadius property that determines the size of the avatar and a backgroundColor property that specifies the background color of the avatar.
+ </br>
+ ## Outcome
+![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2017.PNG)
+</br>
+</br>
+</br>
+</br>
+## **Profile Screen**
+The final screen of our appplication is next. Still within the `screens` folder, create a file. You may opt to name it `profile_screen.dart`, or not. 
+</br>
+```dart
+import 'package:fluentui_icons/fluentui_icons.dart';
+import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
+import 'package:kaburacreates/widgets/column_layout.dart';
+import '../utils/app_layout.dart';
+import '../utils/app_styles.dart';
+```
+As is the norm, we importing relevant libraries
+</br>
+```dart
+class ProfileScreen extends StatelessWidget {
+  const ProfileScreen({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      // content goes here
+    );
+  }
+}
+```
+This code creates a Scaffold widget which is a basic layout structure in Flutter. It provides several features such as a app bar, a drawer, and a floating action button. It has a single child, which is a widget that represents the content of the screen.
+</br>
+</br>
+
+```dart
+return Scaffold(
+        backgroundColor: Styles.bgColor,
+        body: ListView(
+            padding: EdgeInsets.symmetric(
+              horizontal: AppLayout.getHeight(20),
+              vertical: AppLayout.getHeight(10),
+            ),
+            children: [
+              Gap(
+                AppLayout.getHeight(40),
+              ),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                      height: AppLayout.getHeight(86),
+                      width: AppLayout.getHeight(86),
+                      decoration: BoxDecoration(
+                          borderRadius:
+                              BorderRadius.circular(AppLayout.getHeight(10)),
+                          image: DecorationImage(
+                              image: AssetImage("assets/images/img2.jpg")))),
+                  Gap(
+                    AppLayout.getHeight(10),
+                  ),
+                  Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Text("Book Games", style: Styles.headLineStyle),
+                        Gap(AppLayout.getHeight(2)),
+                        Text("Kabura Creates",
+                            style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.grey.shade500)),
+                        Gap(AppLayout.getHeight(8)),
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius:
+                                BorderRadius.circular(AppLayout.getHeight(100)),
+                            color: Color(0xFFFEF4F3),
+                          ),
+                          padding: EdgeInsets.symmetric(
+                              horizontal: AppLayout.getHeight(3),
+                              vertical: AppLayout.getHeight(3)),
+                          child: Row(
+                            children: [
+                              Container(
+                                padding: EdgeInsets.all(3),
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Color(0xffa6489e),
+                                ),
+                                child: Icon(
+                                  FluentSystemIcons.ic_fluent_shield_filled,
+                                  color: Colors.white,
+                                  size: 15,
+                                ),
+                              ),
+                              Gap(AppLayout.getHeight(6)),
+                              Text("Premium Status",
+                                  style: const TextStyle(
+                                      color: Color(0xffa6489e),
+                                      fontWeight: FontWeight.w600)),
+                              Gap(AppLayout.getHeight(6)),
+                            ],
+                          ),
+                        )
+                      ]),
+```
+This code is creating a layout for a profile screen in a Flutter app. It has a header with an image, name, and username. It also has a section for a premium status badge, which is a purple circle with a white shield icon. The header is a Row with a circular image on the left and the name, username, and premium status badge on the right. The premium status badge is a Container with a purple background and white shield icon.
+</br>
+This is done by creating a ListView widget with a padding around the edges and a Gap widget as the first child. Then it creates a Row widget with two children: a Container widget with a circular border and an image, and a Column widget with various text and other widgets as children. The Gap widget is used to add space between the widgets. The Column widget contains a Text widget for the user's name, another Text widget for their username, another Gap widget, and a Container widget with a circular border and a Row widget as its child. The Row widget contains a Container widget with a circular border and an icon as its child, a Gap widget, a Text widget, and another Gap widget.
+</br>
+</br>
+```dart
+const Spacer(),
+                  Column(
+                    children: [
+                      InkWell(
+                        onTap: () {
+                          print("Tou are tapped");
+                        },
+                        child: Text("Edit",
+                            style: Styles.textStyle.copyWith(
+                                color: Styles.orangeColor,
+                                fontWeight: FontWeight.w300)),
+                      ),
+                    ],
+                  )
+```
+This code is creating a layout with a spacer and a column with a single InkWell widget. The InkWell widget is a non-visual widget that provides gesture recognition. When the user taps on it, the onTap callback is triggered and the print statement is executed. The InkWell widget has a single child, which is a Text widget that displays the text "Edit" in orange and with a weight of 300.
+</br>
+
+## Outcome
+![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2018.PNG)
+</br>
+</br>
+</br>
+
+```dart
+Gap(
+                AppLayout.getHeight(8),
+              ),
+              Divider(
+                color: Colors.grey.shade300,
+              ),
+              Gap(
+                AppLayout.getHeight(8),
+              ),
+              Stack(children: [
+                Container(
+                    height: AppLayout.getHeight(90),
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                        color: Color(0xffa42d87),
+                        borderRadius:
+                            BorderRadius.circular(AppLayout.getHeight(18)))),
+                Positioned(
+                    right: -45,
+                    top: -40,
+                    child: Container(
+                      padding: EdgeInsets.all(AppLayout.getHeight(30)),
+                      decoration: BoxDecoration(
+                          color: Colors.transparent,
+                          shape: BoxShape.circle,
+                          border:
+                              Border.all(width: 18, color: Color(0xff7e1154))),
+                    )),
+                Container(
+                  padding: EdgeInsets.symmetric(
+                      horizontal: AppLayout.getHeight(25),
+                      vertical: AppLayout.getHeight(20)),
+                  child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        CircleAvatar(
+                          child: Icon(
+                              FluentSystemIcons
+                                  .ic_fluent_lightbulb_filament_filled,
+                              color: Color(0xffa42d87),
+                              size: 27),
+                          maxRadius: 25,
+                          backgroundColor: Colors.white,
+                        ),
+                        Gap(AppLayout.getHeight(12)),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("New reward!",
+                                style: Styles.headLineStyle2.copyWith(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white)),
+                            Text("9 games booked already!",
+                                style: Styles.headLineStyle2.copyWith(
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 16,
+                                    color: Colors.white.withOpacity(0.9)))
+                          ],
+                        )
+                      ]),
+  ```
+This code defines a Flutter widget for displaying a message about a new reward. The widget consists of several UI elements stacked together: a gap, a divider, another gap, and then a stack containing a container with a circular background color and border radius, another container with a transparent background and border, and a third container with padding and containing a row with an avatar icon, a gap, and a column of text. The avatar icon is a light bulb and the text includes a headline and a subheadline. The text and the avatar icon are both white, while the background container has a color of Color(0xffa42d87), which is a shade of pink.
+</br>
+This is done by:
+* A gap with a height of 8 logical pixels.
+* A divider with a grey color.
+* Another gap with a height of 8 logical pixels.
+* A stack containing several nested containers. The outermost container has a height of 90 logical pixels and a circular pink background color with a border radius of 18 logical pixels. The middle container has a transparent background and a circular border. The innermost container has padding and contains a row with an avatar icon, a gap, and a column of text. The avatar icon is a white light bulb on a circular background and the text includes a headline and a subheadline, both in white.
+# Outcome
+![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2019.PNG)
+</br>
+</br>
+
+```dart
+Gap(
+                AppLayout.getHeight(25),
+              ),
+              Text("Accumulated Games", style: Styles.headLineStyle2),
+              Gap(
+                AppLayout.getHeight(20),
+              ),
+ ```
+The code snippet above creates:
+* A gap with a height of 25 logical pixels.
+* A text element with the text "Accumulated Games" and a particular style defined by Styles.headLineStyle2.
+* Another gap with a height of 20 logical pixels.
+</br>
+## Outcome
+![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2020.PNG)
+</br>
+</br>
+</br>
+```dart
+Container(
+                  padding:
+                      EdgeInsets.symmetric(horizontal: AppLayout.getWidth(15)),
+                  decoration: BoxDecoration(
+                      borderRadius:
+                          BorderRadius.circular(AppLayout.getHeight(18)),
+                      color: Styles.primaryColor,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.shade300,
+                          blurRadius: 1,
+                          spreadRadius: 1,
+                        )
+                      ]),
+                  child: Column(
+                    children: [
+                      Gap(
+                        AppLayout.getHeight(8),
+                      ),
+                      Text("193745",
+                          style: TextStyle(
+                              fontSize: 45,
+                              color: Styles.bgColor,
+                              fontWeight: FontWeight.w600)),
+                      Gap(
+                        AppLayout.getHeight(20),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "Games Played",
+                            style: Styles.headLineStyle4.copyWith(fontSize: 16),
+                          ),
+                          Text(
+                            "31 Dec 2022",
+                            style: Styles.headLineStyle4.copyWith(fontSize: 16),
+                          ),
+                        ],
+                      ),
+                      Gap(
+                        AppLayout.getHeight(20),
+                      ),
+                      Divider(
+                        color: Colors.grey.shade300,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          AppColumnLayout(
+                            firstText: "23",
+                            secondText: "Games",
+                            alignment: CrossAxisAlignment.start,
+                            isColor: false,
+                          ),
+                          AppColumnLayout(
+                            firstText: "MPESA",
+                            secondText: "Payment from",
+                            alignment: CrossAxisAlignment.end,
+                            isColor: false,
+                          )
+                        ],
+                      ),
+                      Gap(
+                        AppLayout.getHeight(20),
+                      ),
+                      Divider(
+                        color: Colors.grey.shade300,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          AppColumnLayout(
+                            firstText: "2",
+                            secondText: "Games",
+                            alignment: CrossAxisAlignment.start,
+                            isColor: false,
+                          ),
+                          AppColumnLayout(
+                            firstText: "PayPal",
+                            secondText: "Payment from",
+                            alignment: CrossAxisAlignment.end,
+                            isColor: false,
+                          )
+                        ],
+                      ),
+                      Gap(
+                        AppLayout.getHeight(20),
+                      ),
+                      Divider(
+                        color: Colors.grey.shade300,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          AppColumnLayout(
+                            firstText: "0",
+                            secondText: "Games",
+                            alignment: CrossAxisAlignment.start,
+                            isColor: false,
+                          ),
+                          AppColumnLayout(
+                            firstText: "Bank",
+                            secondText: "Payment from",
+                            alignment: CrossAxisAlignment.end,
+                            isColor: false,
+                          )
+                        ],
+                      ),
+                      Container(
+                          child: Column(children: [
+                        Gap(
+                          AppLayout.getHeight(8),
+                        ),
+                        Divider(
+                          color: Colors.grey.shade300,
+                        ),
+                      ]))
+                    ],
+                  ))
+    ```
+ This code creates:
+* A gap with a height of 8 logical pixels.
+* A text element displaying a large number with a particular style.
+* Another gap with a height of 20 logical pixels.
+* A row with two text elements displaying dates and aligned to opposite ends of the row.
+* Another gap with a height of 20 logical pixels.
+* A divider with a grey color.
+* Several rows, each with two instances of a custom AppColumnLayout widget and a divider in between. Each AppColumnLayout widget displays a number and a label, and can be aligned to either end of the row.
+Another gap with a height of 20 logical pixels.
+</br>
+## Outcome
+![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2021.PNG)
+</br>
+</br>
+</br>
 
 
 

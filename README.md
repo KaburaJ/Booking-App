@@ -1,10 +1,10 @@
 # Booking-App
-
+This repository contains a booking app which targets gaming shops. This app can be accessed [here](https://kaburaj.github.io/Booking-App)
 # Table of contents
 1. [Overview](#Overview)
 2. [Development](#Development)
     1. [The Nitty Gritties](#The Nitty Gritties)
-       1. [Definitions](#Definitions)
+        1. [Definitions](#Definitions)
 3. [Let's Dive into it!](#Let's Dive into it!)
     1. [main.dart](#main.dart)
     2. [bottom_bar.dart](#bottom_bar.dart)
@@ -22,8 +22,6 @@
     6. [home_screen.dart](#home_screen.dart)
     7. [Search Screen.dart](#Search Screen.dart)
 5. [links](#links)
-
-This repository contains a booking app which targets gaming shops. This app can be accessed [here](https://kaburaj.github.io/Booking-App)
 
 # Overview
 This app, though currently more of a UI representation of the end goal, is supposed to be updated by the gaming shop owner. These changes are to be showcased in real time hence the app is dynamic nature. The clients, on the other hand, can now book the available games in advance instead of going to the shop and waiting in line, thus wasting time. To put a spin on it, I thought of categorizing the games in terms of availability and the number of players it requires. For example, the client might opt for a multi-player game at a certain time. This game will remain in the available games tab up until the maximum number of players for that game (usually 2) is reached. 

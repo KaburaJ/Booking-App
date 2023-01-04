@@ -3,9 +3,9 @@ This repository contains a booking app which targets gaming shops. This app can 
 # Table of contents
 1. [Overview](#Overview)
 2. [Development](#Development)
-    1. [The Nitty Gritties](#The Nitty Gritties)
+    1. [The Nitty Gritties](# The Nitty Gritties)
         1. [Definitions](#Definitions)
-3. [Let's Dive into it!](#Let's Dive into it!)
+3. [Let's Dive into it!](# Let's Dive into it!)
     1. [main.dart](#main.dart)
     2. [bottom_bar.dart](#bottom_bar.dart)
     3. [Utils](#Utils)
@@ -20,7 +20,7 @@ This repository contains a booking app which targets gaming shops. This app can 
         5. [layout_builder_widget.dart](#layout_builder_widget.dart)
         6. [thick_cotainer.dart](#thick_container.dart)
     6. [home_screen.dart](#home_screen.dart)
-    7. [Search Screen.dart](#Search Screen.dart)
+    7. [search_screen.dart](#search_screen.dart)
 5. [links](#links)
 
 # Overview

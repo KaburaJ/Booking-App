@@ -2000,7 +2000,6 @@ The `Positioned` widgets are used to position their children within their parent
 </br>
 </br>
 ## **Profile Screen**
-</br>
 The final screen of our appplication is next. Still within the `screens` folder, create a file. You may opt to name it `profile_screen.dart`, or not. 
 
 ```dart
@@ -2011,7 +2010,7 @@ import 'package:kaburacreates/widgets/column_layout.dart';
 import '../utils/app_layout.dart';
 import '../utils/app_styles.dart';
 ```
-As is the norm, we importing relevant libraries
+As is the norm, we are importing the relevant libraries
 
 ```dart
 class ProfileScreen extends StatelessWidget {
@@ -2024,7 +2023,7 @@ class ProfileScreen extends StatelessWidget {
   }
 }
 ```
-This code creates a Scaffold widget which is a basic layout structure in Flutter. It provides several features such as a `app bar`, a `drawer`, and a `floating action button`. It has a single child, which is a widget that represents the content of the screen.
+This code creates a `Scaffold` widget which is a basic layout structure in Flutter. It provides several features such as a `app bar`, a `drawer`, and a `floating action button`. It has a single child, which is a widget that represents the content of the screen.
 </br>
 </br>
 
@@ -2120,9 +2119,6 @@ The first child of the row is a container widget with a single child, which is a
 The second child of the row is a `gap` widget with a fixed height of 6 pixels, and the third child is a text widget displaying the string "Premium Status" with a dark purple color and a font weight of 600.
 </br>
 *The code snippets above create a layout for a profile screen in a Flutter app. It has a `header` with an image, name, and username. It also has a section for a premium status badge, which is a purple circle with a white shield icon. The header is a Row with a circular image on the left and the name, username, and premium status badge on the right. The premium status badge is a Container with a purple background and white shield icon.*
-
-</br>
-</br>
 ```dart
 const Spacer(),
                   Column(
@@ -2329,7 +2325,6 @@ Another `column` widget as a child of the `container`. This `column` has several
 A row widget with two children, each of which is an instance of a custom `AppColumnLayout` widget. The row has mainAxisAlignment set to `spaceBetween`, so the two children will be evenly distributed at the beginning and end of the row.
 </br>
 The `AppColumnLayout` widget appears to have four named parameters: `firstText`, `secondText`, `alignment`, and `isColor`. This widget displays two pieces of text and allows some customization of the text alignment and coloring. The `firstText` and `secondText` parameters specify the text to be displayed, while the `alignment` parameter controls the alignment of the text within the widget.
-</br>
   ```dart
                       Gap(
                         AppLayout.getHeight(20),

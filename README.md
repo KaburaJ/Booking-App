@@ -23,6 +23,8 @@ This repository contains a booking app which targets gaming shops. This app can 
     7. [Search_Screen](https://github.com/KaburaJ/Booking-App#search-screen)
     8. [Games ticket view](https://github.com/KaburaJ/Booking-App/blob/main/README.md#games-ticket-view)
     9. [Profile Screen](https://github.com/KaburaJ/Booking-App/blob/main/README.md#profile-screen)
+5. [We made it!](https://github.com/KaburaJ/Booking-App/blob/main/README.md#we-made-it)
+5. [Acknowledgements](#Acknowledgements)
 5. [links](#links)
 
 # Overview
@@ -45,7 +47,6 @@ Before diving into the application's code, certain key words have to be understo
 </br>
 
 1. **Widget** 
-</br>
 This feature is graphical and provides information through which a user can interact with an application. Widgets are of two types: **Stateless** and **stateful**.
 
 - **Stateless** widgets refer to widgets which are immutable. Simply put, stateless widgets do not change even when there are obvious changes in the app such as variations in the input parameters. A good example is a text widget.
@@ -57,34 +58,28 @@ Thus, in the selection of a stateless or stateful widget- which you will see ple
 </br>
 
 2. **Container**
-</br>
 From the word itself, a container is some sort of storage system. In Flutter, a container stores widgets which perform various functions such as displaying text, icons and images. It is useful for when these widgets are many and require to be arranged and positioned ina certain way as per the UI design. A container is a widget in its own capacity. It is referred to as a parent widget. It might be obvious, or not, that this parent widget requires a child widget. This is true for a `Container`. 
 </br>
 Consequently, there are terms that are used within containers. They include:
 - **Padding**
-</br>
 This widget creates empty space around a widget or a group of widgets. 
 </br>
 
 - **Margin**
-</br>
 Easily confused with padding, this widget creates empty space around the container itself. In this way, it outlines the application's margin.
 </br>
 
 - **Row and Column**
-</br>
 Rows and columns are usually accompanied by children in the Flutter syntax. As such, a row displays its children in a horizontal manner whereas a column displays these children in a vertical manner. 
 </br>
 *In the interpration of UI design to code, identifying whether you intend to work with a column or row in a particular instance is paramount in the creation of an application.*
 </br>
 
 - **CrossAxisAlignment and MainAxisAlignment**
-</br>
 When it comes to rows, the main axis is horizontal while the cross axis is perpendicular. The opposite is true for columns. Consequently, the terms CrossAxisAlignment and MainAxisAlignment vary in definition depending on whether one is referring to the row or column. However, both properties allow for positioning of widgets. 
 </br>
 
 - **Spacer()**
-</br>
 Of importance is the `spacer()` widget which allows for spacing in between widgets. In this project, the widget is replaced by Gap() which carries out a similar funtion.
 </br>
 
@@ -92,28 +87,23 @@ Of importance is the `spacer()` widget which allows for spacing in between widge
 </br>
 
 3. **Scaffold**
-</br>
 A scaffold provides the UI layout of an application's screen such as appbar and bottom navigation bar. Where this layout is to be used by default, the scaffold can wrap a container. 
 Although a scaffold and container may seem to overlap in functioning, a container is more flexible moreso when one is aiming at creating their own layout away from the defaults. 
 </br>
 
 4. **Flex**
-</br>
 We can refer to flex as a combination of rows and columns. It facilitates the positioning of widgets either in the vertical or horizontal axes. Unlike row and column whose direction is fixed, flex is flexible.
 </br>
 
 6. **ListView**
-</br>
 ListView creates children in a list that can be `scrolled though` either vertically or horizontally. 
 </br>
 
 8. **Stack**
-</br>
 When one wants widgets to overlap, a stack widget is used.
 </br>
 
 9. **FittedBox**
-</br>
 When called, it creates a widget that scales and positions its child within itself
 </br>
 
@@ -1096,6 +1086,7 @@ Expanded(
 4. *Another `ThickContainer` widget with its "isColor" field set to true.*
 </br>
 5. *A `text` widget that displays the value of the `code` field in the `002_Available` object of the `list` map. The `text style` for this widget is determined by the `isColor` bool value. If `isColor` is null, the text style is `Styles.headLineStyle4` with the colour set to `black`. If `isColor` is not null, the text style is `Styles.headLineStyle3` with no colour modification.*
+
 ```dart
 SizedBox(
                     height: AppLayout.getHeight(20),
@@ -1112,7 +1103,9 @@ SizedBox(
                                     Radius.circular(AppLayout.getHeight(10))))),
                   )
 ```
+
 *This code is creating a `SizedBox` widget with a `width` of 10 logical pixels and a `height` of 20 logical pixels. The `SizedBox` widget is then decorated with a `BoxDecoration` that sets its color to either `Colors.grey.shade200` or `Colors.white` depending on the value of the `isColor` boolean parameter. The `BoxDecoration` also sets the border radius of the `SizedBox` widget to have rounded corners on the top-left and bottom-left edges. The `SizedBox` widget is then displayed on the screen.*
+
 ```dart
 Container(
             decoration: BoxDecoration(
@@ -1156,6 +1149,7 @@ Container(
             ]),
           )
  ```
+ 
 *Here, there is a `container` with a solid color background (either orange or white, depending on the value of isColor). It contains a `Column` with a single `Row` inside it. This `Row` contains three more `AppColumnLayout` widgets, which again display information about the game (date, time, and number of players). The `AppColumnLayout` widgets are used to display the information in a consistent way, with a label and a value aligned vertically. The isColor parameter determines whether the widget should use a light or dark color scheme.*
 
 </br>

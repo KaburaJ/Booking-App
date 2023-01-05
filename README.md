@@ -115,9 +115,10 @@ When called, it creates a widget that scales and positions its child within itse
 
 
 # Let's Dive into it!
-</br>
 ## **main.dart**
+</br>
 The `main.dart` file is a prerequisite for all Flutter applications and is where the program starts. 
+
 ```dart
 import 'package:flutter/material.dart';
 import 'package:kaburacreates/screens/bottom_bar.dart';
@@ -2023,7 +2024,7 @@ class ProfileScreen extends StatelessWidget {
   }
 }
 ```
-This code creates a Scaffold widget which is a basic layout structure in Flutter. It provides several features such as a app bar, a drawer, and a floating action button. It has a single child, which is a widget that represents the content of the screen.
+This code creates a Scaffold widget which is a basic layout structure in Flutter. It provides several features such as a `app bar`, a `drawer`, and a `floating action button`. It has a single child, which is a widget that represents the content of the screen.
 </br>
 </br>
 
@@ -2054,7 +2055,7 @@ return Scaffold(
                     AppLayout.getHeight(10),
                   ),
  ```
-This code is defining a "Scaffold" widget with a white background color, and a single child, which is a "ListView" widget. The "ListView" has padding and a single child, which is a row widget with two children. The first child is a container widget with a height and width of 86 pixels, and a decoration that includes a rounded corner border and an image. The second child is a gap widget with a fixed height of 10 pixels.
+This code is defining a "Scaffold" widget with a white background color, and a single child, which is a "ListView" widget. The `ListView` has padding and a single child, which is a row widget with two children. The first child is a container widget with a height and width of 86 pixels, and a decoration that includes a rounded corner border and an image. The second child is a gap widget with a fixed height of 10 pixels.
 </br>
 The container widget has a single child, which is an image widget displaying the image specified by the "assets/images/img2.jpg" asset. The image is displayed within the container with a rounded corner border. The gap widget is likely used to add some space between the container and the next widget.
  ```dart
@@ -2077,9 +2078,9 @@ The container widget has a single child, which is an image widget displaying the
                             color: Color(0xFFFEF4F3),
                           ),
 ```
-This code defines a column widget with three children. The first child is a text widget displaying the string "Book Games" with a style defined by the "headLineStyle" constant. The second child is a gap widget with a fixed height of 2 pixels, and the third child is a text widget displaying the string "Kabura Creates" with a custom text style.
+This code defines a column widget with three children. The first child is a text widget displaying the string "Book Games" with a style defined by the `headLineStyle` constant. The second child is a gap widget with a fixed height of 2 pixels, and the third child is a text widget displaying the string "Kabura Creates" with a custom text style.
 </br>
-The column also has two named parameters set: "crossAxisAlignment" and "mainAxisAlignment". "crossAxisAlignment" is set to "start", so the children will be aligned along the start of the column, and "mainAxisAlignment" is set to "start", so the children will be aligned along the start of the main axis.
+The column also has two named parameters set: `crossAxisAlignment` and `mainAxisAlignment`. `crossAxisAlignment` is set to `start`, so the children will be aligned along the start of the column, and `mainAxisAlignment` is set to `start`, so the children will be aligned along the start of the main axis.
 </br>
 The column has a single grandchild, which is a container widget with a single child, which is a gap widget with a fixed height of 8 pixels. The container has a decoration with a rounded corner border and a light pink background color.
 
@@ -2112,13 +2113,13 @@ The column has a single grandchild, which is a container widget with a single ch
                         )
                       ]),
 ```
-This code defines a row widget with three children as a child of the container widget. The row has a single grandchild, which is a gap widget with a fixed height of 6 pixels.
+This code defines a `row` widget with three children as a child of the `container` widget. The row has a single grandchild, which is a gap widget with a fixed height of 6 pixels.
 </br>
 The first child of the row is a container widget with a single child, which is an icon widget. The container has padding and a decoration with a circular shape and a dark purple background color. The icon widget displays a shield icon in white color and has a size of 15 pixels.
 </br>
-The second child of the row is a gap widget with a fixed height of 6 pixels, and the third child is a text widget displaying the string "Premium Status" with a dark purple color and a font weight of 600.
+The second child of the row is a `gap` widget with a fixed height of 6 pixels, and the third child is a text widget displaying the string "Premium Status" with a dark purple color and a font weight of 600.
 </br>
-*The code snippets above create a layout for a profile screen in a Flutter app. It has a header with an image, name, and username. It also has a section for a premium status badge, which is a purple circle with a white shield icon. The header is a Row with a circular image on the left and the name, username, and premium status badge on the right. The premium status badge is a Container with a purple background and white shield icon.*
+*The code snippets above create a layout for a profile screen in a Flutter app. It has a `header` with an image, name, and username. It also has a section for a premium status badge, which is a purple circle with a white shield icon. The header is a Row with a circular image on the left and the name, username, and premium status badge on the right. The premium status badge is a Container with a purple background and white shield icon.*
 
 </br>
 </br>
@@ -2138,7 +2139,7 @@ const Spacer(),
                     ],
                   )
 ```
-This code is creating a layout with a spacer and a column with a single InkWell widget. The InkWell widget is a non-visual widget that provides gesture recognition. When the user taps on it, the onTap callback is triggered and the print statement is executed. The InkWell widget has a single child, which is a Text widget that displays the text "Edit" in orange and with a weight of 300.
+This code is creating a layout with a `spacer` and a column with a single `InkWell` widget. The InkWell widget is a non-visual widget that provides gesture recognition. When the user taps on it, the `onTap` callback is triggered and the print statement is executed. The InkWell widget has a single child, which is a `Text` widget that displays the text "Edit" in orange and with a weight of 300.
 </br>
 
 ## Outcome
@@ -2178,11 +2179,11 @@ Gap(
                               Border.all(width: 18, color: Color(0xff7e1154))),
                     )),
  ```
-The code above defines a gap widget with a fixed height of 8 pixels as a child of the "ListView" widget, followed by a divider widget with a grey color, and another gap widget with a fixed height of 8 pixels.
+The code above defines a gap widget with a fixed height of 8 pixels as a child of the `ListView` widget, followed by a divider widget with a grey color, and another gap widget with a fixed height of 8 pixels.
 </br>
 The code also defines a stack widget with a single child, which is a container widget. The stack widget has a single grandchild, which is a positioned widget.
 </br>
-The container widget has a fixed height of 90 pixels and a width of "double.infinity", so it will take up all the available horizontal space. It also has a decoration with a dark purple background color and rounded corners.
+The container widget has a fixed height of 90 pixels and a width of `double.infinity`, so it will take up all the available horizontal space. It also has a decoration with a dark purple background color and rounded corners.
 </br>
 The positioned widget is positioned 45 pixels to the right and 40 pixels from the top of the container widget. It has padding and a decoration with a transparent color, a circular shape, and a border with a width of 18 pixels and a dark purple color.
  ```dart
@@ -2221,9 +2222,9 @@ The positioned widget is positioned 45 pixels to the right and 40 pixels from th
                         )
                       ]),
   ```
-This code defines a container widget with a single child, which is a row widget. The container has padding and the row widget has two children and one grandchild.
+This code defines a `container` widget with a single child, which is a row widget. The container has padding and the row widget has two children and one grandchild.
 </br>
-The first child of the row widget is a circle avatar widget with a single child, which is an icon widget. The circle avatar widget has a maximum radius of 25 pixels and a white background color. The icon widget displays a lightbulb icon in dark purple color and has a size of 27 pixels.
+The first child of the row widget is a `circle avatar` widget with a single child, which is an icon widget. The circle avatar widget has a maximum radius of 25 pixels and a white background color. The icon widget displays a lightbulb icon in dark purple color and has a size of 27 pixels.
 </br>
 *The code snippets above define a Flutter widget for displaying a message about a new reward. The widget consists of several UI elements stacked together: a gap, a divider, another gap, and then a stack containing a container with a circular background color and border radius, another container with a transparent background and border, and a third container with padding and containing a row with an avatar icon, a gap, and a column of text. The avatar icon is a light bulb and the text includes a headline and a subheadline. The text and the avatar icon are both white, while the background container has a color of Color(0xffa42d87), which is a shade of pink.*
 
@@ -2305,7 +2306,7 @@ A container that has some `padding`, a rounded border, a solid `color` backgroun
                         color: Colors.grey.shade300,
                       ),
  ```
-Another column widget as a child of the container. This column has several children: a `gap`, a row widget with two text widgets, and another gap. The row widget has mainAxisAlignment set to "spaceBetween", which means that the two children will be positioned at the beginning and end of the row, with space evenly distributed between them. The `text` widgets display the strings "Games Played" and "31 Dec 2022", respectively, with a font size of 16 and a style defined by the `headLineStyle4` constant. The column also has a divider widget as a child, which will display a horizontal line with a grey color.
+Another `column` widget as a child of the `container`. This `column` has several `children`: a `gap`, a row widget with two text widgets, and another gap. The row widget has mainAxisAlignment set to `spaceBetween`, which means that the two children will be positioned at the beginning and end of the row, with space evenly distributed between them. The `text` widgets display the strings "Games Played" and "31 Dec 2022", respectively, with a font size of 16 and a style defined by the `headLineStyle4` constant. The column also has a divider widget as a child, which will display a horizontal line with a grey color.
  ```dart
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,

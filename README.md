@@ -2054,7 +2054,7 @@ return Scaffold(
                     AppLayout.getHeight(10),
                   ),
  ```
-This code is defining a "Scaffold" widget with a white background color, and a single child, which is a "ListView" widget. The `ListView` has padding and a single child, which is a row widget with two children. The first child is a container widget with a height and width of 86 pixels, and a decoration that includes a rounded corner border and an image. The second child is a gap widget with a fixed height of 10 pixels.
+This code is defining a "Scaffold" widget with a white background color, and a single child, which is a `ListView` widget. The `ListView` has padding and a single child, which is a row widget with two children. The first child is a container widget with a height and width of 86 pixels, and a decoration that includes a rounded corner border and an image. The second child is a gap widget with a fixed height of 10 pixels.
 </br>
 The container widget has a single child, which is an image widget displaying the image specified by the "assets/images/img2.jpg" asset. The image is displayed within the container with a rounded corner border. The gap widget is likely used to add some space between the container and the next widget.
  ```dart
@@ -2175,13 +2175,13 @@ Gap(
                               Border.all(width: 18, color: Color(0xff7e1154))),
                     )),
  ```
-The code above defines a gap widget with a fixed height of 8 pixels as a child of the `ListView` widget, followed by a divider widget with a grey color, and another gap widget with a fixed height of 8 pixels.
+The code above defines a `gap` widget with a fixed height of 8 pixels as a child of the `ListView` widget, followed by a divider widget with a grey color, and another gap widget with a fixed height of 8 pixels.
 </br>
-The code also defines a stack widget with a single child, which is a container widget. The stack widget has a single grandchild, which is a positioned widget.
+The code also defines a `stack` widget with a single child, which is a container widget. The stack widget has a single grandchild, which is a positioned widget.
 </br>
-The container widget has a fixed height of 90 pixels and a width of `double.infinity`, so it will take up all the available horizontal space. It also has a decoration with a dark purple background color and rounded corners.
+The `container` widget has a fixed height of 90 pixels and a width of `double.infinity`, so it will take up all the available horizontal space. It also has a decoration with a dark purple background color and rounded corners.
 </br>
-The positioned widget is positioned 45 pixels to the right and 40 pixels from the top of the container widget. It has padding and a decoration with a transparent color, a circular shape, and a border with a width of 18 pixels and a dark purple color.
+The `positioned` widget is positioned 45 pixels to the right and 40 pixels from the top of the container widget. It has padding and a decoration with a transparent color, a circular shape, and a border with a width of 18 pixels and a dark purple color.
  ```dart
                 Container(
                   padding: EdgeInsets.symmetric(
@@ -2240,9 +2240,9 @@ Gap(
               ),
  ```
 The code snippet above creates:
-* A gap with a height of 25 logical pixels.
-* A text element with the text "Accumulated Games" and a particular style defined by Styles.headLineStyle2.
-* Another gap with a height of 20 logical pixels.
+* A `gap` with a height of 25 logical pixels.
+* A `text` element with the text "Accumulated Games" and a particular style defined by Styles.headLineStyle2.
+* Another `gap` with a height of 20 logical pixels.
 </br>
 ## Outcome
 
@@ -2354,7 +2354,7 @@ Another row widget with two children, each of which is an instance of the `AppCo
 
 The `AppColumnLayout` widget appears to have four named parameters: `firstText`, `secondText`, `alignment`, and `isColor`. This widget displays two pieces of text and allows some customization of the text alignment and coloring. The `firstText` and `secondText` parameters probably specify the text to be displayed, while the `alignment` parameter controls the alignment of the text within the widget. 
 
-This code also includes a divider widget as a child of the column, which will display a horizontal line with a grey color.
+This code also includes a `divider` widget as a child of the column, which will display a horizontal line with some shade of `grey` color.
  ```dart
                       Gap(
                         AppLayout.getHeight(20),
@@ -2393,7 +2393,7 @@ This code also includes a divider widget as a child of the column, which will di
  ```
 The remainder of the children of the container widget. It includes another row widget with two children, each of which is an instance of the `AppColumnLayout` widget. The row has mainAxisAlignment set to `spaceBetween`, so the two children will be evenly distributed at the beginning and end of the row.
 </br>
-The `AppColumnLayout` widget appears to have four named parameters: `firstText`, `secondText`, `alignment`, and `isColor`. This widget displays two pieces of text and allows some customization of the text alignment and coloring. The "firstText" and `secondText` parameters probably specify the text to be displayed, while the `alignment` parameter controls the alignment of the text within the widget. 
+The `AppColumnLayout` widget appears to have four named parameters: `firstText`, `secondText`, `alignment`, and `isColor`. This widget displays two pieces of text and allows some customization of the text alignment and coloring. The "firstText" and `secondText` parameters specify the text to be displayed, while the `alignment` parameter controls the alignment of the text within the widget. 
 </br>
 This code also includes another divider widget as a child of the column, and a container widget with a single child, which is a column widget containing a gap and a divider widget.
 
@@ -2406,7 +2406,7 @@ This code also includes another divider widget as a child of the column, and a c
 </br>
 
 # We made it!
-Now that we've created the home, search, game tickets and profile screens, we have created pretty much the whole project. There is room for improvement in terms of making it useful in the real world but so far, so good. To share it with peers publicly, one has to deploy their application. There are several platforms, GitHub Pages being one of them. This [tutorial](https://maheshmnj.medium.com/deploying-your-flutter-webapp-to-github-pages-111ff9e5cbc9) details the procedure clearly.
+Now that we have created the home, search, game tickets and profile screens, we have created pretty much the whole project. There is room for improvement in terms of making it useful in the real world but so far, so good. To share it with peers publicly, one has to deploy their application. There are several platforms, GitHub Pages being one of them. This [tutorial](https://maheshmnj.medium.com/deploying-your-flutter-webapp-to-github-pages-111ff9e5cbc9) details the procedure clearly.
 
 # Acknowledgements
  - [Awesome Flutter Tutorial](https://www.youtube.com/watch?v=71AsYo2q_0Y)
@@ -2414,7 +2414,8 @@ Now that we've created the home, search, game tickets and profile screens, we ha
  - [Awesome Guide to deploy Flutter app to GitHub Pages](https://maheshmnj.medium.com/deploying-your-flutter-webapp-to-github-pages-111ff9e5cbc9)
 </br>
 </br>
-## 🔗 Links
+
+# Links
 
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/joan-kabura)
 [![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/JoanKabura_)

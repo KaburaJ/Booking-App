@@ -1164,8 +1164,8 @@ Looking at the homescreen UI [here](https://kaburaj.github.io/Booking-App), ther
 * Lastly, there is a `bottom bar` that contains four icons namely: the 'home', 'search', 'games' and 'profile' icons which are clickable.
 These subsequent sections will be reproducing this UI which, when completed, will make up our homescreen.
 </br>
-</br>
-A file is created in  the ```screens``` folder and named ```home_screen.dart``` Here's the procedure followed in this project:
+
+A file is created in  the `screens`` folder and named `home_screen.dart` Here's the procedure followed in this project:
 </br>
 </br>
 
@@ -1532,7 +1532,7 @@ Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                       ],
                     )),
  ```
- </br>
+ 
 The code above creates a `Row` widget with a single child `container` widget. The `Row` widget has its `mainAxisAlignment` property set to `MainAxisAlignment.spaceBetween`, which will align its children such that there is an equal amount of space between the children and the start and end of the row.
 </br>
 This `container` widget has a fixed height (determined by the value returned by `AppLayout.getHeight(425)`), a fixed width (determined by `size.width * 0.42`), some `padding`, a white `background color`, a rounded `border`, and a `box shadow`. The `container` has a single `child`, which is a `Column` widget with three `children`: a `container` with a `background image`, a `Gap` widget, and a `Text` widget.
@@ -1597,8 +1597,8 @@ The `Gap` widget adds some space between the first container and the Text widget
                     ],
                   ),
  ```
- </br>
- This code creates a Column widget with a single child, a Stack widget.
+ 
+This code creates a Column widget with a single child, a Stack widget.
 </br>
 The `Stack` widget has two `children`: a `container` widget and a `positioned` widget. The `container` widget has a fixed `width` (determined by `size.width * 0.44`), a fixed `height` (determined by the value returned by `AppLayout.getHeight(184)`), a purple `background color`, rounded corners, some `padding`, and a single child `column` widget.
 </br>
@@ -1647,7 +1647,7 @@ The `positioned` widget is positioned relatively to the `top-right` corner of th
                     ]),
                   )
   ```
-  </br>
+ 
 This code creates a `Gap` widget and a `container` widget, both with fixed dimensions. The Gap widget is adding some space or gap between the widgets above and below it.
   </br>
 This `container` widget has a fixed width (determined by `size.width * 0.44`), a fixed `height` (determined by the value returned by `AppLayout.getHeight(210)`), some `padding`, a pink background color, rounded corners, and a single child `column` widget. The `column` widget has two children: a `Text` widget and a `RichText` widget.
@@ -2178,7 +2178,7 @@ Gap(
                               Border.all(width: 18, color: Color(0xff7e1154))),
                     )),
  ```
-* The code above defines a gap widget with a fixed height of 8 pixels as a child of the "ListView" widget, followed by a divider widget with a grey color, and another gap widget with a fixed height of 8 pixels.
+The code above defines a gap widget with a fixed height of 8 pixels as a child of the "ListView" widget, followed by a divider widget with a grey color, and another gap widget with a fixed height of 8 pixels.
 </br>
 The code also defines a stack widget with a single child, which is a container widget. The stack widget has a single grandchild, which is a positioned widget.
 </br>
@@ -2221,7 +2221,7 @@ The positioned widget is positioned 45 pixels to the right and 40 pixels from th
                         )
                       ]),
   ```
-* This code defines a container widget with a single child, which is a row widget. The container has padding and the row widget has two children and one grandchild.
+This code defines a container widget with a single child, which is a row widget. The container has padding and the row widget has two children and one grandchild.
 </br>
 The first child of the row widget is a circle avatar widget with a single child, which is an icon widget. The circle avatar widget has a maximum radius of 25 pixels and a white background color. The icon widget displays a lightbulb icon in dark purple color and has a size of 27 pixels.
 </br>
@@ -2280,7 +2280,7 @@ Container(
                               color: Styles.bgColor,
                               fontWeight: FontWeight.w600)),
 ```
-* A container that has some padding, a rounded border, a solid color background, and a box shadow. It also has a single child, which is a column widget containing a gap and a text widget. The text widget displays the string "193745" with a font size of 45 and a white color, and is given a font weight of "w600", which is a slightly bolder weight than the default.
+A container that has some `padding`, a rounded border, a solid `color` background, and a `box shadow`. It also has a single child, which is a column widget containing a gap and a text widget. The text widget displays the string "193745" with a font size of 45 and a white color, and is given a font weight of "w600", which is a slightly bolder weight than the default.
 ```dart
                       Gap(
                         AppLayout.getHeight(20),
@@ -2305,7 +2305,7 @@ Container(
                         color: Colors.grey.shade300,
                       ),
  ```
- * Another column widget as a child of the container. This column has several children: a gap, a row widget with two text widgets, and another gap. The row widget has mainAxisAlignment set to "spaceBetween", which means that the two children will be positioned at the beginning and end of the row, with space evenly distributed between them. The text widgets display the strings "Games Played" and "31 Dec 2022", respectively, with a font size of 16 and a style defined by the "headLineStyle4" constant. The column also has a divider widget as a child, which will display a horizontal line with a grey color.
+Another column widget as a child of the container. This column has several children: a `gap`, a row widget with two text widgets, and another gap. The row widget has mainAxisAlignment set to "spaceBetween", which means that the two children will be positioned at the beginning and end of the row, with space evenly distributed between them. The `text` widgets display the strings "Games Played" and "31 Dec 2022", respectively, with a font size of 16 and a style defined by the `headLineStyle4` constant. The column also has a divider widget as a child, which will display a horizontal line with a grey color.
  ```dart
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -2325,9 +2325,9 @@ Container(
                         ],
                       ),
   ```
-* A row widget with two children, each of which is an instance of a custom "AppColumnLayout" widget. The row has mainAxisAlignment set to "spaceBetween", so the two children will be evenly distributed at the beginning and end of the row.
+A row widget with two children, each of which is an instance of a custom `AppColumnLayout` widget. The row has mainAxisAlignment set to `spaceBetween`, so the two children will be evenly distributed at the beginning and end of the row.
 </br>
-The "AppColumnLayout" widget appears to have four named parameters: "firstText", "secondText", "alignment", and "isColor". It's likely that this widget displays two pieces of text and allows some customization of the text alignment and coloring. The "firstText" and "secondText" parameters probably specify the text to be displayed, while the "alignment" parameter controls the alignment of the text within the widget. The "isColor" parameter might be a boolean that determines whether the widget is colored or not.
+The `AppColumnLayout` widget appears to have four named parameters: `firstText`, `secondText`, `alignment`, and `isColor`. This widget displays two pieces of text and allows some customization of the text alignment and coloring. The `firstText` and `secondText` parameters specify the text to be displayed, while the `alignment` parameter controls the alignment of the text within the widget.
 </br>
   ```dart
                       Gap(
@@ -2354,9 +2354,9 @@ The "AppColumnLayout" widget appears to have four named parameters: "firstText",
                         ],
                       ),
  ```
-* Another row widget with two children, each of which is an instance of the "AppColumnLayout" widget. The row has mainAxisAlignment set to "spaceBetween", so the two children will be evenly distributed at the beginning and end of the row.
+Another row widget with two children, each of which is an instance of the `AppColumnLayout` widget. The row has mainAxisAlignment set to `spaceBetween`, so the two children will be evenly distributed at the beginning and end of the row.
 
-The "AppColumnLayout" widget appears to have four named parameters: "firstText", "secondText", "alignment", and "isColor". It's likely that this widget displays two pieces of text and allows some customization of the text alignment and coloring. The "firstText" and "secondText" parameters probably specify the text to be displayed, while the "alignment" parameter controls the alignment of the text within the widget. The "isColor" parameter might be a boolean that determines whether the widget is colored or not.
+The `AppColumnLayout` widget appears to have four named parameters: `firstText`, `secondText`, `alignment`, and `isColor`. This widget displays two pieces of text and allows some customization of the text alignment and coloring. The `firstText` and `secondText` parameters probably specify the text to be displayed, while the `alignment` parameter controls the alignment of the text within the widget. 
 
 This code also includes a divider widget as a child of the column, which will display a horizontal line with a grey color.
  ```dart
@@ -2395,9 +2395,9 @@ This code also includes a divider widget as a child of the column, which will di
                     ],
                   ))
  ```
-* The remainder of the children of the container widget. It includes another row widget with two children, each of which is an instance of the "AppColumnLayout" widget. The row has mainAxisAlignment set to "spaceBetween", so the two children will be evenly distributed at the beginning and end of the row.
+The remainder of the children of the container widget. It includes another row widget with two children, each of which is an instance of the `AppColumnLayout` widget. The row has mainAxisAlignment set to `spaceBetween`, so the two children will be evenly distributed at the beginning and end of the row.
 </br>
-The "AppColumnLayout" widget appears to have four named parameters: "firstText", "secondText", "alignment", and "isColor". It's likely that this widget displays two pieces of text and allows some customization of the text alignment and coloring. The "firstText" and "secondText" parameters probably specify the text to be displayed, while the "alignment" parameter controls the alignment of the text within the widget. The "isColor" parameter might be a boolean that determines whether the widget is colored or not.
+The `AppColumnLayout` widget appears to have four named parameters: `firstText`, `secondText`, `alignment`, and `isColor`. This widget displays two pieces of text and allows some customization of the text alignment and coloring. The "firstText" and `secondText` parameters probably specify the text to be displayed, while the `alignment` parameter controls the alignment of the text within the widget. 
 </br>
 This code also includes another divider widget as a child of the column, and a container widget with a single child, which is a column widget containing a gap and a divider widget.
 

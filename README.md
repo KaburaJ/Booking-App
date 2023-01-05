@@ -1078,14 +1078,10 @@ Expanded(
 *This code is building a `row` with three elements:*
 </br>
 1. *A `text` widget that displays the value of the `code` field in the `001_Available` object of the `list` map. The `text style` for this widget is determined by the `isColor` bool value. If `isColor` is `null`, the `text style` is `Styles.headLineStyle3` with the `color` set to `black`. If "isColor" is `not null`, the `text style` is `Styles.headLineStyle3` with no color modification.
-</br>
 2. A `ThickContainer` widget with its `isColor` field set to true.
-</br>
 3. A `row` of `AppLayoutBuiderWidget` widgets with `sections` set to 6 and no other properties set.
-</br>
 4. Another `ThickContainer` widget with its "isColor" field set to true.
-</br>
-5. A `text` widget that displays the value of the `code` field in the `002_Available` object of the `list` map. The `text style` for this widget is determined by the `isColor` bool value. If `isColor` is null, the text style is `Styles.headLineStyle4` with the colour set to `black`. If `isColor` is not null, the text style is `Styles.headLineStyle3` with no colour modification.
+5. A `text` widget that displays the value of the `code` field in the `002_Available` object of the `list` map. The `text style` for this widget is determined by the `isColor` bool value. If `isColor` is null, the text style is `Styles.headLineStyle4` with the colour set to `black`. If `isColor` is not null, the text style is `Styles.headLineStyle3` with no colour modification.*
 
 ```dart
 SizedBox(
@@ -1158,20 +1154,20 @@ Container(
 ## **Home Screen**
 
 Looking at the homescreen UI [here](https://kaburaj.github.io/Booking-App), there's:
-* some form of text. Furthermore, the text is of varying fontsize.
-* an image at the top right corner
-* a search bar that has a search icon and the word 'search' on it
-* The text 'Available Games' and 'View all' on the same row but at the beginning and end respectively
-* A scrollable section (we'll employ some sort of ListView widget). Worth noting is that this section is scrollable horizontally.
-* The text 'Games' and 'View all' on the same row but at the beginning and end respectively
-* Another scrollable section that has some images and text.
-* Lastly, there is a bottom bar that contains four icons namely: the 'home', 'search', 'games' and 'profile' icons which are clickable.
-</br>
+* some form of `text`. Furthermore, the text is of varying fontsize.
+* an `image` at the top right corner
+* a `search bar` that has a search icon and the word 'search' on it
+* The `text` 'Available Games' and 'View all' on the same row but at the beginning and end respectively
+* A `scrollable section` (we'll employ some sort of ListView widget). Worth noting is that this section is scrollable horizontally.
+* The `text` 'Games' and 'View all' on the same row but at the beginning and end respectively
+* Another `scrollable section` that has some images and text.
+* Lastly, there is a `bottom bar` that contains four icons namely: the 'home', 'search', 'games' and 'profile' icons which are clickable.
 These subsequent sections will be reproducing this UI which, when completed, will make up our homescreen.
 </br>
-Here, we define what we want to be seen in our home page. A file is created in  the ```screens``` folder and named ```home_screen.dart``` Here's the procedure followed in this project:
 </br>
-
+A file is created in  the ```screens``` folder and named ```home_screen.dart``` Here's the procedure followed in this project:
+</br>
+</br>
 
 ```dart
 import 'package:fluentui_icons/fluentui_icons.dart';
@@ -1231,13 +1227,14 @@ class HomeScreen extends StatelessWidget {
                           ))
                     ]),
  ```
-* The widget has a `Scaffold` as the root element and a `ListView` with a single child `Container` inside. The `Container` has some padding on the left and right sides, and a `Column` as a child. The `Column` has two children: a `Row` and a `Gap` widget. The `Row` widget has two children: two `Column` widgets. Each of these `Column` widgets has two children: a `Text` widget with a greeting message and a title, and a `Gap` widget. The `Text` widgets have different styles applied to them.
+-Creating a widget that has a `Scaffold` as the root element and a `ListView` with a single child `Container` inside. The `Container` has some padding on the left and right sides, and a `Column` as a child. The `Column` has two children: a `Row` and a `Gap` widget. The `Row` widget has two children: two `Column` widgets. Each of these `Column` widgets has two children: a `Text` widget with a greeting message and a title, and a `Gap` widget. The `Text` widgets have different styles applied to them.
 </br>
-* In this code, a `Container` widget is added as a second child of the `Row` widget. The `Container` has a width and height specified in terms of a function `AppLayout.getWidth` and `AppLayout.getHeight`. It also has a `BoxDecoration` with a border radius and an image as its background image. The image is specified using an `AssetImage` widget. The `Container` is decorated with a rounded border with a radius equal to 15 pixels of its height. The image will be scaled to cover the entire `Container`, and any parts of the image that do not fit within the container will be cropped.
+</br>
+In this code, a `Container` widget is added as a second child of the `Row` widget. The `Container` has a width and height specified in terms of a function `AppLayout.getWidth` and `AppLayout.getHeight`. It also has a `BoxDecoration` with a border radius and an image as its background image. The image is specified using an `AssetImage` widget. The `Container` is decorated with a rounded border with a radius equal to 15 pixels of its height. The image will be scaled to cover the entire `Container`, and any parts of the image that do not fit within the container will be cropped.
 </br>
 
 
-_PS: To include images in the project, a new ```folder``` should be created in the file explorer. This folder should be named ```assets``` and the applications images uploaded to it. The ```pubspec.yaml``` file should be edited such that it resembles this: _
+_PS: To be able to include images in the project, a new ```folder``` should be created in the file explorer. This folder should be named ```assets``` and the application's images uploaded to it. The ```pubspec.yaml``` file should be edited such that it resembles this: _
 
 ```dart
 # The following section is specific to Flutter.
@@ -1277,7 +1274,7 @@ Gap(AppLayout.getHeight(25)),
                   ]),
                 ),
   ```
-* This code adds a `Gap` widget with a height equal to 25 pixels of the height of the screen, and a `Container` widget below it. The `Container` has a `BoxDecoration` with a border radius and a solid color specified. It also has some padding specified using `EdgeInsets.symmetric`. The `Container` has a single child, a `Row` widget with two children: an `Icon` and a `Text` widget. The `Icon` is a search icon with a specific color, and the `Text` widget has a specific style applied to it. The `Row` widget is used to display the search icon and the "Search" text in a horizontal arrangement.
+= Adding a `Gap` widget with a height equal to 25 pixels of the height of the screen, and a `Container` widget below it. The `Container` has a `BoxDecoration` with a border radius and a solid color specified. It also has some `padding` specified using `EdgeInsets.symmetric`. The `Container` has a single child, a `Row` widget with two children: an `Icon` and a `Text` widget. The `Icon` is a search icon with a specific color, and the `Text` widget has a specific style applied to it. The `Row` widget is used to display the search icon and the "Search" text in a horizontal arrangement.
 </br>
 
 
@@ -1293,7 +1290,7 @@ Gap(AppLayout.getHeight(25)),
               ]),
             ),
 ```
-* This code adds a `Gap` widget with a height equal to 40 pixels of the height of the screen, and an `AppDoubleTextWidget` below it. The `AppDoubleTextWidget` is a custom widget that displays two pieces of text, a larger one and a smaller one, stacked horizontally. The larger text is specified using the `bigText` parameter, and the smaller text is specified using the `smallText` parameter. In this case, the `bigText` is set to "Available Games" and the `smallText` is set to "View all".
+- Adding a `Gap` widget with a height equal to 40 pixels of the height of the screen, and an `AppDoubleTextWidget` below it. The `AppDoubleTextWidget` is a custom widget that displays two pieces of text, a larger one and a smaller one, stacked horizontally. The larger text is specified using the `bigText` parameter, and the smaller text is specified using the `smallText` parameter. In this case, the `bigText` is set to "Available Games" and the `smallText` is set to "View all".
 </br>
 
 
@@ -1316,7 +1313,7 @@ Gap(AppLayout.getHeight(15)),
                       .toList(),
                 )),
  ```
-* This code adds a `Gap` widget with a height equal to 15 pixels of the height of the screen, and a `SingleChildScrollView` widget below it. The `SingleChildScrollView` is a scrollable widget that has a single child. It is used to display a horizontal list of widgets. The `scrollDirection` property of the `SingleChildScrollView` is set to `Axis.horizontal`, indicating that the list should be scrollable horizontally. The `SingleChildScrollView` has some padding on the left side and a `Row` widget as its child. The `Row` widget has multiple children, which are generated using the `map` function applied to the `gameList` list. Each element in the `gameList` list is passed to a custom `GameView` widget, which is then added to the list of children for the `Row` widget. The resulting list of widgets is then converted to a list of widgets using the `toList` function. The resulting list of widgets is then displayed in a horizontal arrangement and can be scrolled horizontally.
+- Including a `Gap` widget with a height equal to 15 pixels of the height of the screen, and a `SingleChildScrollView` widget below it. The `SingleChildScrollView` is a scrollable widget that has a single child. It is used to display a horizontal list of widgets. The `scrollDirection` property of the `SingleChildScrollView` is set to `Axis.horizontal`, indicating that the list should be scrollable horizontally. The `SingleChildScrollView` has some padding on the left side and a `Row` widget as its child. The `Row` widget has multiple children, which are generated using the `map` function applied to the `gameList` list. Each element in the `gameList` list is passed to a custom `GameView` widget, which is then added to the list of children for the `Row` widget. The resulting list of widgets is then converted to a list of widgets using the `toList` function. The resulting list of widgets is then displayed in a horizontal arrangement and can be scrolled horizontally.
 </br>
 
  
@@ -1342,13 +1339,13 @@ Gap(AppLayout.getHeight(15)),
                         .toList())),
   ```
   
-* This code creats a `SingleChildScrollView` widget that displays a horizontally scrolling list of `GamesScreen` widgets. The `GamesScreen` widgets are created using a `map` function that iterates over a list called `GameList` and creates a new `GamesScreen` widget for each element in the list. The GamesScreen widget takes a single argument called game, which is passed as a named argument when creating the widget.
+- Creating a `SingleChildScrollView` widget that displays a horizontally scrolling list of `GamesScreen` widgets. The `GamesScreen` widgets are created using a `map` function that iterates over a list called `GameList` and creates a new `GamesScreen` widget for each element in the list. The GamesScreen widget takes a single argument called game, which is passed as a named argument when creating the widget.
 
 The code also includes a `Container` widget that has a child widget called `AppDoubleTextWidget`, which takes two named arguments: `bigText` and `smallText`.
 </br>
 
 
-Finally, there are several instances of the `Gap` widget, which are used to add some vertical space between the various widgets in the layout. The Gap widget takes a single argument that specifies the height of the gap. The AppLayout.getHeight method is used to calculate the gap height.
+Finally, there are several instances of the `Gap` widget, which are used to add some vertical space between the various widgets in the layout. The Gap widget takes a single argument that specifies the height of the gap. The `AppLayout.getHeight` method is used to calculate the gap height.
 </br>
 
 
@@ -1359,7 +1356,7 @@ Finally, there are several instances of the `Gap` widget, which are used to add 
 </br>
 </br>
 
-
+That's our homescreen! Let us head on over to the `search` screen.
 
 ## **Search Screen**
 
@@ -1400,11 +1397,11 @@ class SearchScreen extends StatelessWidget {
                     .copyWith(fontSize: AppLayout.getHeight(35)),
               ),
  ```
-This code defines a `SearchScreen` widget, which is a StatelessWidget. The `SearchScreen` widget overrides the `build` method, which is called whenever the widget needs to be displayed.
+We then define a `SearchScreen` widget, which is a StatelessWidget. The `SearchScreen` widget overrides the `build` method, which is called whenever the widget needs to be displayed.
 
-The `build` method creates a `Scaffold` widget, which provides a white background and a basic layout structure. The `Scaffold` has a single child, a `ListView` widget. The ListView has padding applied to its horizontal and vertical edges, using the `EdgeInsets.symmetric` method. The padding values are calculated using the `AppLayout.getWidth` and `AppLayout.getHeight` methods, which seem to be used to scale the padding values based on the size of the screen.
+The `build` method creates a `Scaffold` widget, which provides a white background and a basic layout structure. The `Scaffold` has a single child, a `ListView` widget. The ListView has padding applied to its horizontal and vertical edges, using the `EdgeInsets.symmetric` method. The padding values are calculated using the `AppLayout.getWidth` and `AppLayout.getHeight` methods, which are used to scale the padding values based on the size of the screen.
 
-The `ListView` has two children: a `Gap` widget and a `Text` widget. The Gap widget adds some vertical space between the Text widget and the previous widget in the list (if any). The Text widget displays the message `"What are you looking for?"`, and has a style defined by the `Styles.headLineStyle` property, with the font size adjusted using the `AppLayout.getHeight` method.
+The `ListView` has two children: a `Gap` widget and a `Text` widget. The Gap widget adds some vertical space between the Text widget and the previous widget in the list. The Text widget displays the message `"What are you looking for?"`, and has a style defined by the `Styles.headLineStyle` property, with the font size adjusted using the `AppLayout.getHeight` method.
 </br>
 
 
@@ -1419,8 +1416,8 @@ Gap(AppLayout.getHeight(20)),
                   firstTab: "Game Tickets", secondTab: "View all"),
               Gap(AppLayout.getHeight(25)),
  ```
-The first `Gap` widget adds some vertical space with a height of 20 pixels.
-The `AppGameTabs` widget is a custom widget that displays two tabs with some text labels. It takes two named arguments are: `firstTab `and `secondTab`.
+Having gotten our expected result, we create some room for the next widget. Thus, the first `Gap` widget adds some vertical space with a height of 20 pixels.
+The `AppGameTabs` widget is a custom widget that displays two tabs with some text labels. It takes two named arguments: `firstTab `and `secondTab`.
 The second `Gap` widget adds more vertical space with a height of 25 pixels between the search bar and the rest of the widgets.
 </br>
 
@@ -1441,7 +1438,7 @@ const AppIconText(
                   icon: Icons.gamepad_outlined, text: "Multi Player"),
               Gap(AppLayout.getHeight(25)),
 ```
-This code displays two AppIconText widgets and some gap widgets in between them. The AppIconText widgets are displaying an icon from the Flutter Icons package (Icons.gamepad_outlined) and the text. The gap widgets are adding some space between the AppIconText widgets.
+We then display two `AppIconText` widgets and some gap widgets in between them. The `AppIconText` widgets are displaying an icon using `Icons.gamepad_outlined` package and the text. The gap widgets are adding some space between the `AppIconText` widgets.
 </br>
 
 ## Outcome
@@ -1467,13 +1464,13 @@ Container(
                   )),
    ```
    
-This code creates a new Container widget with some padding, a background color, a border radius, and a single child widget (a Text widget). 
+A new `Container` widget with some `padding`, a `background color`, a `border radius`, and a single child widget (a `Text` widget) is then constructed. 
 </br>
-The padding property specifies the amount of space that should be added inside the container. The EdgeInsets.symmetric method creates an EdgeInsets object with symmetrical vertical and horizontal padding. The vertical padding is determined by the value returned by AppLayout.getWidth(15) and the horizontal padding is determined by the value returned by AppLayout.getHeight(15). It's not clear from this code what these methods do, but it's possible that they take a value in pixels or some other unit of measure and return a value that represents some sort of width or height in pixels.
+The `padding` property specifies the amount of space that should be added inside the container. The `EdgeInsets.symmetric` method creates an EdgeInsets object with symmetrical vertical and horizontal padding. The `vertical` padding is determined by the value returned by `AppLayout.getWidth(15)` and the `horizontal` padding is determined by the value returned by `AppLayout.getHeight(15)`. 
 </br>
-The decoration property specifies a background color and a border radius for the container. The background color is specified using a 32-bit hexadecimal value (0xff7e1154), which represents a reddish purple color. The border radius is determined by the value returned by AppLayout.getWidth(10). This value is passed to the BorderRadius.circular method, which creates a border radius with a circular shape.
+The `decoration` property specifies a `background color` and a `border radius` for the container. The `background color` is specified using a 32-bit hexadecimal value (0xff7e1154), which represents a reddish purple color. The `border radius` is determined by the value returned by `AppLayout.getWidth(10)`. This value is passed to the `BorderRadius.circular` method, which creates a border radius with a circular shape.
 </br>
-The child property specifies a single child widget for the container, which is a Text widget that displays the text "find games" in white. The style property specifies the text style for the Text widget, which appears to be a copy of the Styles.textStyle object with the color set to white.
+The `child` property specifies a single child widget for the `container`, which is a `Text` widget that displays the text "find games" in white. The `style` property specifies the `text style` for the `Text` widget, which is a `copy` of the `Styles.textStyle` object with the color set to white.
 
 ## Outcome
 
@@ -1488,7 +1485,7 @@ Gap(AppLayout.getHeight(40)),
               Gap(AppLayout.getHeight(15)),
 ```
 
-This code creates a new instance of the AppDoubleTextWidget widget and displays two pieces of text: "Available Games" and "View all". The bigText property specifies the text to display in a larger font size and the smallText property specifies the text to display in a smaller font size. The const keyword indicates that this widget is a constant and its value cannot be changed after it is initialized.
+A new instance of the `AppDoubleTextWidget` widget is introduced and it displays two pieces of text: "Available Games" and "View all". The `bigText` property specifies the text to display in a larger font size and the `smallText` property specifies the text to display in a smaller font size. The `const` keyword indicates that this widget is a constant and its value cannot be changed after it is initialized.
 </br>
 
 ## Outcome
@@ -1536,15 +1533,15 @@ Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                     )),
  ```
  </br>
-This code creates a Row widget with a single child container widget. The Row widget has its mainAxisAlignment property set to MainAxisAlignment.spaceBetween, which will align its children such that there is an equal amount of space between the children and the start and end of the row.
+The code above creates a `Row` widget with a single child `container` widget. The `Row` widget has its `mainAxisAlignment` property set to `MainAxisAlignment.spaceBetween`, which will align its children such that there is an equal amount of space between the children and the start and end of the row.
 </br>
-This container widget has a fixed height (determined by the value returned by AppLayout.getHeight(425)), a fixed width (determined by size.width * 0.42), some padding, a white background color, a rounded border, and a box shadow. The container has a single child, which is a Column widget with three children: a container with a background image, a Gap widget, and a Text widget.
-</br>
-
-The first container has a fixed height (determined by the value returned by AppLayout.getHeight(190)) and a background image that is specified using the DecorationImage class. The borderRadius property gives the container rounded corners with a radius determined by the value returned by AppLayout.getHeight(12).
+This `container` widget has a fixed height (determined by the value returned by `AppLayout.getHeight(425)`), a fixed width (determined by `size.width * 0.42`), some `padding`, a white `background color`, a rounded `border`, and a `box shadow`. The `container` has a single `child`, which is a `Column` widget with three `children`: a `container` with a `background image`, a `Gap` widget, and a `Text` widget.
 </br>
 
-The Gap widget adds some space between the first container and the Text widget. The Text widget displays some text with a style specified by the Styles.headLineStyle2 object, which has had its color property set to black.
+The first `containe`r has a fixed `height` (determined by the value returned by `AppLayout.getHeight(190)`) and a `background image` that is specified using the `DecorationImage` class. The `borderRadius` property gives the container rounded corners with a radius determined by the value returned by `AppLayout.getHeight(12)`.
+</br>
+
+The `Gap` widget adds some space between the first container and the Text widget. The `Text` widget displays some text with a `style` specified by the `Styles.headLineStyle2` object, which has had its color property set to black.
 </br>
 
 ## Outcome
@@ -1603,13 +1600,13 @@ The Gap widget adds some space between the first container and the Text widget. 
  </br>
  This code creates a Column widget with a single child, a Stack widget.
 </br>
-The Stack widget has two children: a container widget and a positioned widget. The container widget has a fixed width (determined by size.width * 0.44), a fixed height (determined by the value returned by AppLayout.getHeight(184)), a purple background color, rounded corners, some padding, and a single child column widget.
+The `Stack` widget has two `children`: a `container` widget and a `positioned` widget. The `container` widget has a fixed `width` (determined by `size.width * 0.44`), a fixed `height` (determined by the value returned by `AppLayout.getHeight(184)`), a purple `background color`, rounded corners, some `padding`, and a single child `column` widget.
 </br>
 
-The column widget has a single cross axis alignment (CrossAxisAlignment.start) and two children: a Text widget and a Gap widget. The Text widget displays some text with a bold white font and the Gap widget adds some space between the two Text widgets.
+The `column` widget has a single cross axis `alignment` (`CrossAxisAlignment.start`) and two `children`: a `Text` widget and a `Gap` widget. The `Text` widget displays some text with a bold white font and the Gap widget adds some space between the two Text widgets.
 </br>
 
-The positioned widget is positioned relatively to the top-right corner of the stack. It has a fixed distance from the right edge of the stack (determined by the value returned by AppLayout.getWidth(-45)) and a fixed distance from the top edge of the stack (determined by the value returned by AppLayout.getHeight(-40)). The positioned widget has a single child, a container widget with some padding and a circular border. The container has a transparent background color and a circular shape specified by the BoxShape.circle property. The border has a fixed width (determined by the value returned by AppLayout.getWidth(18)) and a purple color
+The `positioned` widget is positioned relatively to the `top-right` corner of the stack. It has a fixed distance from the right edge of the stack (determined by the value returned by `AppLayout.getWidth(-45)`) and a fixed distance from the top edge of the stack (determined by the value returned by `AppLayout.getHeight(-40)`). The `positioned` widget has a single `child`, a `container` widget with some `padding` and a circular border. The `container` has a transparent background `color` and a circular shape specified by the `BoxShape.circle` property. The border has a fixed width (determined by the value returned by `AppLayout.getWidth(18)`) and a purple color
 </br>
 
 ## Outcome
@@ -1651,13 +1648,13 @@ The positioned widget is positioned relatively to the top-right corner of the st
                   )
   ```
   </br>
-This code creates a Gap widget and a container widget, both with fixed dimensions. The Gap widget is adding some space or gap between the widgets above and below it.
+This code creates a `Gap` widget and a `container` widget, both with fixed dimensions. The Gap widget is adding some space or gap between the widgets above and below it.
   </br>
-This container widget has a fixed width (determined by size.width * 0.44), a fixed height (determined by the value returned by AppLayout.getHeight(210)), some padding, a pink background color, rounded corners, and a single child column widget. The column widget has two children: a Text widget and a RichText widget.
+This `container` widget has a fixed width (determined by `size.width * 0.44`), a fixed `height` (determined by the value returned by `AppLayout.getHeight(210)`), some `padding`, a pink background color, rounded corners, and a single child `column` widget. The `column` widget has two children: a `Text` widget and a `RichText` widget.
 </br>
-RichText is a widget that displays a paragraph of mixed-style text. It displays text that uses multiple different styles.
+`RichText` is a widget that displays a paragraph of mixed-style text. It displays text that uses multiple different styles.
 
-In the given code, the RichText widget displays three text spans, each with a different font size. The text spans are displayed in a row and the resulting text looks like a row of three hearts. The RichText widget allows you to specify the style for each span of text separately, so you can have a paragraph of mixed-style text without having to break it up into multiple Text widgets.
+In the given code, the `RichText` widget displays three text spans, each with a different font size. The text spans are displayed in a row and the resulting text is a row of three hearts. The RichText widget allows you to specify the style for each span of text separately, so you can have a paragraph of mixed-style text without having to break it up into multiple Text widgets.
 </br>
 *The emoticons can be assessed via your PC's keyboard*
 
@@ -1699,9 +1696,9 @@ class GamesTicketView extends StatelessWidget {
     final size = AppLayout.getSize(context);
     return Scaffold(
  ```
-The GamesTicketView is a stateless widget that displays a Scaffold widget. A Scaffold widget is a material design container that provides a framework to implement a consistent layout across an app. It typically includes a top app bar, a bottom navigation bar, and a body that displays a list of items.
-</br>
-The GamesTicketView class extends the StatelessWidget class and overrides the build method to return a Scaffold widget. It also has a constructor that takes an optional Key argument and passes it to the superclass constructor. The build method also gets the size of the screen from the AppLayout utility class and stores it in the size variable.
+The `GamesTicketView` is a `stateless` widget that displays a `Scaffold` widget. 
+
+The `GamesTicketView` class extends the `StatelessWidget` class and overrides the `build` method to return a `Scaffold` widget. It also has a constructor that takes an optional `Key` argument and passes it to the superclass constructor. The `build` method also gets the `size` of the screen from the `AppLayout` utility class and stores it in the `size` variable.
 </br>
 </br>
 
@@ -1722,13 +1719,13 @@ The GamesTicketView class extends the StatelessWidget class and overrides the bu
                   ),
                   Gap(AppLayout.getHeight(20)),
  ```
-This code creates a Scaffold widget with a fixed background color and a single child, a Stack widget.
+This code creates a `Scaffold` widget with a fixed background color and a single child, a Stack widget.
 </br>
-The Stack widget has a single child, a ListView widget. The ListView widget has some padding, a single child Gap widget, and a Text widget.
+The Stack widget has a single child, a `ListView` widget. The ListView widget has some padding, a single child Gap widget, and a Text widget.
 </br>
-The Gap widget adds some space between the widgets above and below it. The Text widget displays a fixed string of text with a predefined style.
+The `Gap` widget adds some space between the widgets above and below it. The Text widget displays a fixed string of text with a predefined style.
 </br>
-The ListView widget also has a padding property that adds some space around the widget. The padding property takes an EdgeInsets object as its value. The EdgeInsets object is constructed using the EdgeInsets.symmetric constructor and takes two arguments: horizontal and vertical. The horizontal argument specifies the padding on the left and right sides of the widget and the vertical argument specifies the padding on the top and bottom sides of the widget. The padding values are determined by the AppLayout.getHeight utility method.
+The `ListView` widget also has a `padding` property that adds some space around the widget. The padding property takes an EdgeInsets object as its value. The EdgeInsets object is constructed using the EdgeInsets.symmetric constructor and takes two arguments: horizontal and vertical. The horizontal argument specifies the padding on the left and right sides of the widget and the vertical argument specifies the padding on the top and bottom sides of the widget. The padding values are determined by the `AppLayout.getHeight` utility method.
 
 </br>
 ## Outcome
@@ -1744,9 +1741,9 @@ const AppGameTabs(
                   Gap(AppLayout.getHeight(20)),
                
 ```
-This code creates a AppGameTabs widget, a Gap widget, and a Container widget with a single child, a GameView widget.
+This code creates a `AppGameTabs` widget, a `Gap` widget, and a `Container` widget with a single child, a `GameView` widget.
 </br>
-The AppGameTabs widget displays two tabs with fixed titles. It does not have any children.
+The `AppGameTabs` widget displays two tabs with fixed titles. 
 </br>
 ## Outcome
 
@@ -1764,11 +1761,11 @@ Container(
                   ),
 
 ```
-This code creates a Container widget with some padding and a single child, a GameView widget.
+This code creates a `Container` widget with some padding and a single child, a `GameView` widget.
 </br>
-The Container widget has a padding property that adds space around the widget. The padding property takes an EdgeInsets object as its value and the EdgeInsets object is constructed using the EdgeInsets.only constructor. The EdgeInsets.only constructor takes an EdgeInsets argument that specifies the padding on specific edges of the widget. In this case, the padding is only added to the left edge of the widget.
+The `Container` widget has a padding property that adds space around the widget. The `padding` property takes an `EdgeInsets` object as its value and the EdgeInsets object is constructed using the `EdgeInsets.only` constructor. The EdgeInsets.only constructor takes an EdgeInsets argument that specifies the padding on specific edges of the widget. In this case, the padding is only added to the left edge of the widget.
 </br>
-The GameView widget displays a list of games. It has two properties: list and isColor. The list property specifies the list of games to display and the isColor property determines whether the background color of the widget should be applied or not.
+The `GameView` widget displays a list of games. It has two properties: `list` and `isColor`. The list property specifies the list of games to display and the isColor property determines whether the background color of the widget should be applied or not.
 ##
 </br>
 ## Outcome
@@ -1806,12 +1803,12 @@ const SizedBox(height: 1),
                           width: 5,
                         ),
 ```
-This code defines a "SizedBox" widget with a fixed height of 1 pixel, and a container widget with white background color and padding. The container has a single child, which is a column widget containing a row widget with two children, each of which is an instance of the "AppColumnLayout" widget, and a gap widget. The row has mainAxisAlignment set to "spaceBetween", so the two children will be evenly distributed at the beginning and end of the row.
+This code defines a `SizedBox` widget with a fixed height of 1 pixel, and a container widget with white background color and padding. The container has a single child, which is a column widget containing a row widget with two children, each of which is an instance of the `AppColumnLayout` widget, and a gap widget. The row has `mainAxisAlignment` set to `spaceBetween`, so the two children will be evenly distributed at the beginning and end of the row.
 </br>
-The "AppColumnLayout" widget appears to have four named parameters: "firstText", "secondText", "alignment", and "isColor". It's likely that this widget displays two pieces of text and allows some customization of the text alignment and coloring. The "firstText" and "secondText" parameters probably specify the text to be displayed, while the "alignment" parameter controls the alignment of the text within the widget. The "isColor" parameter might be a boolean that determines whether the widget is colored or not.
+The `AppColumnLayout` widget appears to have four named parameters: `firstText`, `secondText`, `alignment`, and `isColor`. This widget displays two pieces of text and allows some customization of the text alignment and coloring. The `firstText` and `secondText` parameters specify the text to be displayed, while the `alignment` parameter controls the alignment of the text within the widget. The `isColor` parameter is a boolean that determines whether the widget is colored or not.
 </br>
-The column also includes a gap widget and an instance of a custom "AppLayoutBuiderWidget" widget as children. It's likely that this widget is used to build some kind of layout or display some UI elements. It has three named parameters: "sections", "isColor", and "width". The "sections" parameter probably specifies the number of sections in the widget, while the "isColor" parameter might control the coloring of the widget. The "width" parameter might control the width of the widget or some other aspect of its appearance.
-</br>
+The column also includes a gap widget and an instance of a custom `AppLayoutBuiderWidget` widget as children. This widget is used to build some kind of layout or display some UI elements. It has three named parameters: `sections`, `isColor`, and `width`. The `sections` parameter specifies the number of sections in the widget, while the `isColor` parameter controls the coloring of the widget. The `width` parameter does control the width of the widget or some other aspect of its appearance.
+
 ```dart
                         Gap(AppLayout.getHeight(20)),
                         Row(
@@ -1837,11 +1834,12 @@ The column also includes a gap widget and an instance of a custom "AppLayoutBuid
                           width: 5,
                         ),
   ```
-* This code defines a gap widget and a row widget with two children, each of which is an instance of the "AppColumnLayout" widget, as children of the container's column widget. The row has mainAxisAlignment set to "spaceBetween", so the two children will be evenly distributed at the beginning and end of the row.
+This code defines a gap widget and a row widget with two children, each of which is an instance of the `AppColumnLayout` widget, as children of the container's column widget. The row has mainAxisAlignment set to `spaceBetween`, so the two children will be evenly distributed at the beginning and end of the row.
 </br>
-The "AppColumnLayout" widget appears to have four named parameters: "firstText", "secondText", "alignment", and "isColor". It's likely that this widget displays two pieces of text and allows some customization of the text alignment and coloring. The "firstText" and "secondText" parameters probably specify the text to be displayed, while the "alignment" parameter controls the alignment of the text within the widget. The "isColor" parameter might be a boolean that determines whether the widget is colored or not.
+The `AppColumnLayout` widget appears to have four named parameters: `firstText`, `secondText`, `alignment`, and `isColor`. This widget displays two pieces of text and allows some customization of the text alignment and coloring. The `firstText` and `secondText` parameters specify the text to be displayed, while the "alignment" parameter controls the alignment of the text within the widget. The `isColor` parameter is a boolean that determines whether the widget is colored or not.
 </br>
-This code also includes another gap widget and an instance of the "AppLayoutBuiderWidget" widget as children of the column. It's likely that this widget is used to build some kind of layout or display some UI elements. It has three named parameters: "sections", "isColor", and "width". The "sections" parameter probably specifies the number of sections in the widget, while the "isColor" parameter might control the coloring of the widget. The "width" parameter might control the width of the widget or some other aspect of its appearance.
+This code also includes another gap widget and an instance of the `AppLayoutBuiderWidget` widget as children of the column. It has three named parameters: `sections`, `isColor`, and `width`. The `sections` parameter specifies the number of sections in the widget, while the `isColor` parameter controls the coloring of the widget. The `width` parameter controls the width of the widget or some other aspect of its appearance.
+
   ```dart
                         Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -1874,11 +1872,13 @@ This code also includes another gap widget and an instance of the "AppLayoutBuid
                             ])
                       ])),
    ```
-* This code defines a row widget with two children as a child of the container's column widget. The row has mainAxisAlignment set to "spaceBetween", so the two children will be evenly distributed at the beginning and end of the row.
+   
+This code defines a `row` widget with two children as a child of the container's column widget. The row has mainAxisAlignment set to  `spaceBetween`, so the two children will be evenly distributed at the beginning and end of the row.
 </br>
-The first child is a column widget with three children: a row widget containing an image and a text widget, a gap widget, and another text widget. The row widget has two children: an image widget and a text widget. The image widget displays the image specified by the "assets/images/img1.jpg" asset, and the text widget displays the string "*** 2712" with a style defined by the "headLineStyle3" constant. The second child of the column is a gap widget with a fixed height of 5 pixels, and the third child is a text widget displaying the string "Payment method" with a style defined by the "headLineStyle4" constant.
+The first child is a column widget with three children: a row widget containing an image and a text widget, a gap widget, and another text widget. The row widget has two children: an image widget and a text widget. The image widget displays the image specified by the `"assets/images/img1.jpg"` asset, and the text widget displays the string `"*** 2712"` with a style defined by the `headLineStyle3` constant. The second child of the column is a gap widget with a fixed height of 5 pixels, and the third child is a text widget displaying the string `Payment method` with a style defined by the `headLineStyle4` constant.
 </br>
-The second child of the row is an instance of the "AppColumnLayout" widget. It appears to have four named parameters: "firstText", "secondText", "alignment", and "isColor". It's likely that this widget displays two pieces of text and allows some customization of the text alignment and coloring. The "firstText" and "secondText" parameters probably specify the text to be displayed, while the "alignment" parameter controls the alignment of the text within the widget. The "isColor" parameter might be a boolean that determines whether the widget is colored or not.
+The second child of the row is an instance of the `AppColumnLayout` widget. It has four named parameters: `firstText`, `secondText`, `alignment`, and `isColor`. It's likely that this widget displays two pieces of text and allows some customization of the text alignment and coloring. The `firstText` and `secondText` parameters probably specify the text to be displayed, while the `alignment` parameter controls the alignment of the text within the widget. The `isColor` parameter might be a boolean that determines whether the widget is colored or not.
+
    ```dart
                   //Barcode
                   const SizedBox(
@@ -1917,9 +1917,9 @@ The second child of the row is an instance of the "AppColumnLayout" widget. It a
                         ),
                       )),
   ```
-* This code defines a "SizedBox" widget with a fixed height of 1 pixel, and a container widget with white background color and rounded bottom corners. The container has a single child, which is another container widget with padding and a single child, which is a "ClipRRect" widget. The "ClipRRect" widget has a single child, which is an instance of a custom "BarcodeWidget" widget.
+This code defines a `SizedBox` widget with a fixed height of 1 pixel, and a container widget with white background color and rounded bottom corners. The container has a single child, which is another container widget with padding and a single child, which is a `ClipRRect` widget. The `ClipRRect` widget has a single child, which is an instance of a custom `BarcodeWidget` widget.
 </br>
-The "BarcodeWidget" widget appears to be used to display a barcode image. It has several named parameters: "barcode", "data", "drawText", "color", "width", and "height". The "barcode" parameter specifies the type of barcode to be generated, "data" specifies the data to be encoded in the barcode, "drawText" is a boolean that determines whether text should be drawn below the barcode image, "color" specifies the color of the barcode image, "width" specifies the width of the widget, and "height" specifies the height of the widget. In this case, the "BarcodeWidget" is set to display a Code 128 barcode, encoded with the data "https://github.com/martinovovo", in black color, with no text below the image and with a width and height of 70 pixels.
+The `BarcodeWidget` widget is used to display a barcode image. It has several named parameters: `barcode`, `data`, `drawText`, `color`, `width`, and `height`. The `barcode` parameter specifies the type of barcode to be generated, `data` specifies the data to be encoded in the barcode, `drawText` is a boolean that determines whether text should be drawn below the barcode image, `color` specifies the color of the barcode image, `width` specifies the width of the widget, and `height` specifies the height of the widget. In this case, the "BarcodeWidget" is set to display a Code 128 barcode, encoded with the data `"https://github.com/martinovovo"`, in black color, with no text below the image and with a width and height of 70 pixels.
 </br>
 *For the `barcode` to be created, a package has to be imported onto the `dev_dependencies` section of the `pubspec.yaml` file. Once done, your file should resemble this:*
 
@@ -1983,13 +1983,13 @@ Gap(AppLayout.getHeight(20)),
             )
  ```
  </br>
-This code creates several widgets including a Gap widget, a Container widget, and two Positioned widgets.
+This code creates several widgets including a `Gap` widget, a `Container` widget, and two `Positioned` widgets.
 </br>
-The Gap widget adds some space between the widgets above and below it.
+The `Gap` widget adds some space between the widgets above and below it.
 </br>
-The Container widget has some padding and a single child, a GameView widget. The GameView widget displays a list of games. It has a single property: list, which specifies the list of games to display.
+The `Container` widget has some padding and a single child, a GameView widget. The GameView widget displays a list of games. It has a single property: list, which specifies the list of games to display.
 </br>
-The Positioned widgets are used to position their children within their parent widget. They have a left and top property that determine the position of the child within the parent. The Positioned widgets have a Container widget as their child. The Container widget has some padding and a BoxDecoration that adds a border around it. It also has a single child, a CircleAvatar widget. The CircleAvatar widget displays an avatar in the form of a circle. It has a maxRadius property that determines the size of the avatar and a backgroundColor property that specifies the background color of the avatar.
+The `Positioned` widgets are used to position their children within their parent widget. They have a left and top property that determine the position of the child within the parent. The Positioned widgets have a Container widget as their child. The `Container` widget has some padding and a BoxDecoration that adds a border around it. It also has a single child, a `CircleAvatar` widget. The CircleAvatar widget displays an avatar in the form of a circle. It has a maxRadius property that determines the size of the avatar and a backgroundColor property that specifies the background color of the avatar.
  </br>
  ## Outcome
  

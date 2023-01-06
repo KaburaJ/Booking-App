@@ -174,4 +174,4 @@ List<Map<String, dynamic>> gameList = [
 That being said, the two lists above will be the basis of most of the visuals we see in our application.
 </br>
 </br>
-With that, we have a huge portion of our reusable code. We are not yet done though. Next up, we have our [widgets](https://github.com/KaburaJ/Booking-App/blob/main/Utils.md#utils).
+With that, we have a huge portion of our reusable code. We are not yet done though. Next up, we have our [widgets](https://github.com/KaburaJ/Booking-App/blob/main/widgets.md#widgets).

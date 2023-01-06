@@ -245,6 +245,8 @@ Container(
  
 *Here, there is a `container` with a solid color background (either orange or white, depending on the value of isColor). It contains a `Column` with a single `Row` inside it. This `Row` contains three more `AppColumnLayout` widgets, which again display information about the game (date, time, and number of players). The `AppColumnLayout` widgets are used to display the information in a consistent way, with a label and a value aligned vertically. The isColor parameter determines whether the widget should use a light or dark color scheme.*
 
+Having taking a long deserved detour, we can now get back to our app. Luckily, we have gotten to the juicy bit where we get to use all what we have been creating! Next up is our [home screen](https://github.com/KaburaJ/Booking-App/blob/main/home_screen.md).
+
 </br>
 </br>
 </br>

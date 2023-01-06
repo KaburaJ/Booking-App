@@ -141,5 +141,5 @@ dependencies:
 Getting back to the ```items``` section of the code, we will go through the home icon. This will be similar for all four icons except for the label.
 ```items``` is a list and within it is a ```BottomNavigationBarItem``` widget which takes in ```icon``` as an argument. Here, I selected the ```FluentSystemIcons.ic_fluent_home_regular``` which is basically an outline of a home icon. For the ```activeIcon``` section, the filled version of the home icon was selected. That way when selected, this icon got filled and when unselected, it was not. 
 </br>
-Having created our bottom bar, let us move on to the next section. Next up, we have [utils](https://github.com/KaburaJ/Booking-App#utils).
+Having created our bottom bar, let us move on to the next section. Next up, we have [utils](https://github.com/KaburaJ/Booking-App/blob/main/Utils.md#utils).
 </br>

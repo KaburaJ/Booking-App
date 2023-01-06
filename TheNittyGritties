@@ -1,6 +1,1 @@
 
-### The Nitty Gritties
-
-Setting up a [Flutter environment](https://flutter.io/get-started/editor/) is the first course of action. [VS Code](https://code.visualstudio.com/) is preferred. Nonetheless, on opening any Flutter IDE, one is welcomed by a screen with code already on it. In my case, it was the 'Hello World' project. For a smile's sake, I would advice one to run it, feel proud of themselves for a moment, press and hold Ctrl+A and delete. 
-</br>
-We'll start by defining our terms so let us head on over to [definitions](https://github.com/KaburaJ/Booking-App/blob/main/definitions.md).

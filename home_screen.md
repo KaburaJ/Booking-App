@@ -203,4 +203,4 @@ Finally, there are several instances of the `Gap` widget, which are used to add 
 </br>
 </br>
 
-That's our homescreen! Let us head on over to the [search screen](https://github.com/KaburaJ/Booking-App#search-screen).
+That's our homescreen! Let us head on over to the [search screen](https://github.com/KaburaJ/Booking-App/blob/main/search_screen.md).

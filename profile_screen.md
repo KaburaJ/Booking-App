@@ -401,7 +401,7 @@ This code also includes another divider widget as a child of the column, and a c
 
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2021.PNG)
 
-[We made it!](https://github.com/KaburaJ/Booking-App/blob/main/LastButNotLeast.md) at last! 
+[We made it](https://github.com/KaburaJ/Booking-App/blob/main/LastButNotLeast.md) at last! 
 </br>
 </br>
 </br>

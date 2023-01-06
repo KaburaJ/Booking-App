@@ -22,7 +22,7 @@ This repository contains a booking app which targets gaming shops. This app can 
     6. [Detour](https://github.com/KaburaJ/Booking-App/blob/main/detour.md)
     7. [Home Screen](https://github.com/KaburaJ/Booking-App/blob/main/home_screen.md)
     8. [Search_Screen](https://github.com/KaburaJ/Booking-App/blob/main/search_screen.md)
-    9. [Games ticket view](https://github.com/KaburaJ/Booking-App/blob/main/README.md#games-ticket-view)
+    9. [Games ticket view](https://github.com/KaburaJ/Booking-App/blob/main/Game%20TicketView.md)
     10. [Profile Screen](https://github.com/KaburaJ/Booking-App/blob/main/profile_screen.md)
 5. [We made it!](https://github.com/KaburaJ/Booking-App/blob/main/LastButNotLeast.md)
 5. [Acknowledgements](#Acknowledgements)

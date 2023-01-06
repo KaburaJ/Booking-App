@@ -76,4 +76,4 @@ When called, it creates a widget that scales and positions its child within itse
 *PS: The UI/ layout design comes first before any coding can be done. Thus, it is a good idea to have a vision sketched out to make coding easier and more enjoyable*
 </br>
 </br>
-[Let's dive into it!](https://github.com/KaburaJ/Booking-App/blob/main/main_dart.md)
+[Let's dive into it!](https://github.com/KaburaJ/Booking-App/blob/main/definitions.md#the-nitty-gritties)

@@ -3,7 +3,7 @@ This repository contains a booking app which targets gaming shops. This app can 
 # Table of contents
 1. [Overview](#Overview)
 2. [Development](#Development)
-    1. [The_Nitty_Gritties](https://github.com/KaburaJ/Booking-App/blob/main/TheNittyGritties)
+    1. [The_Nitty_Gritties](https://github.com/KaburaJ/Booking-App/blob/main/definitions.md)
         1. [Definitions](https://github.com/KaburaJ/Booking-App/blob/main/definitions.md#definitions)
 3. [Let's_Dive_into_it!](https://github.com/KaburaJ/Booking-App/blob/main/README.md#lets-dive-into-it)
     1. [main.dart](https://github.com/KaburaJ/Booking-App/blob/main/main_dart.md)
@@ -37,7 +37,7 @@ This app, though currently more of a UI representation of the end goal, is suppo
 In the creation of this application, [Flutter](https://www.geeksforgeeks.org/what-is-flutter/) framework, which supports cross-platform applications, was used. In my case, I used [FlutLab](https://flutlab.io/) in the execution of code initially. Afterwards, I incorporated VS Code in the final building and eventual deployment to Github pages. No special reason though, the choice of IDE was based on preference.
 </br>
 
-Want to know how it is done? Well, I got you covered. Let us slowly immerse ourselves in the world of code by understanding [the nitty gritties](https://github.com/KaburaJ/Booking-App/blob/main/definitions.md#the-nitty-gritties).
+Want to know how it is done? Well, I got you covered. Let us slowly immerse ourselves in the world of code by understanding [the nitty gritties](https://github.com/KaburaJ/Booking-App/blob/main/definitions.md).
 
 # Acknowledgements
  - [Awesome Flutter Tutorial](https://www.youtube.com/watch?v=71AsYo2q_0Y)

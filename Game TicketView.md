@@ -326,6 +326,8 @@ The `Positioned` widgets are used to position their children within their parent
  ## Outcome
  
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2017.PNG)
+
+The [profile screen](https://github.com/KaburaJ/Booking-App/blob/main/profile_screen.md#profile-screen), the last screen of our app, is next.
 </br>
 </br>
 </br>

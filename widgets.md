@@ -395,5 +395,4 @@ class ThickContainer extends StatelessWidget {
 </br>
 The build method returns a `Container` widget that has `padding` on all sides and a border with rounded corners. The border has a `width` of 2.5 and a `color` that is determined by the isColor parameter. If it is null, the color is set to white, otherwise it is set to a specific color (0xFF8ACCF7). 
 
-</br>
-Woah, that was a lot to digest in one take! Luckily, we can have a nice little [detour](https://github.com/KaburaJ/Booking-App/blob/main/detour.md) up next
+Woah, that was a lot to digest in one take! Luckily, we can have a nice little [detour](https://github.com/KaburaJ/Booking-App/blob/main/detour.md) up next.

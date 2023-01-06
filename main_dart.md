@@ -59,5 +59,5 @@ The code above is our project's root. That means that it will be the parent widg
  which allows for one to define the place where the application begins when rerun. In this case, the ```BottomBar``` will be the first to be showcased.
 </br>
 
-Now that we've gone through the ```main.dart``` file, let's begin by setting up the bottom bar for easier reference.
+Now that we've gone through the ```main.dart``` file, let's begin by setting up the [bottom bar](https://github.com/KaburaJ/Booking-App/blob/main/bottom_bar.md) for easier reference.
 </br>

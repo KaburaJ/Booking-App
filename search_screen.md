@@ -301,6 +301,8 @@ In the given code, the `RichText` widget displays three text spans, each with a 
 ## Outcome
 
 ![fig 1](https://github.com/KaburaJ/Booking-App/blob/main/images/Output%2012.PNG)
+
+That's a wrap for our search screen. The [games ticket view](https://github.com/KaburaJ/Booking-App/blob/main/Game%20TicketView.md#games-ticket-view)
 </br>
 </br>
 </br>

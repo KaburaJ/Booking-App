@@ -5,7 +5,7 @@ This repository contains a booking app which targets gaming shops. This app can 
 2. [Development](#Development)
     1. [The_Nitty_Gritties](https://github.com/KaburaJ/Booking-App/blob/main/definitions.md)
         1. [Definitions](https://github.com/KaburaJ/Booking-App/blob/main/definitions.md#definitions)
-3. [Let's_Dive_into_it!](https://github.com/KaburaJ/Booking-App/blob/main/README.md#lets-dive-into-it)
+3. [Let's_Dive_into_it!](https://github.com/KaburaJ/Booking-App/blob/main/definitions.md#the-nitty-gritties)
     1. [main.dart](https://github.com/KaburaJ/Booking-App/blob/main/main_dart.md)
     2. [bottom_bar.dart](https://github.com/KaburaJ/Booking-App/blob/main/bottom_bar.md)
     3. [Utils](https://github.com/KaburaJ/Booking-App#utils)
